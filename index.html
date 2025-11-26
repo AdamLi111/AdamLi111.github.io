@@ -102,6 +102,7 @@
                 <li><a href="#Publications">Publications</a></li>
                 <li><a href="#Academic Projects">Academic Projects</a></li>
                 <!-- <li><a href="#Experiences">Experiences</a></li> -->
+                <li><a herf="#Professional Projects">Professional Projects</a></li>
                 <li><a href="#Professional Experience">Professional Experience</a></li>
                 <!-- <li><a href="#Service">Service</a></li> -->
                 <li><a href="#Misc">Misc.</a></li>
@@ -136,11 +137,12 @@
             </p>
             <ul>
               <li><strong>(Ongoing) Embodied PF: Introducing Positive Friction for Reliable Embodied Language Systems</strong>:<br>
+                  <i>[<b>Target conference: ACL</b> (Association for Computational Linguistics)]</i><br>
                   <i>[Sep 2025 -- Present]</i><br>
                   <!-- <a href="https://arxiv.org/abs/2509.19853" target="_blank">[Paper Arxiv link]</a> -->
                 </p>
                 <article class="columns">
-                  <div class="column is-4">
+                  <div class="column is-7">
                     <figure class="image">
                       <img src="images/publications/misty.png">
                     <br>
@@ -150,6 +152,7 @@
                       <ul>
                         <li>Integrated several Large Language Models (LLMs), such as Gemini2.0, llama3.1, Ollama3.2, etc. into the Misty Robot platform to evaluate their performance and limitations in embodied tasks</li>
                         <li>Implemented positive friction in these LLMs to explore its impact on enhancing the real-world model performance on embodied tasks</li>
+                        <li>Finished the core logic of the end-to-end model(from user commands to misty's action executions)</li>
                         <li>To be continued</li>
                       </ul>
                         <b></b>
@@ -169,7 +172,7 @@
                   <a href="https://arxiv.org/abs/2509.19853" target="_blank">[Paper Arxiv link]</a>
                 </p>
                 <article class="columns">
-                  <div class="column is-4">
+                  <div class="column is-5">
                     <figure class="image">
                       <img src="images/publications/SAGE.png">
                     </figure>
@@ -213,7 +216,7 @@
 		  
             <!--List of publications-->
             <article class="columns">
-              <div class="column is-3">
+              <div class="column is-4">
                 <figure class="image">
                   <img src="images/publications/ProGEM_main.png">
                 </figure>
@@ -234,7 +237,7 @@
                         <a>Qianyao Xu</a>,
                         <a>Jiaying Li</a>,
 			                	<a>Yingqing Xu</a>.</em><br>
-                    <i>Submitted at CVPR 2025</i><br>
+                    <i>Under submission</i><br>
                     <!-- <a href="https://arxiv.org/abs/" target="_blank">[PDF Coming Soon]</a> -->
 	                  <!-- <p>This is an ongoing survey paper with awesome list repo.</p> -->
                   </p>
@@ -351,7 +354,7 @@
               <div class="column">
                 <div class="content">
                   <p>
-                    <b>Statewide University Statistics Analysis (Ongoing)</b><br>
+                    <b>Statewide University Statistics Analysis</b><br>
                     <b>Data Science Semester Project</b><br>
                     <strong>Project leader</strong><br>
                     <a href="https://github.com/AdamLi111/statewide_university_stat_comparison" target="_blank">[source code]</a>
@@ -370,11 +373,34 @@
               </div>
             </article>
 		  
-           
+            <br>
 
-
-           
+            <h2 id="Professional Projects">Professional Projects</h2>
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/imagepipe.png">
+                </figure>
+                <figure class="image">
+                  <img src="images/publications/gui.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>ImagePipe - Computer Vision System for Tourist Photo Processing</b><br>
+                  </p>
+                  <ul>
+                    <li>Developed ImagePipe, a computer vision pipeline for tourist photo processing integrating <b>YOLOv8</b> classification, <b>InsightFace</b> face detection, <b>MediaPipe</b> eye state detection, and custom generative eye-opening model<b>(U-net + attention mechanism)</b>.</li>
+                    <li>Implemented <b>DBSCAN-based</b> face clustering system with <b>InsightFace Buffalo_L embeddings</b> for multi-person identity tracking across photo sets; designed modular three-layer architecture (<b>PyQt6</b> UI, processing core, ML models) supporting batch processing of <b>1000+</b> images with optimized memory management</li>
+                    <li>Engineered memory-efficient batch processing pipeline using <b>LazyImageLoader</b> and garbage collection strategies to prevent allocation failures; integrated parallel processing with <b>ThreadPoolExecutor</b> and comprehensive timing analysis for performance optimization</li>
+                    <li>Built deployment infrastructure using Cython compilation and PyInstaller packaging <b>with license management</b>; developed both GUI and headless command-line modes supporting cross-platform distribution</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
             
+            <br>
 
             <!--Professional Experience-->
             <h2 id="Professional Experience">Professional Experience</h2>
