@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ImagePipe &mdash; Haocheng Li</title>
+  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
+  <link href='css/style.css?_t=20200916' rel='stylesheet' type='text/css'>
+  <script defer src="font-awesome/js/brands.min.js"></script>
+  <script defer src="font-awesome/js/regular.min.js"></script>
+  <script defer src="font-awesome/js/fontawesome.min.js"></script>
+  <style>
+    body {
+      font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #2c2c2c;
+      background-color: #ffffff;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, #2c3e50 0%, #4a4a4a 100%);
+      color: #ffffff;
+      padding: 4rem 1.5rem 3rem;
+      margin-bottom: 0;
+    }
+
+    .hero-banner .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-banner h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-banner .tagline {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 720px;
+      line-height: 1.55;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .back-link:hover {
+      color: #ffffff;
+    }
+
+    .container.imagepipe {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 2rem;
+    }
+
+    .section-block {
+      margin-bottom: 3rem;
+    }
+
+    .section-block h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.005em;
+    }
+
+    .section-block h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-block p {
+      line-height: 1.7;
+      color: #3a3a3a;
+      font-size: 1rem;
+    }
+
+    .section-block ul {
+      line-height: 1.7;
+      color: #3a3a3a;
+    }
+
+    .section-block ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .demo-figure {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .demo-figure img {
+      max-width: 100%;
+      border: 1px solid #e2e2e2;
+      border-radius: 6px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .demo-figure figcaption {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.3rem 0.75rem;
+      background-color: #f3f4f6;
+      color: #2c3e50;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid #e2e5ea;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .feature-card {
+      background-color: #fafafa;
+      border: 1px solid #ececec;
+      border-left: 3px solid #2c3e50;
+      padding: 1.1rem 1.2rem;
+      border-radius: 4px;
+    }
+
+    .feature-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .pipeline-stages {
+      counter-reset: stage;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .pipeline-stages li {
+      counter-increment: stage;
+      position: relative;
+      padding: 0.85rem 1rem 0.85rem 3rem;
+      margin-bottom: 0.6rem;
+      background-color: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 4px;
+    }
+
+    .pipeline-stages li::before {
+      content: counter(stage);
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.65rem;
+      height: 1.65rem;
+      background-color: #2c3e50;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .pipeline-stages strong {
+      color: #1a1a1a;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .metric {
+      text-align: center;
+      padding: 1rem 0.75rem;
+      background-color: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 4px;
+    }
+
+    .metric .value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #2c3e50;
+      display: block;
+    }
+
+    .metric .label {
+      font-size: 0.78rem;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.25rem;
+    }
+
+    .contact-block {
+      background-color: #fafafa;
+      border: 1px solid #ececec;
+      border-radius: 4px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .contact-block a {
+      color: rgb(238, 76, 44);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-block a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-strip {
+      border-top: 1px solid #eaeaea;
+      padding: 1.5rem;
+      text-align: center;
+      color: #888;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero-banner h1 { font-size: 1.9rem; }
+      .hero-banner { padding: 2.5rem 1.25rem 2rem; }
+      .container.imagepipe { padding: 2rem 1.25rem; }
+    }
+  </style>
+</head>
+
+
+<body>
+  <section class="hero-banner">
+    <div class="container imagepipe" style="padding-top: 0; padding-bottom: 0;">
+      <a href="index.html" class="back-link">&larr; Back to homepage</a>
+      <div class="eyebrow">Professional Project</div>
+      <h1>ImagePipe</h1>
+      <p class="tagline">
+        An AI-powered desktop application that automates the curation, enhancement, and organization of large tourist photo sets &mdash; turning hours of manual sorting into a single batch run.
+      </p>
+    </div>
+  </section>
+
+  <div class="container imagepipe">
+
+    <!-- Overview -->
+    <div class="section-block">
+      <h2>Overview</h2>
+      <p>
+        ImagePipe is a production-grade computer vision pipeline designed for tourism photographers and studios that process thousands of photos per session. It identifies the people in each shot, detects common issues such as closed eyes or poor framing, restores low-quality faces with a custom generative model, and organizes the final results by person &mdash; all in one continuous batch workflow.
+      </p>
+      <div class="pill-row">
+        <span class="pill">PyTorch</span>
+        <span class="pill">YOLOv8</span>
+        <span class="pill">InsightFace</span>
+        <span class="pill">MediaPipe</span>
+        <span class="pill">U-Net + Attention</span>
+        <span class="pill">DBSCAN</span>
+        <span class="pill">PyQt6</span>
+        <span class="pill">Cython</span>
+        <span class="pill">PyInstaller</span>
+      </div>
+
+      <div class="metric-row">
+        <div class="metric">
+          <span class="value">1000+</span>
+          <span class="label">Images per batch</span>
+        </div>
+        <div class="metric">
+          <span class="value">4</span>
+          <span class="label">ML models integrated</span>
+        </div>
+        <div class="metric">
+          <span class="value">3-layer</span>
+          <span class="label">Modular architecture</span>
+        </div>
+        <div class="metric">
+          <span class="value">Cross-platform</span>
+          <span class="label">GUI + CLI builds</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo -->
+    <div class="section-block">
+      <h2>Demo</h2>
+      <p>
+        ImagePipe ships as a standalone desktop application with both a graphical interface for studio operators and a headless command-line mode for automated workflows. The screenshots below show the end-to-end processing pipeline and the operator-facing UI.
+      </p>
+      <figure class="demo-figure">
+        <img src="images/publications/imagepipe.png" alt="ImagePipe processing pipeline demo">
+        <figcaption>End-to-end pipeline output: classification, face clustering, eye-state detection, and enhancement.</figcaption>
+      </figure>
+      <figure class="demo-figure">
+        <img src="images/publications/gui.png" alt="ImagePipe graphical user interface">
+        <figcaption>PyQt6 desktop interface used by studio operators for batch processing.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Key Features -->
+    <div class="section-block">
+      <h2>Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>Photo Classification</h4>
+          <p>YOLOv8-powered classifier filters and tags photos by content type, removing obvious duplicates and low-quality shots before downstream processing.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Face Detection &amp; Recognition</h4>
+          <p>InsightFace Buffalo_L embeddings provide robust face localization and identity features that work across lighting and pose variation.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Person Clustering</h4>
+          <p>DBSCAN clustering groups faces by identity across an entire photo set &mdash; no labels required &mdash; enabling per-person album generation.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Eye-State Detection</h4>
+          <p>MediaPipe landmarks flag photos with closed or partially closed eyes for automatic correction or operator review.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Generative Eye-Opening</h4>
+          <p>A custom U-Net with attention restores naturally open eyes on flagged photos, salvaging otherwise unusable shots.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Batch Processing</h4>
+          <p>Lazy image loading, garbage collection, and ThreadPoolExecutor parallelism keep memory bounded across 1000+ image batches.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pipeline -->
+    <div class="section-block">
+      <h2>Processing Pipeline</h2>
+      <p>Each batch flows through a fixed sequence of stages, with intermediate state cached to disk to keep peak memory low.</p>
+      <ol class="pipeline-stages">
+        <li><strong>Ingest &amp; classify</strong> &mdash; YOLOv8 tags photos and discards rejects.</li>
+        <li><strong>Detect faces</strong> &mdash; InsightFace localizes every face and extracts Buffalo_L embeddings.</li>
+        <li><strong>Cluster by identity</strong> &mdash; DBSCAN groups embeddings into per-person clusters.</li>
+        <li><strong>Evaluate eye state</strong> &mdash; MediaPipe landmarks flag closed-eye candidates.</li>
+        <li><strong>Restore</strong> &mdash; the U-Net + attention model regenerates open eyes on flagged faces.</li>
+        <li><strong>Organize &amp; export</strong> &mdash; processed images are written into per-person folders with full provenance.</li>
+      </ol>
+    </div>
+
+    <!-- Architecture -->
+    <div class="section-block">
+      <h2>Architecture</h2>
+      <p>ImagePipe follows a strict three-layer separation so the UI, business logic, and ML models can evolve independently.</p>
+
+      <h3>UI Layer &mdash; PyQt6</h3>
+      <p>A desktop interface for non-technical operators with progress reporting, per-stage previews, and exportable run logs. A headless CLI mode shares the same processing core for automated server-side use.</p>
+
+      <h3>Processing Core</h3>
+      <p>Orchestrates the pipeline, handles I/O, and manages memory via a <strong>LazyImageLoader</strong> that streams images on demand. Parallelism is provided by <strong>ThreadPoolExecutor</strong> with per-stage timing instrumentation for profiling.</p>
+
+      <h3>ML Model Layer</h3>
+      <p>Each model (classification, detection, clustering, eye-state, restoration) is wrapped behind a uniform interface so it can be swapped or upgraded without touching the rest of the system.</p>
+    </div>
+
+    <!-- Engineering -->
+    <div class="section-block">
+      <h2>Engineering Highlights</h2>
+      <ul>
+        <li>Memory-efficient batch pipeline using <strong>LazyImageLoader</strong> and explicit garbage-collection strategies to prevent allocation failures on long runs.</li>
+        <li>Parallel processing via <strong>ThreadPoolExecutor</strong> with comprehensive per-stage timing instrumentation for ongoing performance tuning.</li>
+        <li><strong>Cython</strong> compilation of hot paths and <strong>PyInstaller</strong> packaging for cross-platform, dependency-free distribution.</li>
+        <li>Integrated <strong>license management</strong> for commercial deployment, with both GUI and headless command-line entry points.</li>
+        <li>Modular three-layer architecture (UI / core / models) that keeps the ML stack swappable without touching the rest of the app.</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-block">
+      <p>
+        Interested in ImagePipe or want to discuss the project in detail?<br>
+        Reach out at <a href="mailto:haochengli2018@gmail.com">haochengli2018@gmail.com</a>
+      </p>
+    </div>
+
+  </div>
+
+  <footer class="footer-strip">
+    &copy; 2025 Haocheng Li &middot; <a href="index.html" style="color:#888;">Return to homepage</a>
+  </footer>
+
+</body>
+
+</html>

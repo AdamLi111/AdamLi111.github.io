@@ -98,12 +98,12 @@
               <p class="menu-label"><b>Quick Links</b></p>
               <ul class="menu-list">  
                 <li><a href="#Intro">About Me</a></li>
+                <li><a href="#Professional Experience">Professional Experience</a></li>
                 <li><a href="#Research">Research</a></li>
                 <li><a href="#Publications">Publications</a></li>
                 <li><a href="#Academic Projects">Academic Projects</a></li>
                 <!-- <li><a href="#Experiences">Experiences</a></li> -->
                 <li><a herf="#Professional Projects">Professional Projects</a></li>
-                <li><a href="#Professional Experience">Professional Experience</a></li>
                 <!-- <li><a href="#Service">Service</a></li> -->
                 <li><a href="#Misc">Misc.</a></li>
               </ul>
@@ -122,11 +122,36 @@
             <p>
               I'm a 5th year Computer Science student at Northeastern University's Khoury College of Computer Science, graduating in May 2026. With strong interest and passion about Embodied AI, I aim to build <strong>Embodied Agents</strong>🤖 that interact with humans👫 in real-world🌏 settings.
               <br>
-              <p><strong>Coursework: </strong> Linear Algebra <strong>|</strong> Mathematics of Data Models <strong>|</strong> Algorithms and Data <strong>|</strong> Computer Systems <strong>|</strong> Object-Oriented Design <strong>|</strong> Artificial Intelligence</p>
+              <p><strong>Coursework: </strong> Linear Algebra <strong>|</strong> Mathematics of Data Models <strong>|</strong> Algorithms and Data <strong>|</strong> Computer Systems <strong>|</strong> Object-Oriented Design <strong>|</strong> Artificial Intelligence <strong>|</strong> Machine Learning <strong>|</strong> Software Engineering <strong>|</strong> Reinforcement Learning</p>
               
               <br>
-              <!-- <strong>I am actively looking for research or internship opportunity in Fall 2025, here is my <a href="https://drive.google.com/file/d/18NsAlvKFr_VhGMYNppik21AlSo6ClVJb/view?usp=drive_link">Resume</a>.</strong> -->
+              <!-- <b>If you are interested in purchasing ImagePipe, please contact me by my <a href="mailto:haochengli2018@gmail.com" target="_blank">email</a></b> -->
             </p>
+
+
+            <h2 id="Professional Projects">Professional Projects</h2>
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/imagepipe.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>ImagePipe &mdash; AI-powered tourist photo processing system</b><br>
+                  </p>
+                  <p>
+                    An end-to-end computer vision pipeline that automates the curation, enhancement, and organization of tourist photos &mdash; combining YOLOv8 classification, InsightFace recognition, MediaPipe eye-state detection, and a custom U-Net generative eye-opening model.
+                  </p>
+                  <p>
+                    <a href="imagepipe.html" class="button is-link is-outlined is-small"><strong>View full demo &rarr;</strong></a>
+                  </p>
+                </div>
+              </div>
+            </article>
+            
+            <br>
 
             <!--Research-->
             <h2 id="Research">Research</h2>
@@ -136,9 +161,9 @@
                
             </p>
             <ul>
-              <li><strong>(Ongoing) Embodied PF: Introducing Positive Friction for Reliable Embodied Language Systems</strong>:<br>
-                  <i>[<b>Target conference: ACL</b> (Association for Computational Linguistics)]</i><br>
-                  <i>[Sep 2025 -- Present]</i><br>
+              <li><strong>Slow the Dialogue, Not Just the Robot: Positive Friction for Reliable Grounding and Safe, Embodied Vision-Language Action.</strong>:<br>
+                  <i>[Submitted at: <b>ACL 2026 (Association for Computational Linguistics)]</b></i><br>
+                  <i>[Oct 2025 -- Jan 2026] -- Under Review</i><br>
                   <!-- <a href="https://arxiv.org/abs/2509.19853" target="_blank">[Paper Arxiv link]</a> -->
                 </p>
                 <article class="columns">
@@ -150,10 +175,9 @@
                   <div class="column">
                     <div class="content">
                       <ul>
-                        <li>Integrated several Large Language Models (LLMs), such as Gemini2.0, llama3.1, Ollama3.2, etc. into the Misty Robot platform to evaluate their performance and limitations in embodied tasks</li>
-                        <li>Implemented positive friction in these LLMs to explore its impact on enhancing the real-world model performance on embodied tasks</li>
-                        <li>Finished the core logic of the end-to-end model(from user commands to misty's action executions)</li>
-                        <li>To be continued</li>
+                        <li>Built a <strong>2D coordinate-based world model</strong> with collision detection, hazard zones, and dynamic FOV simulation for reproducible evaluation of embodied dialogue policies across 46 structured task scenarios.</li>
+                        <li>Engineered a <strong>hierarchical ambiguity detection protocol</strong> that prioritizes safety hazards over navigation and referential errors, reducing collision-related task failures through ordered friction triggers.</li>
+                        <li>Implemented a <strong>vague-to-specific synthetic evaluation pipeline</strong> using GPT-4o-mini as a simulated user agent, enabling controlled large-scale benchmarking that isolated contributions of conversation history (+7%), prompt design (+15.5%), and friction (+14.5%).</li>
                       </ul>
                         <b></b>
                         <!-- <a href="https://arxiv.org/abs/" target="_blank">[Coming Soon]</a> -->
@@ -375,32 +399,6 @@
 		  
             <br>
 
-            <h2 id="Professional Projects">Professional Projects</h2>
-            <article class="columns">
-              <div class="column is-3">
-                <figure class="image">
-                  <img src="images/publications/imagepipe.png">
-                </figure>
-                <figure class="image">
-                  <img src="images/publications/gui.png">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <p>
-                    <b>ImagePipe - Computer Vision System for Tourist Photo Processing</b><br>
-                  </p>
-                  <ul>
-                    <li>Developed ImagePipe, a computer vision pipeline for tourist photo processing integrating <b>YOLOv8</b> classification, <b>InsightFace</b> face detection, <b>MediaPipe</b> eye state detection, and custom generative eye-opening model<b>(U-net + attention mechanism)</b>.</li>
-                    <li>Implemented <b>DBSCAN-based</b> face clustering system with <b>InsightFace Buffalo_L embeddings</b> for multi-person identity tracking across photo sets; designed modular three-layer architecture (<b>PyQt6</b> UI, processing core, ML models) supporting batch processing of <b>1000+</b> images with optimized memory management</li>
-                    <li>Engineered memory-efficient batch processing pipeline using <b>LazyImageLoader</b> and garbage collection strategies to prevent allocation failures; integrated parallel processing with <b>ThreadPoolExecutor</b> and comprehensive timing analysis for performance optimization</li>
-                    <li>Built deployment infrastructure using Cython compilation and PyInstaller packaging <b>with license management</b>; developed both GUI and headless command-line modes supporting cross-platform distribution</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            
-            <br>
 
             <!--Professional Experience-->
             <h2 id="Professional Experience">Professional Experience</h2>
