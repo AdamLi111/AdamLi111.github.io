@@ -1,597 +1,753 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Haocheng Li - Homepage</title>
-  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-  <link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <!-- Bulma Version 0.7.5-->
-  <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
-  <link href='css/style.css?_t=20200916' rel='stylesheet' type='text/css'>
-  <script defer src="font-awesome/js/brands.min.js"></script>
-  <script defer src="font-awesome/js/regular.min.js"></script>
-  <script defer src="font-awesome/js/fontawesome.min.js"></script>
-    <style>
-      .red {
-        color: rgb(238, 76, 44);
-        font-style: normal;
-      }
-      .blue {
-        color: rgb(238, 76, 44);
-        font-style: normal;
-      }
-       
-      #intro {
-       margin-top: 0em !important;
-      }
-      
-      .content h3 {
-       margin-bottom: 1em!important;
-       margin-top: 2em!important;
-      }
-
-      .content figure {
-       width: 90%;
-       display: flex;
-       align-items: center;
-       overflow: hidden;
-       margin-left: auto!important;
-       margin-right: auto!important;
-      }
-      
-      .columns:not(:last-child) {
-       margin-bottom: 1.75rem!important;
-      }
-
-      #sidebar {
-        width: 75%;
-      }
-
-      @media screen and (min-width: 769px), print {
-        .column.is-2_5, .column.is-2-tablet {
-          flex: none;
-          width: 20%;
-        }
-      }
-</style>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <title>Haocheng Li — Robotics &amp; Embodied AI</title>
+  <meta name="description" content="Haocheng Li is an M.S. in Robotics student at Northwestern University building embodied agents that interact with humans in real-world settings. Projects, work experience, and research.">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Haocheng Li — Robotics &amp; Embodied AI">
+  <meta property="og:description" content="M.S. in Robotics student at Northwestern University. Projects, work experience, and research in robotic manipulation, 3D vision, and human-robot interaction.">
+  <meta property="og:url" content="https://adamli111.github.io/">
+  <meta property="og:image" content="https://adamli111.github.io/images/misc/profile.jpg">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+  <link rel="stylesheet" href="css/site.css?v=20261111">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
+<body id="top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+  </svg>
 
-<body>
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-2_5">
-          <div class="sticky">
-            <figure class="image" style="width: 11.6rem; margin-top: 6px;">
-              <img src="images/misc/profile.jpg">
-            </figure>
-            <div class="content">
-              <h2 style="margin-top: 1em">Haocheng Li</h2>
-              <p>
-                <b><a href="https://www.mccormick.northwestern.edu/robotics/" target="_blank">MSR</a> Student</b><br/> 
-                @ Northwestern University<br/>
-                Evanston, IL<br/> 
-		            haochengli2018@gmail.com
-              </p>
-            </div>
-            <!-- social networks -->
-            <div class="social">
-              <a href="mailto:haochengli2018@gmail.com" target="_blank">
-                <span class="fa-regular fa-envelope fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; "></span>
-              </a>
-              <a href="https://github.com/AdamLi111/" target="_blank">
-                <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 15px"></span>
-              </a>
-              <a href="https://www.linkedin.com/in/haocheng-li-aug27/" target="_blank">
-                <span class="fab fa-linkedin fa-2x" style="display:inline; text-decoration: none; color: #4a4a4a; margin-left: 15px"></span>
-              </a>
-            </div>
+  <a class="skip" href="#main">Skip to content</a>
 
-
-            <div id="sidebar" class="menu sticky is-hidden-mobile">
-              <p class="menu-label"><b>Quick Links</b></p>
-              <ul class="menu-list">  
-                <li><a href="#Intro">About Me</a></li>
-                <li><a href="#Professional Experience">Professional Experience</a></li>
-                <li><a href="#Research">Research</a></li>
-                <li><a href="#Academic Projects">Academic Projects</a></li>
-                <!-- <li><a href="#Experiences">Experiences</a></li> -->
-                <li><a href="#Professional Projects">Professional Projects</a></li>
-                <!-- <li><a href="#Service">Service</a></li> -->
-                <li><a href="#Misc">Misc.</a></li>
-              </ul>
-            </div>
+  <!-- ===================== Hero: top third ===================== -->
+  <header class="hero site-header">
+    <div class="wrap hero-grid">
+      <img class="portrait" src="images/misc/profile.webp" width="560" height="560" alt="Portrait of Haocheng Li" fetchpriority="high">
+      <div class="hero-info">
+        <p class="eyebrow">Robotics · Embodied AI · Human-Robot Interaction</p>
+        <h1>Haocheng Li</h1>
+        <p class="hero-lede">M.S. in Robotics student at Northwestern University. I aim to build <strong>embodied agents</strong> that interact with humans in real-world settings.</p>
+        <div class="hero-facts">
+          <div>
+            <p class="fact-label">Education</p>
+            <ul class="facts">
+              <li><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.mccormick.northwestern.edu/robotics/" target="_blank" rel="noopener">M.S. in Robotics (MSR)</a>, Northwestern University <span class="muted">· expected late 2027</span></span></li>
+              <li><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg><span>B.S. in Computer Science, Northeastern University <span class="muted">· Khoury College</span></span></li>
+            </ul>
           </div>
-
-
-
-        </div>
-        <div class="column right-panel">
-          <div class="content">
-
-
-            <!--About Me-->
-            <h2 id="Intro">About Me</h2>
-            <p>
-              I'm currently a Master of Science in Robotics (MSR) student at Northwestern University, expecting to graduate in Fall/Winter 2027. I received my B.S. in Computer Science from Northeastern University's Khoury College of Computer Sciences. With strong interest and passion about Embodied AI, I aim to build <strong>Embodied Agents</strong>🤖 that interact with humans👫 in real-world🌏 settings.
-              <br>
-              <p><strong>Coursework: </strong> Embedded Systems <strong>|</strong> Microcontroller System Design <strong>|</strong> Machine Dynamics <strong>|</strong> Robotic Manipulation <strong>|</strong> Algorithms and Data <strong>|</strong> Computer Systems <strong>|</strong> Object-Oriented Design <strong>|</strong> Artificial Intelligence <strong>|</strong> Machine Learning <strong>|</strong> Software Engineering <strong>|</strong> Reinforcement Learning</p>
-              
-              <br>
-              <!-- <b>If you are interested in purchasing ImagePipe, please contact me by my <a href="mailto:haochengli2018@gmail.com" target="_blank">email</a></b> -->
-            </p>
-
-
-            <h2 id="Professional Projects">Professional Projects</h2>
-            <article class="columns">
-              <div class="column is-3">
-                <figure class="image">
-                  <img src="images/publications/imagepipe.png">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <p>
-                    <b>ImagePipe &mdash; AI-powered tourist photo processing system</b><br>
-                  </p>
-                  <p>
-                    An end-to-end computer vision pipeline that automates the curation, enhancement, and organization of tourist photos &mdash; combining YOLOv8 classification, InsightFace recognition, MediaPipe eye-state detection, and a custom U-Net generative eye-opening model.
-                  </p>
-                  <p>
-                    <a href="imagepipe.html" class="button is-link is-outlined is-small"><strong>View full demo &rarr;</strong></a>
-                  </p>
-                </div>
-              </div>
-            </article>
-            
-            <br>
-
-            <!--Research-->
-            <h2 id="Research">Research</h2>
-            <p>
-               I'm currently exploring my research interests in areas such as <strong>Robotic Manipulation, 3D Vision, and Human-Robot Interaction</strong>. 
-              <br>
-               
-            </p>
-            <ul>
-              <li><strong>Slow the Dialogue, Not Just the Robot: Positive Friction for Reliable Grounding and Safe, Embodied Vision-Language Action.</strong>:<br>
-                  <i><b>Haocheng Li</b>, Asteria Kaeberlein, Mert Inan, Malihe Alikhani</i><br>
-                  <i>[Target venue: <b>TACL (Transactions of the Association for Computational Linguistics)</b>] -- In preparation for submission</i><br>
-                  <i>[Oct 2025 -- Present]</i><br>
-                  <!-- <a href="https://arxiv.org/abs/2509.19853" target="_blank">[Paper Arxiv link]</a> -->
-                </p>
-                <article class="columns">
-                  <div class="column is-7">
-                    <figure class="image">
-                      <img src="images/publications/misty.png">
-                    <br>
-                  </div>
-                  <div class="column">
-                    <div class="content">
-                      <ul>
-                        <li>Built a <strong>2D coordinate-based world model</strong> with collision detection, hazard zones, and dynamic FOV simulation for reproducible evaluation of embodied dialogue policies across 46 structured task scenarios.</li>
-                        <li>Engineered a <strong>hierarchical ambiguity detection protocol</strong> that prioritizes safety hazards over navigation and referential errors, reducing collision-related task failures through ordered friction triggers.</li>
-                        <li>Implemented a <strong>vague-to-specific synthetic evaluation pipeline</strong> using GPT-4o-mini as a simulated user agent, enabling controlled large-scale benchmarking that isolated contributions of conversation history (+7%), prompt design (+15.5%), and friction (+14.5%).</li>
-                      </ul>
-                        <b></b>
-                        <!-- <a href="https://arxiv.org/abs/" target="_blank">[Coming Soon]</a> -->
-                        <!-- <p>This is an ongoing survey paper with awesome list repo.</p> -->
-                      </p>
-                    </div>
-                  </div>
-                </article>
-            </ul>
-
-            </p>
-            <ul>
-              <li><strong>SAGE: State-Aware Guided End-to-End Policy for Multi-Stage Sequential Tasks via Hidden Markov Decision Process</strong>:<br>
-                <i>Binxu Wu, Tengfei Zhang, Chen Yang, Jiahao Wen, Yixuan Huang, <b>Haocheng Li</b>, Jingtian Ma, Zhen Chen, Jingyuan Wang</i><br>
-                <i>[Submitted at: <b>RA-L (IEEE Robotics and Automation Letters)</b>, Oct 2026] -- Under Review <br>
-                  [Dec 2024 -- Sep 2026]</i><br>
-                  <a href="https://arxiv.org/abs/2509.19853" target="_blank">[Paper Arxiv link]</a>
-                </p>
-                <article class="columns">
-                  <div class="column is-5">
-                    <figure class="image">
-                      <img src="images/publications/SAGE.png">
-                    </figure>
-		    <figure class="image">
-                      <img src="images/publications/SAGE.gif">
-                    </figure>
-                    <br>
-                  </div>
-                  <div class="column">
-                    <div class="content">
-                      <ul>
-                        <li>Reproduced UMI successfully after extensive code review and debugging.</li>
-                        <li>Conducted comprehensive research on SLAM (ORB SLAM3), leading to a significant improvement in our
-                          dataset's SLAM success rate <strong>from 43.1% to 97.9%</strong></li>
-                        <li>Refined the gripper’s 3D design in <strong>SolidWorks</strong>, significantly improving maximum grasping force and stability</li>
-                        <li>Led literature reviews and identified model improvements, actively driving research team's progress. Contributed significantly
-                          to the <strong>Related Works</strong> section of our paper
-                        </li>
-                        <li>Reproduced Diffusion Policy's <strong>behavior cloning</strong> module and evaluated its performance and suitability for our model. </li>
-                        <li>Collaborated on the development and debugging of the model's <strong>state-perception module</strong>, enhancing model performance on long-horizon and complex tasks.</li>
-                        <li>Proposed and co-developed an <strong>active learning</strong> module for automated data labeling, significantly streamlining the data labeling pipeline.</li>
-                      </ul>
-                        <b></b>
-                        <!-- <a href="https://arxiv.org/abs/" target="_blank">[Coming Soon]</a> -->
-                        <!-- <p>This is an ongoing survey paper with awesome list repo.</p> -->
-                      </p>
-                    </div>
-                  </div>
-                </article>
-            </ul>
-
-            <ul>
-              <li><strong>ProGEM: Probing Generalizable and Efficient Feature Fields Distillation for Multi-Task Robotic Manipulation</strong>:<br>
-                <i>Zhen Chen, Robin Ananda, Binxu Wu, <b>Haocheng Li</b>, Weize Li, Qi Lu, Qianyao Xu, Jiaying Li, Yingqing Xu</i><br>
-                <i>Under submission <br>
-                  [Jul 2024 -- Nov 2024]</i><br>
-                </p>
-                <article class="columns">
-                  <div class="column is-5">
-                    <figure class="image">
-                      <img src="images/publications/ProGEM_main.png">
-                    </figure>
-                    <figure class="image">
-                      <img src="images/publications/ProGEM.gif">
-                    </figure>
-                    <br>
-                  </div>
-                  <div class="column">
-                    <div class="content">
-                      <ul>
-                        <li>Used <strong>Stable Diffusion</strong> as a vision foundation model to extract semantic information from the scene.</li>
-                        <li>Fused the semantic embeddings with <strong>RGB</strong> observations to build a semantically enriched <strong>3D point cloud</strong> (distilled feature field) of the scene.</li>
-                        <li>Voxelized the scene and used a learned <strong>selection network</strong> to keep only the <strong>top-k occupied voxels</strong> from the voxel grid, so the policy reasons over a small set of informative voxels instead of the full grid &mdash; improving overall <strong>inference speed</strong>.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </article>
-            </ul>
-
-            <!--Academic Projects-->
-
-            <h2 id="Academic Projects">
-              Academic Projects
-              <span style="font-size: 1rem;margin-left: 1rem;position: relative;bottom: .2rem;">
-              </span>
-            </h2>
-
-            <article class="columns">
-              <div class="column is-3">
-                <figure class="image">
-                  <img src="images/publications/gridgame.gif">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <p>
-                    <b>Simulated Annealing AI Agent</b><br>
-                    <a href="https://github.com/AdamLi111/Simulated_Annealing_Agent" target="_blank">[source code]</a>
-                  </p>
-                  <ul>
-                    <li>Developed <b>simulated annealing AI agent</b> for constrained graph coloring, minimizing shapes while satisfying adjacency constraints</li>
-                    <li>Implemented <b>adaptive optimization</b> with intelligent shape selection, problem area targeting, and dynamic cooling schedules</li>
-                    <li>Engineered <b>efficient grid algorithms</b> using larger shapes first and offline state management for rapid solution evaluation</li>
-                    <li>Applied <b>local search metaheuristics</b> to constraint satisfaction problems with applications in scheduling and resource allocation</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            <article class="columns">
-              <div class="column is-3">
-                <figure class="image">
-                  <img src="images/publications/escape_castle.gif">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <p>
-                    <b>Q-Learning Reinforcement Learning Agent</b><br>
-                    <!-- <a href="https://github.com/haochenl/escape-the-castle-rl" target="_blank">[source code]</a><br> -->
-                  </p>
-                  <ul>
-                    <li>Implemented <b>Q-learning agent</b> for grid-based MDP game with probabilistic transitions and combat mechanics</li>
-                    <li>Developed <b>model-based probability estimation</b> from random gameplay to learn guard strength characteristics</li>
-                    <li>Applied <b>epsilon-greedy exploration</b> with adaptive learning rates to train agent across 1M episodes</li>
-                    <li>Built <b>temporal difference learner</b> that successfully navigates 5×5 castle grid while managing health and guard encounters</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            <article class="columns">
-              <div class="column is-3">
-                <figure class="image">
-                  <img src="images/publications/training_losses.png">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <p>
-                    <b>Deep Learning Image Classification with PyTorch</b><br>
-                    <!-- <a href="https://github.com/haochenl/fashion-mnist-classifier" target="_blank">[source code]</a><br> -->
-                  </p>
-                  <ul>
-                    <li>Designed and trained <b>CNN and feedforward neural networks</b> achieving 90%+ accuracy on Fashion-MNIST dataset classification</li>
-                    <li>Implemented <b>convolutional architectures</b> with 3 conv layers, max pooling, and dropout regularization, demonstrating CNNs' superior performance with 25% fewer parameters than FFN</li>
-                    <li>Visualized <b>learned feature representations</b> through kernel analysis and feature map progression, revealing hierarchical pattern detection from edges to complex shapes</li>
-                    <li>Analyzed model performance using <b>confusion matrices and classification metrics</b>, identifying misclassification patterns between visually similar clothing categories</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            <article class="columns">
-              <div class="column is-3">
-                <figure class="image">
-                  <img src="images/publications/plannersystem.png">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <p>
-                    <b>Weekly Planner System</b><br>
-                    <b>Multi-user system with role-based permissions</b><br>
-                    <strong>Project leader</strong><br>
-                    <a href="https://github.com/AdamLi111/OOD_hw" target="_blank">[source code]</a>
-                  </p>
-                  <ul>
-                    <li>Built a multi-user weekly planner system with role-based permissions for event creation and deletion, ensuring automatic and real-time schedule updates for all related users</li>
-                    <li>Chose <strong>MVC Design Pattern</strong> for this project, ensuring <strong>object-oriented design</strong> principles</li>
-                    <li>Implemented XML functionalities where users can upload or save their schedule with an XML file, significantly improving system's efficiency</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            <article class="columns">
-              <div class="column is-3">
-                <figure class="image">
-                  <img src="images/publications/tuition_project.png">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <p>
-                    <b>Statewide University Statistics Analysis</b><br>
-                    <b>Data Science Semester Project</b><br>
-                    <strong>Project leader</strong><br>
-                    <a href="https://github.com/AdamLi111/statewide_university_stat_comparison" target="_blank">[source code]</a>
-                  </p>
-                  <ul>
-                    <li>Conducted a data-driven analysis of private universities by <strong>scraping</strong> key variables from CollegeSimply to investigate the relationship between tuition fees and educational quality</li>
-                    <li>Implemented interactive linear regression plot, where every point on the plot is clickable and demonstrates the educational quality of a university using radar chart</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            
-            <article>
-              <div class="columns">
-                <p><strong>[more projects coming soon]</strong></p>
-              </div>
-            </article>
-		  
-            <br>
-
-
-            <!--Professional Experience-->
-            <h2 id="Professional Experience">Professional Experience</h2>
-            <ul>
-              <li><strong>Northeastern University, EDGE Lab, SPHERE Project</strong>
-                <ul>
-                  <li>[Jun 2025 -- Dec 2025]<strong>Research Engineer</strong><br>
-                    <br>
-                    <p>
-                      - LeArm 6-DOF Robotic Arm System
-                      <ul>
-                        <li>Developed USB HID communication protocols for precise <b>6-DOF robotic arm control</b></li>
-                        <li>Created automated interaction systems enabling physical manipulation of diverse IoT interfaces including button pressing and dial rotation</li>
-                        <li>Built <b>Flask web servers</b> and SSH-based remote execution for distributed robotic control</li>
-                        <li>Implemented position calibration and <b>inverse kinematics</b> for repeatable automated testing sequences</li>
-                      </ul>
-                      - XY-Plotter Drawing/Interaction System
-                      <ul>
-                        <li>Interfaced with <b>GRBL-based</b> CoreXY systems through G-code protocols</li>
-                        <li>Implemented safety features including bounds checking and collision avoidance</li>
-                        <li>Created high-level command abstractions (click, swipe, draw) from low-level motion primitives</li>
-                        <li>Developed <b>real-time position tracking</b>and error recovery for autonomous operation</li>
-                      </ul>
-                      - SPHERE Framework Integration
-                      <ul>
-                        <li>Architected handler classes following design patterns for the SPHERE device infrastructure</li>
-                        <li>Implemented <b>asynchronous command execution</b> using ThreadPoolExecutor</li>
-                        <li>Built standardized interfaces and YAML-based configuration for flexible deployment</li>
-                      </ul>
-                    </p>
-                  </li>
-                </ul>
+          <div>
+            <p class="fact-label">Contact</p>
+            <ul class="facts">
+              <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:haochengli2018@gmail.com">haochengli2018@gmail.com</a></li>
+              <li class="socials">
+                <span class="loc"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Evanston, IL</span>
+                <a class="social" href="https://github.com/AdamLi111/" target="_blank" rel="noopener"><svg class="i i--fill" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+                <a class="social" href="https://www.linkedin.com/in/haocheng-li-aug27/" target="_blank" rel="noopener"><svg class="i i--fill" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
               </li>
-
-            <ul>
-              <li><strong>EncoSmart Technology</strong>
-                <ul>
-                <li>[Jul 2024 -- Nov 2024]<strong>Intern in the Department of Embodied AI</strong><br>
-                  <p>
-                    <ul>
-                      <li>
-                        Participated in the full research cycle of ProGEM. Assigned as the 4th author of the paper.
-                      </li>
-                      <li>Assisted in deploying our research result on the compnay's robot in real-world settings</li>
-                    </ul>
-                  </p>
-                <li>[Jul 2024 -- Sep 2024]<strong>Network Intern</strong><br>
-                  <ul>
-                    <li>Analyzed open-source IoT frameworks, leading to the selection of an optimal solution for the company's third generation product.</li>
-                    <li>Assisted in developing and debugging of back-end interface code using Django for preliminary IoT networks.</li>
-                  </ul>
-                  <li>[Nov 2024 -- Dec 2024]<strong>Intern in the Department of Testing</strong><br>
-                    <ul>
-                      <li>Evaluated robotic arm and gripper's grasping stability across various objects, durations, and environmental conditions.</li>
-                      <li>Assisted in the testing of back-end interface code of the preliminary IoT networks.</li>
-                    </ul>
-              </ul></li>
             </ul>
-            
-            <!--Academic Service
-            <h2 id="Service">Service</h2>
-            <p>
-              I served / was delegated as Reviewer for NeurIPS’23, CVPR’24, IJCV, ICLR'25.
-            </p> -->
-
-            <!-- Misc. -->
-            <h2 id="Misc">Misc.</h2>
-            <p>
-              Outside of work and research, I enjoy rock climbing🧗, playing billiards🎱, and fitness💪. I also love to go fishing🎣 and skiing🏂 on vacations. Sometimes when I have the eureka moment, I also love to try implementing my ideas. See my little side projects below:
-            </p>
-
-            <article class="columns">
-              <div class="column is-3">
-                <figure class="image">
-                  <img src="images/misc/fishing.jpg">
-                </figure>
-              </div>
-              <div class="column">
-                <div class="content">
-                  <p>
-                    <b><strong>Fishing🎣</strong></b>
-                  </p>
-                  <p>
-                    I'm a huge fishing enthusiast. It's my favorite way to fully reset between large research or professional projects. Check out the largest fish I've caught by now. (There will be larger fish in the future and I will update this photo for sure)
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <p>
-              My side projects:
-              <article class="columns">
-                <div class="column is-3">
-                  <figure class="image">
-                    <img src="images/misc/MBTI.png">
-                  </figure>
-                </div>
-                <div class="column">
-                  <div class="content">
-                    <p>
-                      <b><strong>Fight of MBTI's</strong></b>
-                      <p>An online card game I designed and implemented using Java. Currently supports up to 4 players. Players can play cards with different abilities to reduce enemies' health or defense. Last one survived wins the game.
-                      </p>
-                    </p>
-                  </div>
-                </div>
-              </article>
-
-              <!-- <figure class="image">
-                <img src="images/misc/MBTI.png">
-              </figure> -->
-
-            </p>
-            <!-- To be add? -->
-
           </div>
         </div>
       </div>
     </div>
+  </header>
 
+  <main id="main">
+    <!-- ===================== Hub: lower two thirds ===================== -->
+    <section class="hub wrap" aria-label="Explore">
 
+      <!-- Projects -->
+      <article class="hub-card" data-sheet="projects">
+        <div class="reel" data-reel role="region" aria-label="Project demos">
+          <div class="reel-track">
+            <figure class="slide slide--fit" data-target="p-franka">
+              <img class="slide-bg" src="images/projects/franka_real-poster.webp" alt="" aria-hidden="true" decoding="async">
+              <img class="slide-img" src="images/projects/franka_real-poster.webp" data-gif="images/projects/franka_real.gif" width="540" height="676" alt="Real Franka arm carrying a block past an obstacle" decoding="async">
+              <figcaption>Franka pick-and-place</figcaption>
+            </figure>
+            <figure class="slide" data-target="p-franka">
+              <img class="slide-img" src="images/projects/franka_rviz-poster.webp" data-gif="images/projects/franka_rviz.gif" width="760" height="542" alt="MoveIt motion plan executing in RViz" loading="lazy" decoding="async">
+              <figcaption>MoveIt plan in RViz</figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="p-brickbot">
+              <img class="slide-bg" src="images/projects/brickbot-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img class="slide-img" src="images/projects/brickbot-poster.webp" data-gif="images/projects/brickbot.gif" width="456" height="588" alt="Unicycle robot catching a falling brick in RViz" loading="lazy" decoding="async">
+              <figcaption>Brickbot catching a brick</figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="p-turtle">
+              <img class="slide-bg" src="images/projects/turtlesim-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img class="slide-img" src="images/projects/turtlesim-poster.webp" data-gif="images/projects/turtlesim.gif" width="496" height="540" alt="TurtleSim turtle tracing a loop of waypoints" loading="lazy" decoding="async">
+              <figcaption>TurtleSim waypoint follower</figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="p-ce346">
+              <img class="slide-img" src="images/projects/ce346_led-poster.webp" data-gif="images/projects/ce346_led.gif" width="640" height="400" alt="5x5 LED matrix spelling out text" loading="lazy" decoding="async">
+              <figcaption>CE346 LED-matrix firmware</figcaption>
+            </figure>
+            <figure class="slide slide--paper" data-target="p-imagepipe">
+              <img class="slide-img" src="images/projects/imagepipe.webp" width="1200" height="676" alt="ImagePipe photo-processing pipeline" loading="lazy" decoding="async">
+              <figcaption>ImagePipe</figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="p-annealing">
+              <img class="slide-bg" src="images/projects/gridgame-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img class="slide-img" src="images/projects/gridgame-poster.webp" data-gif="images/projects/gridgame.gif" width="242" height="272" alt="Simulated-annealing agent coloring a grid" loading="lazy" decoding="async">
+              <figcaption>Simulated-annealing agent</figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="p-qlearning">
+              <img class="slide-bg" src="images/projects/escape_castle-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img class="slide-img" src="images/projects/escape_castle-poster.webp" data-gif="images/projects/escape_castle.gif" width="600" height="868" alt="Q-learning agent escaping a castle grid" loading="lazy" decoding="async">
+              <figcaption>Q-learning agent</figcaption>
+            </figure>
+            <figure class="slide slide--paper" data-target="p-pytorch">
+              <img class="slide-img" src="images/projects/training_losses.webp" width="1200" height="500" alt="Training-loss curves for feedforward and convolutional networks" loading="lazy" decoding="async">
+              <figcaption>PyTorch image classifiers</figcaption>
+            </figure>
+            <figure class="slide slide--paper" data-target="p-planner">
+              <img class="slide-img" src="images/projects/plannersystem.webp" width="1200" height="482" alt="Weekly planner system interface and MVC architecture" loading="lazy" decoding="async">
+              <figcaption>Weekly planner system</figcaption>
+            </figure>
+            <figure class="slide slide--paper" data-target="p-stats">
+              <img class="slide-img" src="images/projects/tuition_project.webp" width="900" height="844" alt="University statistics radar charts and regression plot" loading="lazy" decoding="async">
+              <figcaption>University statistics analysis</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="hub-text">
+          <h2>Projects</h2>
+          <p class="desc">All my academic and professional projects, focusing on both hardware and software.</p>
+          <a class="btn" href="#projects" data-open="projects">See more details<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
 
-    <!-- Footer -->
-	<footer class="container">
-	  <br><hr>
-	  <!-- counts ip -->
-	  <div id="mapmyvisitors-widget" style="width:10%; margin: 0 auto; text-align: center;">
-	    <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=afdJ46ACXFHtiC_wv5ZfMzpEBedGslwjhPprv68F7rw"></script>
-	  </div>
-	  <div class="row" style="text-align: center;">
-	    © 2025 Haocheng Li<br>Last update: Oct. 2026
-	  </div>
-	</footer>
+      <!-- Work -->
+      <article class="hub-card" data-sheet="work">
+        <div class="reel" data-reel role="region" aria-label="Work demos">
+          <div class="reel-track">
+            <figure class="slide slide--fit" data-target="w-learm">
+              <img class="slide-bg" src="images/work/learm-poster.webp" alt="" aria-hidden="true" decoding="async">
+              <img class="slide-img" src="images/work/learm-poster.webp" data-gif="images/work/learm.gif" width="540" height="676" alt="6-DOF robotic arm pressing buttons on a smart speaker" decoding="async">
+              <figcaption>EDGE Lab · LeArm automation</figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="w-plotter">
+              <img class="slide-bg" src="images/work/xy_plotter-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img class="slide-img" src="images/work/xy_plotter-poster.webp" data-gif="images/work/xy_plotter.gif" width="540" height="676" alt="CoreXY plotter moving under G-code control" loading="lazy" decoding="async">
+              <figcaption>EDGE Lab · XY-plotter</figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="w-sphere">
+              <img class="slide-bg" src="images/work/sphere_testbed-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img class="slide-img" src="images/work/sphere_testbed-poster.webp" width="540" height="720" alt="SPHERE testbed cabinet with robot arm, smart speaker, camera and XY-plotter" loading="lazy" decoding="async">
+              <figcaption>EDGE Lab · SPHERE testbed</figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="w-embodied">
+              <img class="slide-bg" src="images/work/progem_featurefield-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img class="slide-img" src="images/work/progem_featurefield-poster.webp" data-gif="images/work/progem_featurefield.gif" width="600" height="600" alt="Point-cloud feature field of a robot workspace" loading="lazy" decoding="async">
+              <figcaption>EncoSmart · feature field</figcaption>
+            </figure>
+            <figure class="slide" data-target="w-embodied">
+              <img class="slide-img" src="images/work/sim_open_drawer-poster.webp" data-gif="images/work/sim_open_drawer.gif" width="760" height="426" alt="Simulated Franka arm opening a drawer" loading="lazy" decoding="async">
+              <figcaption>EncoSmart · open-drawer rollout</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="hub-text">
+          <h2>Work Experience</h2>
+          <p class="desc">Engineering roles at Northeastern's EDGE Lab and EncoSmart Technology, from robotic test automation to embodied-AI R&amp;D.</p>
+          <a class="btn" href="#work" data-open="work">See more details<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Research -->
+      <article class="hub-card" data-sheet="research">
+        <div class="reel" data-reel role="region" aria-label="Research figures and demos">
+          <div class="reel-track">
+            <figure class="slide" data-target="r-sage">
+              <img class="slide-img" src="images/research/sage-poster.webp" data-gif="images/research/sage.gif" width="800" height="450" alt="UR robot arm with a wrist fisheye camera executing a multi-stage task" decoding="async">
+              <figcaption>SAGE · real-robot rollout</figcaption>
+            </figure>
+            <figure class="slide slide--paper" data-target="r-friction">
+              <img class="slide-img" src="images/research/misty.webp" width="1400" height="764" alt="Four ambiguity scenarios for positive friction in human-robot interaction" loading="lazy" decoding="async">
+              <figcaption>Positive friction in HRI</figcaption>
+            </figure>
+            <figure class="slide" data-target="r-progem">
+              <img class="slide-img" src="images/research/progem-poster.webp" data-gif="images/research/progem.gif" width="800" height="450" alt="Robot arm opening a drawer and placing objects" loading="lazy" decoding="async">
+              <figcaption>ProGEM · multi-task manipulation</figcaption>
+            </figure>
+            <figure class="slide slide--paper" data-target="r-sage">
+              <img class="slide-img" src="images/research/sage_pipeline.webp" width="1264" height="870" alt="SAGE state-aware policy framework" loading="lazy" decoding="async">
+              <figcaption>SAGE · framework</figcaption>
+            </figure>
+            <figure class="slide slide--paper" data-target="r-progem">
+              <img class="slide-img" src="images/research/progem_pipeline.webp" width="699" height="284" alt="ProGEM feature-field distillation pipeline" loading="lazy" decoding="async">
+              <figcaption>ProGEM · pipeline</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="hub-text">
+          <h2>Research</h2>
+          <p class="desc">Robotic manipulation, 3D vision, and human-robot interaction, from methods to real-robot results.</p>
+          <a class="btn" href="#research" data-open="research">See more details<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== Misc ===================== -->
+    <section class="misc" id="misc" aria-labelledby="misc-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="misc-title">Misc.</h2>
+          <p>Outside of work and research.</p>
+        </div>
+        <div class="misc-grid">
+          <article class="misc-card misc-card--text misc-card--about">
+            <div class="body">
+              <h3>Beyond the lab</h3>
+              <p>Outside of work and research, I enjoy rock climbing, playing billiards, and fitness. I also love to go fishing and skiing on vacations. Sometimes when I have a eureka moment, I also love to try implementing my ideas.</p>
+              <ul class="chips" aria-label="Hobbies">
+                <li>🧗 Rock climbing</li><li>🎱 Billiards</li><li>💪 Fitness</li><li>🎣 Fishing</li><li>🏂 Skiing</li>
+              </ul>
+            </div>
+          </article>
+          <article class="misc-card">
+            <div class="thumb"><img src="images/misc/fishing.webp" width="508" height="516" alt="Haocheng holding a striped bass on a boat" loading="lazy" decoding="async" style="object-position: 60% 40%"></div>
+            <div class="body">
+              <h3>Fishing 🎣</h3>
+              <p>I'm a huge fishing enthusiast. It's my favorite way to fully reset between large research or professional projects. Check out the largest fish I've caught by now. (There will be larger fish in the future and I will update this photo for sure)</p>
+            </div>
+          </article>
+          <article class="misc-card">
+            <div class="thumb"><img src="images/misc/mbti.webp" width="1200" height="716" alt="Fight of MBTI's card game screen" loading="lazy" decoding="async"></div>
+            <div class="body">
+              <h3>Fight of MBTI's</h3>
+              <p>A side project: an online card game I designed and implemented in Java. It supports up to 4 players, who play cards with different abilities to reduce enemies' health or defense. The last one standing wins the game.</p>
+            </div>
+          </article>
+          <article class="misc-card misc-card--text misc-card--wide">
+            <div class="body">
+              <h3>Coursework</h3>
+              <ul class="chips" aria-label="Coursework">
+                <li>Embedded Systems in Robotics</li><li>Microcontroller System Design</li><li>Machine Dynamics</li><li>Robotic Manipulation</li><li>Algorithms and Data</li><li>Computer Systems</li><li>Object-Oriented Design</li><li>Artificial Intelligence</li><li>Machine Learning</li><li>Software Engineering</li><li>Reinforcement Learning</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       Detail sheets. They open in place (no page load); images are lazy.
+       ===================================================================== -->
+
+  <!-- ===================== Projects sheet ===================== -->
+  <section class="sheet" id="projects" aria-labelledby="projects-title">
+    <div class="sheet-scroll">
+      <div class="sheet-inner">
+        <div class="sheet-bar">
+          <a class="sheet-back" href="#top" data-close><svg class="i" aria-hidden="true"><use href="#i-arrow-left"/></svg>Home</a>
+          <nav class="sheet-tabs" aria-label="Sections">
+            <a href="#projects" data-switch="projects" aria-current="page">Projects</a>
+            <a href="#work" data-switch="work">Work Experience</a>
+            <a href="#research" data-switch="research">Research</a>
+          </nav>
+        </div>
+        <div class="wrap">
+          <header class="sheet-head">
+            <p class="eyebrow">Projects</p>
+            <h2 id="projects-title" tabindex="-1">Projects</h2>
+            <p class="lede">All my academic and professional projects, focusing on both hardware and software: bare-metal firmware, ROS&nbsp;2 robots, computer-vision products, and learning agents.</p>
+            <ul class="jump">
+              <li><a href="#g-robotics" data-jump="g-robotics">Robotics &amp; embedded systems</a></li>
+              <li><a href="#g-professional" data-jump="g-professional">Professional</a></li>
+              <li><a href="#g-ai" data-jump="g-ai">AI &amp; software</a></li>
+            </ul>
+          </header>
+
+          <div class="sheet-body">
+            <h3 class="group-title" id="g-robotics">Robotics &amp; embedded systems · Northwestern University</h3>
+
+            <article class="entry" id="p-franka">
+              <div class="entry-media">
+                <figure class="media media--portrait has-gif">
+                  <img src="images/projects/franka_real-poster.webp" data-gif="images/projects/franka_real.gif" width="368" height="460" alt="Real Franka arm grasping a block and carrying it past a book obstacle" loading="lazy" decoding="async">
+                  <figcaption>Pick-and-place on the real Franka in the lab (1.5× speed).</figcaption>
+                </figure>
+                <figure class="media has-gif">
+                  <img src="images/projects/franka_rviz-poster.webp" data-gif="images/projects/franka_rviz.gif" width="560" height="400" alt="RViz view of the planned and executed Franka trajectory" loading="lazy" decoding="async">
+                  <figcaption>The same task with mock hardware, visualized in RViz (2× speed).</figcaption>
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">ME495 Embedded Systems in Robotics · Homework 3 · Nov 2026 · Team of 4</p>
+                <h3>Franka Pick-and-Place with MoveIt&nbsp;2</h3>
+                <ul class="points">
+                  <li>Built <code>franka_package</code>, a Python library that wraps MoveIt's <b>move_group</b> ROS&nbsp;2 interfaces for the Franka arm: motion planning, the planning scene, robot state (FK/IK), and the gripper.</li>
+                  <li>Co-developed the <b>MotionPlanner</b> module: reworked it to talk to <code>move_group</code> directly instead of MoveItPy, and implemented planning to joint configurations, end-effector poses, <b>Cartesian paths</b>, and named SRDF configurations, plus trajectory execution.</li>
+                  <li>A <code>pick_node</code> exposes a <code>/pick</code> service that loads the table, object, and obstacle into the planning scene, then grasps the object, attaches it to the hand, carries it past the obstacle, and releases it.</li>
+                  <li>Ran the task both in simulation (mock hardware) and on the <b>real robot</b>, and wrote an integration test that moves the arm from pose A to pose B.</li>
+                </ul>
+                <ul class="tags"><li>ROS 2</li><li>MoveIt 2</li><li>Python</li><li>Franka Emika</li><li>pytest</li></ul>
+              </div>
+            </article>
+
+            <article class="entry" id="p-brickbot">
+              <div class="entry-media">
+                <figure class="media media--portrait has-gif">
+                  <img src="images/projects/brickbot-poster.webp" data-gif="images/projects/brickbot.gif" width="456" height="588" alt="Unicycle robot driving under a falling brick and catching it on its platform" loading="lazy" decoding="async">
+                  <figcaption>Catching a brick dropped within range.</figcaption>
+                </figure>
+                <div class="media-row">
+                  <figure class="media">
+                    <img src="images/projects/brickbot_unreachable.webp" width="441" height="478" alt="RViz showing an Unreachable marker above a brick" loading="lazy" decoding="async">
+                    <figcaption>Out of reach: the catcher flags it.</figcaption>
+                  </figure>
+                  <figure class="media">
+                    <img src="images/projects/brickbot_big_robot.webp" width="518" height="588" alt="Larger robot model loaded from a YAML config" loading="lazy" decoding="async">
+                    <figcaption>Robot size set from YAML.</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">ME495 Embedded Systems in Robotics · Homework 2 · Oct 2026</p>
+                <h3>Brickbot: A Unicycle Robot That Catches Falling Bricks</h3>
+                <ul class="points">
+                  <li>Built a ROS&nbsp;2 simulation of a single-wheel robot with a tilting platform, modeled in <b>URDF/xacro</b> and visualized in <b>RViz</b>.</li>
+                  <li>Wrote a <code>simulation</code> node that acts as fake hardware: it integrates the robot and brick physics (free fall and frictionless sliding), publishes joint states and markers, broadcasts <b>TF</b> frames, and offers <code>place</code> and <code>drop</code> services.</li>
+                  <li>Implemented a <code>control</code> node that computes <b>wheel odometry</b> from joint states and drives to a <code>goal_pose</code>, slowing down as it approaches.</li>
+                  <li>The <code>catcher</code> node compares the brick's <b>fall time</b> with the robot's predicted <b>drive time</b>. If the brick is reachable it drives underneath, catches it, and tilts the platform until the brick slides off; otherwise it marks the brick as unreachable.</li>
+                  <li>Kept the physics ROS-independent and covered it with <b>unit tests</b>; robot dimensions are configurable through YAML.</li>
+                </ul>
+                <ul class="tags"><li>ROS 2</li><li>rclpy</li><li>TF2</li><li>URDF / xacro</li><li>RViz</li><li>pytest</li></ul>
+              </div>
+            </article>
+
+            <article class="entry" id="p-turtle">
+              <div class="entry-media">
+                <div class="media-row">
+                  <figure class="media has-gif">
+                    <img src="images/projects/turtlesim-poster.webp" data-gif="images/projects/turtlesim.gif" width="440" height="478" alt="Turtle driving through red waypoint markers" loading="lazy" decoding="async">
+                    <figcaption>Following loaded waypoints (3× speed).</figcaption>
+                  </figure>
+                  <figure class="media has-gif">
+                    <img src="images/projects/turtlesim_bag-poster.webp" data-gif="images/projects/turtlesim_bag.gif" width="440" height="478" alt="Turtle replaying a recorded path from a bag file" loading="lazy" decoding="async">
+                    <figcaption>Replaying a recorded ros2 bag (3× speed).</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">ME495 Embedded Systems in Robotics · Homework 1 · Oct 2026</p>
+                <h3>TurtleSim Waypoint Follower</h3>
+                <ul class="points">
+                  <li>ROS&nbsp;2 package that drives a TurtleSim turtle around a loop of user-supplied waypoints with a <b>100&nbsp;Hz</b> feedback controller: turn toward the target, then drive with a speed proportional to the remaining distance.</li>
+                  <li>Defined custom interfaces: a <code>LoadWaypoints</code> service that resets the turtle, draws the waypoint markers, and returns the loop distance, and an <code>ErrorMetric</code> message published after every completed loop.</li>
+                  <li>Added a <code>toggle</code> service to start and stop the turtle, and a <code>corrupt</code> node that injects Gaussian noise into velocity commands to test robustness.</li>
+                  <li>Recorded and replayed runs with <b>ros2 bag</b>; one loop took <b>26.9&nbsp;s</b> and finished with a <b>−0.32&nbsp;m</b> distance error.</li>
+                </ul>
+                <ul class="tags"><li>ROS 2</li><li>Python</li><li>Custom msgs &amp; srvs</li><li>Launch files</li><li>ros2 bag</li></ul>
+              </div>
+            </article>
+
+            <article class="entry" id="p-ce346">
+              <div class="entry-media">
+                <figure class="media has-gif">
+                  <img src="images/projects/ce346_led-poster.webp" data-gif="images/projects/ce346_led.gif" width="640" height="400" alt="5x5 LED matrix showing an X, then spelling Hi CE346! and It works!" loading="lazy" decoding="async">
+                  <figcaption>LED-matrix driver output, rendered from the lab's own font table and 400&nbsp;ms / 100&nbsp;ms character timing.</figcaption>
+                </figure>
+                <figure class="media media--square">
+                  <img src="images/projects/ce346_rng_histogram.webp" width="640" height="480" alt="Histogram of 10,000 hardware random numbers in 16 bins against the uniform expectation" loading="lazy" decoding="async">
+                  <figcaption>10,000 hardware-RNG samples against the uniform expectation.</figcaption>
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">CE346 Microcontroller System Design · Lab series · Sep – Nov 2026</p>
+                <h3>Bare-Metal Firmware on an ARM Cortex-M4</h3>
+                <p>A series of embedded C labs on the Nordic <b>nRF52833</b> (micro:bit v2), building each driver directly on the hardware registers.</p>
+                <ul class="points">
+                  <li><b>Memory-mapped I/O &amp; interrupts:</b> mapped the GPIO and RNG peripheral registers onto C structs to write drivers from scratch, configured GPIOTE and software interrupts with NVIC priorities to demonstrate preemption, and validated the hardware RNG with a 10,000-sample histogram.</li>
+                  <li><b>Virtual timers:</b> multiplexed one 32-bit hardware timer into any number of one-shot and repeating timers using a sorted linked list and compare-channel scheduling, with interrupt-safe critical sections and handling for stale or missed compare events. Built a real-time clock on top.</li>
+                  <li><b>LED matrix:</b> row-scanned the 5×5 matrix at about 1&nbsp;kHz with app timers, rendered ASCII text from a 5×5 font, and built Snake with a ring-buffer body.</li>
+                  <li><b>Analog sensing &amp; capacitive touch:</b> read an NTC thermistor and a photoresistor through the 12-bit SAADC, drove an RGB LED from sensor thresholds, and detected touches by timing an RC rise with GPIOTE and a 1&nbsp;MHz timer capture.</li>
+                  <li><b>Audio &amp; I²C:</b> generated tones with the PWM peripheral and read the LSM303AGR accelerometer and magnetometer over I²C with repeated-START register reads.</li>
+                </ul>
+                <ul class="tags"><li>Embedded C</li><li>nRF52833</li><li>ARM Cortex-M4</li><li>Interrupts</li><li>Timers</li><li>PWM</li><li>ADC</li><li>I²C</li></ul>
+              </div>
+            </article>
+
+            <h3 class="group-title" id="g-professional">Professional</h3>
+
+            <article class="entry" id="p-imagepipe">
+              <div class="entry-media">
+                <figure class="media">
+                  <img src="images/projects/imagepipe.webp" width="1200" height="676" alt="ImagePipe pipeline: photo set, face detection, eye-state correction, and per-person albums" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">Professional project · Desktop application</p>
+                <h3>ImagePipe: AI-Powered Tourist Photo Processing</h3>
+                <p>An end-to-end computer vision pipeline that automates the curation, enhancement, and organization of tourist photos, combining YOLOv8 classification, InsightFace recognition, MediaPipe eye-state detection, and a custom U-Net generative eye-opening model.</p>
+                <ul class="tags"><li>PyTorch</li><li>YOLOv8</li><li>InsightFace</li><li>MediaPipe</li><li>U-Net</li><li>PyQt6</li></ul>
+                <div class="links"><a class="link-btn" href="imagepipe.html">View full demo<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+              </div>
+            </article>
+
+            <h3 class="group-title" id="g-ai">AI &amp; software</h3>
+
+            <article class="entry" id="p-annealing">
+              <div class="entry-media">
+                <figure class="media media--portrait has-gif">
+                  <img src="images/projects/gridgame-poster.webp" data-gif="images/projects/gridgame.gif" width="242" height="272" alt="Agent placing shapes on a grid under adjacency constraints" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <h3>Simulated Annealing AI Agent</h3>
+                <ul class="points">
+                  <li>Developed a <b>simulated annealing AI agent</b> for constrained graph coloring, minimizing shapes while satisfying adjacency constraints.</li>
+                  <li>Implemented <b>adaptive optimization</b> with intelligent shape selection, problem-area targeting, and dynamic cooling schedules.</li>
+                  <li>Engineered <b>efficient grid algorithms</b> using larger shapes first and offline state management for rapid solution evaluation.</li>
+                  <li>Applied <b>local search metaheuristics</b> to constraint satisfaction problems with applications in scheduling and resource allocation.</li>
+                </ul>
+                <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/Simulated_Annealing_Agent" target="_blank" rel="noopener">Source code<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+              </div>
+            </article>
+
+            <article class="entry" id="p-qlearning">
+              <div class="entry-media">
+                <figure class="media media--portrait has-gif">
+                  <img src="images/projects/escape_castle-poster.webp" data-gif="images/projects/escape_castle.gif" width="600" height="868" alt="Agent navigating a 5x5 castle grid past guards" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <h3>Q-Learning Reinforcement Learning Agent</h3>
+                <ul class="points">
+                  <li>Implemented a <b>Q-learning agent</b> for a grid-based MDP game with probabilistic transitions and combat mechanics.</li>
+                  <li>Developed <b>model-based probability estimation</b> from random gameplay to learn guard strength characteristics.</li>
+                  <li>Applied <b>epsilon-greedy exploration</b> with adaptive learning rates to train the agent across 1M episodes.</li>
+                  <li>Built a <b>temporal-difference learner</b> that navigates the 5×5 castle grid while managing health and guard encounters.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="entry" id="p-pytorch">
+              <div class="entry-media">
+                <figure class="media">
+                  <img src="images/projects/training_losses.webp" width="1200" height="500" alt="Training loss curves for a feedforward network and a CNN" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <h3>Deep Learning Image Classification with PyTorch</h3>
+                <ul class="points">
+                  <li>Designed and trained <b>CNN and feedforward neural networks</b> reaching 90%+ accuracy on Fashion-MNIST classification.</li>
+                  <li>Implemented <b>convolutional architectures</b> with 3 conv layers, max pooling, and dropout regularization, showing that CNNs outperform the FFN with 25% fewer parameters.</li>
+                  <li>Visualized <b>learned feature representations</b> through kernel analysis and feature-map progression, revealing hierarchical pattern detection from edges to complex shapes.</li>
+                  <li>Analyzed model performance with <b>confusion matrices and classification metrics</b>, identifying misclassification patterns between visually similar clothing categories.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="entry" id="p-planner">
+              <div class="entry-media">
+                <figure class="media">
+                  <img src="images/projects/plannersystem.webp" width="1200" height="482" alt="Weekly planner schedule view, MVC diagram, and event editor" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">Multi-user system with role-based permissions · Project leader</p>
+                <h3>Weekly Planner System</h3>
+                <ul class="points">
+                  <li>Built a multi-user weekly planner with role-based permissions for event creation and deletion, keeping every related user's schedule updated automatically in real time.</li>
+                  <li>Chose the <b>MVC design pattern</b> for the project, following <b>object-oriented design</b> principles.</li>
+                  <li>Implemented XML support so users can upload or save their schedule as an XML file, significantly improving the system's efficiency.</li>
+                </ul>
+                <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/OOD_hw" target="_blank" rel="noopener">Source code<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+              </div>
+            </article>
+
+            <article class="entry" id="p-stats">
+              <div class="entry-media">
+                <figure class="media media--square">
+                  <img src="images/projects/tuition_project.webp" width="900" height="844" alt="Radar charts of education quality and a tuition regression plot" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">Data science semester project · Project leader</p>
+                <h3>Nationwide University Statistics Analysis</h3>
+                <ul class="points">
+                  <li>Ran a data-driven analysis of private universities by <b>scraping</b> key variables from CollegeSimply to investigate the relationship between tuition and educational quality.</li>
+                  <li>Built an interactive linear-regression plot where every point is clickable and shows that university's educational quality as a radar chart.</li>
+                </ul>
+                <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/nationwide_university_stat_analysis" target="_blank" rel="noopener">Source code<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- ===================== Work sheet ===================== -->
+  <section class="sheet" id="work" aria-labelledby="work-title">
+    <div class="sheet-scroll">
+      <div class="sheet-inner">
+        <div class="sheet-bar">
+          <a class="sheet-back" href="#top" data-close><svg class="i" aria-hidden="true"><use href="#i-arrow-left"/></svg>Home</a>
+          <nav class="sheet-tabs" aria-label="Sections">
+            <a href="#projects" data-switch="projects">Projects</a>
+            <a href="#work" data-switch="work" aria-current="page">Work Experience</a>
+            <a href="#research" data-switch="research">Research</a>
+          </nav>
+        </div>
+        <div class="wrap">
+          <header class="sheet-head">
+            <p class="eyebrow">Work Experience</p>
+            <h2 id="work-title" tabindex="-1">Work Experience</h2>
+            <p class="lede">Engineering roles in a research lab and in industry: automating real IoT devices with robots, and taking embodied-AI research onto real hardware.</p>
+            <ul class="jump">
+              <li><a href="#o-edge" data-jump="o-edge">Northeastern EDGE Lab</a></li>
+              <li><a href="#o-encosmart" data-jump="o-encosmart">EncoSmart Technology</a></li>
+            </ul>
+          </header>
 
-  <script>
+          <div class="sheet-body">
+            <section class="org" id="o-edge" aria-labelledby="o-edge-title">
+              <header class="org-head">
+                <div>
+                  <h3 id="o-edge-title">Northeastern University · EDGE Lab</h3>
+                  <p class="org-sub">Research Engineer · SPHERE Project</p>
+                </div>
+                <p class="org-when">Jun 2025 – Dec 2025</p>
+              </header>
 
-    var $hashList = $('.menu-list a'), offsetList, maxScrollHeight;
+              <article class="entry" id="w-learm">
+                <div class="entry-media">
+                  <figure class="media media--portrait has-gif">
+                    <img src="images/work/learm-poster.webp" data-gif="images/work/learm.gif" width="384" height="480" alt="LeArm 6-DOF arm pressing the buttons of a smart speaker" loading="lazy" decoding="async">
+                    <figcaption>LeArm pressing a smart speaker's buttons (1.6× speed).</figcaption>
+                  </figure>
+                </div>
+                <div class="entry-body">
+                  <p class="entry-meta">Robot arm · USB HID · Flask</p>
+                  <h4>LeArm 6-DOF Robotic Arm System</h4>
+                  <ul class="points">
+                    <li>Developed USB HID communication protocols for precise <b>6-DOF robotic arm control</b>.</li>
+                    <li>Created automated interaction systems that physically manipulate diverse IoT interfaces, including button pressing and dial rotation.</li>
+                    <li>Built <b>Flask web servers</b> and SSH-based remote execution for distributed robotic control.</li>
+                    <li>Implemented position calibration and <b>inverse kinematics</b> for repeatable automated testing sequences.</li>
+                  </ul>
+                </div>
+              </article>
 
-    $('#sidebar').on('click', 'a', function(){
-      activate($(this))
-    });
-    
-    $(window).on('resize', debounce(calculateBoundary, 300));
+              <article class="entry" id="w-plotter">
+                <div class="entry-media">
+                  <figure class="media media--portrait has-gif">
+                    <img src="images/work/xy_plotter-poster.webp" data-gif="images/work/xy_plotter.gif" width="384" height="480" alt="CoreXY plotter moving while a G-code sender shows its position" loading="lazy" decoding="async">
+                    <figcaption>CoreXY plotter driven over G-code (1.8× speed).</figcaption>
+                  </figure>
+                </div>
+                <div class="entry-body">
+                  <p class="entry-meta">CoreXY · GRBL · G-code</p>
+                  <h4>XY-Plotter Drawing / Interaction System</h4>
+                  <ul class="points">
+                    <li>Interfaced with <b>GRBL-based</b> CoreXY systems through G-code protocols.</li>
+                    <li>Implemented safety features including bounds checking and collision avoidance.</li>
+                    <li>Created high-level command abstractions (click, swipe, draw) from low-level motion primitives.</li>
+                    <li>Developed <b>real-time position tracking</b> and error recovery for autonomous operation.</li>
+                  </ul>
+                </div>
+              </article>
 
-    $(document).on('scroll', debounce(judgeScroll, 300));
+              <article class="entry" id="w-sphere">
+                <div class="entry-media">
+                  <figure class="media media--portrait">
+                    <img src="images/work/sphere_testbed.webp" width="900" height="1200" alt="SPHERE testbed cabinet: robot arm, smart speaker and camera on the top shelf, XY-plotter and laptop below" loading="lazy" decoding="async">
+                    <figcaption>The SPHERE testbed: arm and smart speaker on top, XY-plotter below.</figcaption>
+                  </figure>
+                </div>
+                <div class="entry-body">
+                  <p class="entry-meta">Systems integration · Python</p>
+                  <h4>SPHERE Framework Integration</h4>
+                  <ul class="points">
+                    <li>Architected handler classes following design patterns for the SPHERE device infrastructure.</li>
+                    <li>Implemented <b>asynchronous command execution</b> using ThreadPoolExecutor.</li>
+                    <li>Built standardized interfaces and YAML-based configuration for flexible deployment.</li>
+                  </ul>
+                </div>
+              </article>
+            </section>
 
-    calculateBoundary();
-    judgeScroll();
-    
-    function togglePatents() {
-    var content = document.getElementById("patentsContent");
-    if (content.style.display === "none") {
-      content.style.display = "block";
-    } else {
-      content.style.display = "none";
-    }
-  }
+            <section class="org" id="o-encosmart" aria-labelledby="o-encosmart-title">
+              <header class="org-head">
+                <div>
+                  <h3 id="o-encosmart-title">EncoSmart Technology</h3>
+                  <p class="org-sub">Internships in Embodied AI, Networking, and Testing</p>
+                </div>
+                <p class="org-when">Jul 2024 – Dec 2024</p>
+              </header>
 
-    function  calculateBoundary() {
-      offsetList = $hashList.map(function(idx, ele){
-        return $(ele.hash).offset().top
-      });
-      maxScrollHeight = $(document).height() - $(window).height()
-    }
-    
-    function judgeScroll() {
-      var tps = $("html").scrollTop()
-              ? $("html").scrollTop()
-              : $("body").scrollTop(),
-              len = offsetList.length;
-      if(tps >= maxScrollHeight-10){
-        activate($hashList.eq(len-1));
-        return
-      }
-      for(var i=0; i<len; i++){
-       if(tps+50<offsetList[i]){
-          activate($hashList.eq(Math.max(0,i-1)));
-          return
-        }
-      }
-    }
+              <article class="entry" id="w-embodied">
+                <div class="entry-media">
+                  <figure class="media media--square has-gif">
+                    <img src="images/work/progem_featurefield-poster.webp" data-gif="images/work/progem_featurefield.gif" width="420" height="420" alt="Rotating point cloud of a robot workspace colored by distilled features" loading="lazy" decoding="async">
+                    <figcaption>ProGEM's distilled feature field of the workspace, as a point cloud.</figcaption>
+                  </figure>
+                  <figure class="media has-gif">
+                    <img src="images/work/sim_open_drawer-poster.webp" data-gif="images/work/sim_open_drawer.gif" width="520" height="290" alt="Simulated Franka arm grasping a drawer handle and pulling it open" loading="lazy" decoding="async">
+                    <figcaption>Policy rollout in simulation: opening a drawer (1.5× speed).</figcaption>
+                  </figure>
+                </div>
+                <div class="entry-body">
+                  <p class="entry-meta">Jul 2024 – Nov 2024</p>
+                  <h4>Intern, Department of Embodied AI</h4>
+                  <ul class="points">
+                    <li>Participated in the full research cycle of <b>ProGEM</b> and was listed as 4th author of the paper.</li>
+                    <li>Assisted in deploying our research results on the company's robot in real-world settings.</li>
+                  </ul>
+                  <div class="links"><a class="link-btn" href="#r-progem" data-switch="research" data-target="r-progem">About ProGEM<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+                </div>
+              </article>
 
-    function activate(ele){
-      $hashList.removeClass('is-active');
-      ele.addClass('is-active');
-    }
+              <article class="entry entry--text" id="w-network">
+                <div class="entry-body">
+                  <p class="entry-meta">Jul 2024 – Sep 2024</p>
+                  <h4>Network Intern</h4>
+                  <ul class="points">
+                    <li>Analyzed open-source IoT frameworks, leading to the selection of an optimal solution for the company's third-generation product.</li>
+                    <li>Assisted in developing and debugging back-end interface code using Django for preliminary IoT networks.</li>
+                  </ul>
+                </div>
+              </article>
 
-    function debounce(fn, delay) {
-      var timeout = null;
-      return function () {
-        var args = arguments;
-        var context = this;
-        if (!timeout) {
-          timeout = setTimeout(function () {
-            timeout = 0;
-            return fn.apply(context, args);
-          }, delay);
-        }
-      };
-    }
+              <article class="entry entry--text" id="w-testing">
+                <div class="entry-body">
+                  <p class="entry-meta">Nov 2024 – Dec 2024</p>
+                  <h4>Intern, Department of Testing</h4>
+                  <ul class="points">
+                    <li>Evaluated the robotic arm and gripper's grasping stability across various objects, durations, and environmental conditions.</li>
+                    <li>Assisted in testing the back-end interface code of the preliminary IoT networks.</li>
+                  </ul>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===================== Research sheet ===================== -->
+  <section class="sheet" id="research" aria-labelledby="research-title">
+    <div class="sheet-scroll">
+      <div class="sheet-inner">
+        <div class="sheet-bar">
+          <a class="sheet-back" href="#top" data-close><svg class="i" aria-hidden="true"><use href="#i-arrow-left"/></svg>Home</a>
+          <nav class="sheet-tabs" aria-label="Sections">
+            <a href="#projects" data-switch="projects">Projects</a>
+            <a href="#work" data-switch="work">Work Experience</a>
+            <a href="#research" data-switch="research" aria-current="page">Research</a>
+          </nav>
+        </div>
+        <div class="wrap">
+          <header class="sheet-head">
+            <p class="eyebrow">Research</p>
+            <h2 id="research-title" tabindex="-1">Research</h2>
+            <p class="lede">I'm currently exploring my research interests in areas such as <b>robotic manipulation</b>, <b>3D vision</b>, and <b>human-robot interaction</b>.</p>
+            <ul class="jump">
+              <li><a href="#r-friction" data-jump="r-friction">Positive Friction</a></li>
+              <li><a href="#r-sage" data-jump="r-sage">SAGE</a></li>
+              <li><a href="#r-progem" data-jump="r-progem">ProGEM</a></li>
+            </ul>
+          </header>
 
+          <div class="sheet-body">
+            <article class="entry" id="r-friction">
+              <div class="entry-media">
+                <figure class="media">
+                  <img src="images/research/misty.webp" width="1400" height="764" alt="Referential, trajectory, implicit-precondition, and contextual-safety ambiguity, each with and without positive friction" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">Target venue: TACL (Transactions of the ACL) · In preparation · Oct 2025 – Present</p>
+                <h3>Slow the Dialogue, Not Just the Robot: Positive Friction for Reliable Grounding and Safe, Embodied Vision-Language Action</h3>
+                <p class="authors"><b>Haocheng Li</b>, Asteria Kaeberlein, Mert Inan, Malihe Alikhani</p>
+                <ul class="points">
+                  <li>Built a <b>2D coordinate-based world model</b> with collision detection, hazard zones, and dynamic FOV simulation for reproducible evaluation of embodied dialogue policies across 46 structured task scenarios.</li>
+                  <li>Engineered a <b>hierarchical ambiguity detection protocol</b> that prioritizes safety hazards over navigation and referential errors, reducing collision-related task failures through ordered friction triggers.</li>
+                  <li>Implemented a <b>vague-to-specific synthetic evaluation pipeline</b> using GPT-4o-mini as a simulated user agent, enabling controlled large-scale benchmarking that isolated the contributions of conversation history (+7%), prompt design (+15.5%), and friction (+14.5%).</li>
+                </ul>
+              </div>
+            </article>
 
-  </script>
+            <article class="entry" id="r-sage">
+              <div class="entry-media">
+                <figure class="media">
+                  <img src="images/research/sage_pipeline.webp" width="1264" height="870" alt="SAGE: pushing buttons in order with a state-aware policy" loading="lazy" decoding="async">
+                </figure>
+                <figure class="media has-gif">
+                  <img src="images/research/sage-poster.webp" data-gif="images/research/sage.gif" width="480" height="270" alt="UR arm pushing colored buttons in sequence, with a wrist fisheye view inset" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">Submitted to IEEE RA-L (Robotics and Automation Letters), Oct 2026 · Under review · Dec 2024 – Sep 2026</p>
+                <h3>SAGE: State-Aware Guided End-to-End Policy for Multi-Stage Sequential Tasks via Hidden Markov Decision Process</h3>
+                <p class="authors">Binxu Wu, Tengfei Zhang, Chen Yang, Jiahao Wen, Yixuan Huang, <b>Haocheng Li</b>, Jingtian Ma, Zhen Chen, Jingyuan Wang</p>
+                <ul class="points">
+                  <li>Reproduced UMI successfully after extensive code review and debugging.</li>
+                  <li>Conducted comprehensive research on SLAM (ORB-SLAM3), raising our dataset's SLAM success rate <b>from 43.1% to 97.9%</b>.</li>
+                  <li>Refined the gripper's 3D design in <b>SolidWorks</b>, significantly improving maximum grasping force and stability.</li>
+                  <li>Led literature reviews and identified model improvements, actively driving the team's progress; contributed significantly to the <b>Related Work</b> section of the paper.</li>
+                  <li>Reproduced Diffusion Policy's <b>behavior cloning</b> module and evaluated its performance and suitability for our model.</li>
+                  <li>Collaborated on developing and debugging the model's <b>state-perception module</b>, improving performance on long-horizon, complex tasks.</li>
+                  <li>Proposed and co-developed an <b>active learning</b> module for automated data labeling, significantly streamlining the labeling pipeline.</li>
+                </ul>
+                <div class="links"><a class="link-btn" href="https://arxiv.org/abs/2509.19853" target="_blank" rel="noopener">Paper on arXiv<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+              </div>
+            </article>
 
+            <article class="entry" id="r-progem">
+              <div class="entry-media">
+                <figure class="media">
+                  <img src="images/research/progem_pipeline.webp" width="699" height="284" alt="ProGEM pipeline: Stable Diffusion features, contrastive learning, voxel selection, and next-best-action prediction" loading="lazy" decoding="async">
+                </figure>
+                <figure class="media has-gif">
+                  <img src="images/research/progem-poster.webp" data-gif="images/research/progem.gif" width="480" height="270" alt="Robot arm opening a drawer and placing objects on a table" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">Under submission · Jul 2024 – Nov 2024</p>
+                <h3>ProGEM: Probing Generalizable and Efficient Feature Fields Distillation for Multi-Task Robotic Manipulation</h3>
+                <p class="authors">Zhen Chen, Robin Ananda, Binxu Wu, <b>Haocheng Li</b>, Weize Li, Qi Lu, Qianyao Xu, Jiaying Li, Yingqing Xu</p>
+                <ul class="points">
+                  <li>Used <b>Stable Diffusion</b> as a vision foundation model to extract semantic information from the scene.</li>
+                  <li>Fused the semantic embeddings with <b>RGB</b> observations to build a semantically enriched <b>3D point cloud</b> (distilled feature field) of the scene.</li>
+                  <li>Voxelized the scene and used a learned <b>selection network</b> to keep only the <b>top-k occupied voxels</b>, so the policy reasons over a small set of informative voxels instead of the full grid, improving <b>inference speed</b>.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <script src="js/site.js?v=20261111"></script>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div id="mapmyvisitors-widget" class="globe">
+        <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=afdJ46ACXFHtiC_wv5ZfMzpEBedGslwjhPprv68F7rw"></script>
+      </div>
+      <p>© 2026 Haocheng Li · Last update: Nov. 2026</p>
+    </div>
+  </footer>
 </body>
-
 </html>
