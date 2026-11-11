@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
-  <link rel="stylesheet" href="css/site.css?v=20261111">
+  <link rel="stylesheet" href="css/site.css?v=20261111b">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
@@ -82,6 +82,10 @@
               <img class="slide-img" src="images/projects/franka_rviz-poster.webp" data-gif="images/projects/franka_rviz.gif" width="760" height="542" alt="MoveIt motion plan executing in RViz" loading="lazy" decoding="async">
               <figcaption>MoveIt plan in RViz</figcaption>
             </figure>
+            <figure class="slide" data-target="p-flip">
+              <img class="slide-img" src="images/projects/flipbot-poster.webp" data-gif="images/projects/flipbot.gif" width="480" height="270" alt="Differential-drive robot flipping over in a Gazebo world" loading="lazy" decoding="async">
+              <figcaption>Flipping diff-drive robot</figcaption>
+            </figure>
             <figure class="slide slide--fit" data-target="p-brickbot">
               <img class="slide-bg" src="images/projects/brickbot-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
               <img class="slide-img" src="images/projects/brickbot-poster.webp" data-gif="images/projects/brickbot.gif" width="456" height="588" alt="Unicycle robot catching a falling brick in RViz" loading="lazy" decoding="async">
@@ -91,6 +95,10 @@
               <img class="slide-bg" src="images/projects/turtlesim-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
               <img class="slide-img" src="images/projects/turtlesim-poster.webp" data-gif="images/projects/turtlesim.gif" width="496" height="540" alt="TurtleSim turtle tracing a loop of waypoints" loading="lazy" decoding="async">
               <figcaption>TurtleSim waypoint follower</figcaption>
+            </figure>
+            <figure class="slide slide--paper" data-target="p-balance">
+              <img class="slide-img" src="images/projects/balancebot_cad.webp" width="1040" height="1300" alt="CAD model of the two-wheeled self-balancing robot" loading="lazy" decoding="async">
+              <figcaption>Balancing robot · CAD design</figcaption>
             </figure>
             <figure class="slide slide--fit" data-target="p-ce346">
               <img class="slide-img" src="images/projects/ce346_led-poster.webp" data-gif="images/projects/ce346_led.gif" width="640" height="400" alt="5x5 LED matrix spelling out text" loading="lazy" decoding="async">
@@ -227,12 +235,22 @@
             </div>
           </article>
           <article class="misc-card">
+            <a class="thumb" href="https://adamli111.github.io/denver-trip/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/misc/denver_trip.webp" width="800" height="500" alt="" loading="lazy" decoding="async"></a>
+            <div class="body">
+              <h3>Denver Trip Planner 🗺️</h3>
+              <p>A side project: an interactive map I built to plan a five-day Thanksgiving trip to Denver with friends. It draws and animates each day's driving route, shows more detail as you zoom in, and lets friends who sign in with Google add Airbnbs, sights, and restaurants to a shared Firebase database.</p>
+              <div class="links"><a class="link-btn" href="https://adamli111.github.io/denver-trip/" target="_blank" rel="noopener">Open the planner<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+            </div>
+          </article>
+          <!-- MBTI card hidden for now; remove the comment markers to show it again.
+          <article class="misc-card">
             <div class="thumb"><img src="images/misc/mbti.webp" width="1200" height="716" alt="Fight of MBTI's card game screen" loading="lazy" decoding="async"></div>
             <div class="body">
               <h3>Fight of MBTI's</h3>
               <p>A side project: an online card game I designed and implemented in Java. It supports up to 4 players, who play cards with different abilities to reduce enemies' health or defense. The last one standing wins the game.</p>
             </div>
           </article>
+          -->
           <article class="misc-card misc-card--text misc-card--wide">
             <div class="body">
               <h3>Coursework</h3>
@@ -289,7 +307,7 @@
                 </figure>
               </div>
               <div class="entry-body">
-                <p class="entry-meta">ME495 Embedded Systems in Robotics · Homework 3 · Nov 2026 · Team of 4</p>
+                <p class="entry-meta">ME450 Embedded Systems in Robotics · Homework 3 · Nov 2026 · Team of 4</p>
                 <h3>Franka Pick-and-Place with MoveIt&nbsp;2</h3>
                 <ul class="points">
                   <li>Built <code>franka_package</code>, a Python library that wraps MoveIt's <b>move_group</b> ROS&nbsp;2 interfaces for the Franka arm: motion planning, the planning scene, robot state (FK/IK), and the gripper.</li>
@@ -298,6 +316,27 @@
                   <li>Ran the task both in simulation (mock hardware) and on the <b>real robot</b>, and wrote an integration test that moves the arm from pose A to pose B.</li>
                 </ul>
                 <ul class="tags"><li>ROS 2</li><li>MoveIt 2</li><li>Python</li><li>Franka Emika</li><li>pytest</li></ul>
+              </div>
+            </article>
+
+            <article class="entry" id="p-flip">
+              <div class="entry-media">
+                <figure class="media has-gif">
+                  <img src="images/projects/flipbot-poster.webp" data-gif="images/projects/flipbot.gif" width="480" height="270" alt="Blue differential-drive robot driving back and forth between Jersey barriers and cardboard boxes, flipping over at each reversal" loading="lazy" decoding="async">
+                  <figcaption>In Gazebo, the robot flips over at every reversal instead of turning around.</figcaption>
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">ME450 Embedded Systems in Robotics · Homework 3, individual part · Nov 2026</p>
+                <h3>Flipping Differential-Drive Robot in Gazebo</h3>
+                <ul class="points">
+                  <li>Modeled a differential-drive robot in <b>URDF/xacro</b>: a box body with two wheels at the front and frictionless casters on both its top and bottom, so it can drive either way up. Dimensions and masses load from a YAML file, and the inertias are computed from them.</li>
+                  <li>Built a <b>Gazebo</b> world in SDF with Jersey barriers, cardboard boxes, a person, and other Gazebo Fuel models.</li>
+                  <li>Drove the wheels with Gazebo's <b>DiffDrive</b> plugin and bridged <code>/cmd_vel</code>, <code>/odom</code>, <code>/tf</code>, <code>/joint_states</code>, and <code>/clock</code> to ROS&nbsp;2 with <code>ros_gz_bridge</code>, loaded into the same component container as the Gazebo server.</li>
+                  <li>Wrote a <code>flip</code> node that starts once odometry appears and reverses the commanded velocity on a fixed period (3&nbsp;m/s every 2&nbsp;s of sim time by default). Each reversal brakes hard enough to flip the robot over its axle, so it drives back and forth along a line.</li>
+                  <li>One launch file starts Gazebo and its GUI, the bridge, <code>robot_state_publisher</code>, and RViz, then spawns the robot and starts the flip node.</li>
+                </ul>
+                <ul class="tags"><li>ROS 2</li><li>Gazebo</li><li>ros_gz_bridge</li><li>URDF / xacro</li><li>SDF</li><li>rclpy</li></ul>
               </div>
             </article>
 
@@ -319,7 +358,7 @@
                 </div>
               </div>
               <div class="entry-body">
-                <p class="entry-meta">ME495 Embedded Systems in Robotics · Homework 2 · Oct 2026</p>
+                <p class="entry-meta">ME450 Embedded Systems in Robotics · Homework 2 · Oct 2026</p>
                 <h3>Brickbot: A Unicycle Robot That Catches Falling Bricks</h3>
                 <ul class="points">
                   <li>Built a ROS&nbsp;2 simulation of a single-wheel robot with a tilting platform, modeled in <b>URDF/xacro</b> and visualized in <b>RViz</b>.</li>
@@ -346,7 +385,7 @@
                 </div>
               </div>
               <div class="entry-body">
-                <p class="entry-meta">ME495 Embedded Systems in Robotics · Homework 1 · Oct 2026</p>
+                <p class="entry-meta">ME450 Embedded Systems in Robotics · Homework 1 · Oct 2026</p>
                 <h3>TurtleSim Waypoint Follower</h3>
                 <ul class="points">
                   <li>ROS&nbsp;2 package that drives a TurtleSim turtle around a loop of user-supplied waypoints with a <b>100&nbsp;Hz</b> feedback controller: turn toward the target, then drive with a speed proportional to the remaining distance.</li>
@@ -355,6 +394,26 @@
                   <li>Recorded and replayed runs with <b>ros2 bag</b>; one loop took <b>26.9&nbsp;s</b> and finished with a <b>−0.32&nbsp;m</b> distance error.</li>
                 </ul>
                 <ul class="tags"><li>ROS 2</li><li>Python</li><li>Custom msgs &amp; srvs</li><li>Launch files</li><li>ros2 bag</li></ul>
+              </div>
+            </article>
+
+            <article class="entry" id="p-balance">
+              <div class="entry-media">
+                <figure class="media media--portrait">
+                  <img src="images/projects/balancebot_cad.webp" width="1040" height="1300" alt="CAD model of the balancing robot: four stacked decks between two wheels, with battery packs on the middle decks and a micro:bit and LCD face on top" loading="lazy" decoding="async">
+                  <figcaption>Our CAD design in Onshape.</figcaption>
+                </figure>
+              </div>
+              <div class="entry-body">
+                <p class="entry-meta">CE346 Microcontroller System Design · Final project · In progress · Nov 2026</p>
+                <h3>Two-Wheeled Self-Balancing Robot</h3>
+                <p>Our team's final project, built around a micro:bit v2. So far we have finished the mechanical design.</p>
+                <ul class="points">
+                  <li>Designed the chassis in <b>Onshape</b>: four 3D-printable decks stacked on built-in standoffs above the wheel axle, plus an L-bracket that holds a 1.69" LCD as the robot's face.</li>
+                  <li>Laid out the real parts from their vendor CAD models: Pololu micro metal gearmotors with encoders and 42×19&nbsp;mm wheels, a DRV8833 motor driver, an MPU-6050 IMU, the micro:bit on a Qwiic breakout, and two 4×AA battery packs.</li>
+                  <li>Balanced the mass in the model: each part carries its datasheet mass, and a <b>FeatureScript</b> feature sizes a 21&nbsp;g steel counterweight so the center of mass sits directly above the axle (73.5&nbsp;mm up, 470&nbsp;g in total).</li>
+                </ul>
+                <ul class="tags"><li>Onshape</li><li>FeatureScript</li><li>CAD</li><li>3D printing</li><li>micro:bit v2</li></ul>
               </div>
             </article>
 
