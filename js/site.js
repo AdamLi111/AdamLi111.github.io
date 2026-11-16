@@ -11,6 +11,8 @@
  *    With reduced motion or Save-Data they become click-to-play.
  * 4. Project and research entries open on a plain-language summary; a
  *    "Technical details" button cross-fades to the in-depth version.
+ * 5. English / 中文: every string is in the page in both languages and a class
+ *    on <html> shows one. The choice is remembered; ?lang=zh links to Chinese.
  */
 (() => {
   'use strict';
@@ -96,8 +98,10 @@
         const b = doc.createElement('button');
         const cap = slide.querySelector('figcaption');
         b.type = 'button';
-        b.setAttribute('aria-label', 'Show ' + (cap ? cap.textContent : 'slide ' + (k + 1)));
-        b.innerHTML = '<span class="t"><span class="f"></span></span>';
+        // The label is visually hidden text (not aria-label), so it follows the
+        // page language the same way the captions do.
+        b.innerHTML = '<span class="sr-only"><span class="en">Show </span><span class="zh">查看：</span>'
+          + (cap ? cap.innerHTML : String(k + 1)) + '</span><span class="t"><span class="f"></span></span>';
         b.addEventListener('click', (e) => {
           e.stopPropagation();
           this.go(k);
@@ -606,7 +610,8 @@
     btn.className = 'tech-btn';
     btn.setAttribute('aria-expanded', 'false');
     btn.setAttribute('aria-controls', tech.id);
-    btn.innerHTML = '<span class="when-closed">Technical details</span><span class="when-open">Back to summary</span>'
+    btn.innerHTML = '<span class="when-closed"><span class="en">Technical details</span><span class="zh">技术细节</span></span>'
+      + '<span class="when-open"><span class="en">Back to summary</span><span class="zh">返回简介</span></span>'
       + '<svg class="i" aria-hidden="true"><use href="#i-chevron-down"/></svg>';
     btn.addEventListener('click', (e) => swapView(box, btn, e.detail === 0));
 
@@ -618,6 +623,72 @@
     }
     row.prepend(btn);
   });
+
+  /* -------------------------------------------------------------- language */
+  // Every string is in the page twice, as <span class="en"> and <span class="zh">,
+  // and html.is-zh (set in <head> before the first paint) shows one of them.
+  // Attributes keep their Chinese in data-zh-*.
+  const TITLE = { en: doc.title, zh: 'Haocheng Li — 机器人与具身智能' };
+  const ATTRS = ['alt', 'aria-label'];
+  const attrEls = Array.from(doc.querySelectorAll(ATTRS.map((a) => '[data-zh-' + a + ']').join(',')));
+  const enAttrs = new Map(attrEls.map((el) => [el, ATTRS.map((a) => el.getAttribute(a))]));
+  const langButtons = doc.querySelectorAll('.lang-switch [data-lang]');
+  const langNow = () => (root.classList.contains('is-zh') ? 'zh' : 'en');
+
+  function applyLang(lang) {
+    const zh = lang === 'zh';
+    root.classList.toggle('is-zh', zh);
+    root.lang = zh ? 'zh-CN' : 'en';
+    doc.title = TITLE[lang];
+    attrEls.forEach((el) => {
+      const en = enAttrs.get(el);
+      ATTRS.forEach((a, k) => {
+        const v = zh ? el.getAttribute('data-zh-' + a) : en[k];
+        if (v !== null) el.setAttribute(a, v);
+      });
+    });
+    langButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  }
+
+  // Text changes length between languages; keep the first block still on screen
+  // where it was, so the reader does not lose their place.
+  function readingAnchor() {
+    const sheet = current && sheets[current];
+    const sc = sheet ? scroller(sheet) : null;
+    let top = 0;
+    if (sc) {
+      const bar = sheet.querySelector('.sheet-bar');
+      top = sc.getBoundingClientRect().top + (bar ? bar.offsetHeight : 0);
+    }
+    const blocks = sheet
+      ? sheet.querySelectorAll('.sheet-head, .group-title, .org-head, .entry')
+      : doc.querySelectorAll('.hero, .hub-card, .misc .section-head, .misc-card, .site-footer');
+    const el = Array.prototype.find.call(blocks, (b) => b.getBoundingClientRect().bottom > top + 1);
+    if (!el) return () => {};
+    const y = el.getBoundingClientRect().top;
+    return () => {
+      const dy = el.getBoundingClientRect().top - y;
+      if (Math.abs(dy) < 1) return;
+      if (sc) sc.scrollTop += dy;
+      else window.scrollBy(0, dy);
+    };
+  }
+
+  function setLang(lang) {
+    if (lang === langNow()) return;
+    try { localStorage.setItem('lang', lang); } catch (e) { /* storage blocked: still switch */ }
+    const url = new URL(location.href); // keep the link shareable in the chosen language
+    if (lang === 'zh') url.searchParams.set('lang', 'zh');
+    else url.searchParams.delete('lang');
+    history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+    const restore = readingAnchor();
+    const swap = () => { applyLang(lang); restore(); };
+    if (doc.startViewTransition && !reduced()) doc.startViewTransition(swap); // a soft cross-fade
+    else swap();
+  }
+
+  applyLang(langNow()); // alt text, title and button states follow the class set in <head>
+  langButtons.forEach((b) => b.addEventListener('click', () => setLang(b.dataset.lang)));
 
   // Deep link (e.g. index.html#research): open immediately, no animation.
   const initial = fromHash();
