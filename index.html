@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
-  <link rel="stylesheet" href="css/site.css?v=20261111b">
+  <link rel="stylesheet" href="css/site.css?v=20261115">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
@@ -337,14 +337,21 @@
               <div class="entry-body">
                 <p class="entry-meta">ME450 Embedded Systems in Robotics · Homework 3, individual part · Nov 2026</p>
                 <h3>Flipping Differential-Drive Robot in Gazebo</h3>
-                <ul class="points">
-                  <li>Modeled a differential-drive robot in <b>URDF/xacro</b>: a box body with two wheels at the front and frictionless casters on both its top and bottom, so it can drive either way up. Dimensions and masses load from a YAML file, and the inertias are computed from them.</li>
-                  <li>Built a <b>Gazebo</b> world in SDF with Jersey barriers, cardboard boxes, a person, and other Gazebo Fuel models.</li>
-                  <li>Drove the wheels with Gazebo's <b>DiffDrive</b> plugin and bridged <code>/cmd_vel</code>, <code>/odom</code>, <code>/tf</code>, <code>/joint_states</code>, and <code>/clock</code> to ROS&nbsp;2 with <code>ros_gz_bridge</code>, loaded into the same component container as the Gazebo server.</li>
-                  <li>Wrote a <code>flip</code> node that starts once odometry appears and reverses the commanded velocity on a fixed period (3&nbsp;m/s every 2&nbsp;s of sim time by default). Each reversal brakes hard enough to flip the robot over its axle, so it drives back and forth along a line.</li>
-                  <li>One launch file starts Gazebo and its GUI, the bridge, <code>robot_state_publisher</code>, and RViz, then spawns the robot and starts the flip node.</li>
-                </ul>
-                <ul class="tags"><li>ROS 2</li><li>Gazebo</li><li>ros_gz_bridge</li><li>URDF / xacro</li><li>SDF</li><li>rclpy</li></ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>A simulated robot that never turns around. Every two seconds it throws itself into reverse so hard that it flips over its own axle, then keeps driving on its other side. I designed the robot so it can drive either way up, built its world in the Gazebo simulator, and wrote the program that times the flips.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Modeled a differential-drive robot in <b>URDF/xacro</b>: a box body with two wheels at the front and frictionless casters on both its top and bottom, so it can drive either way up. Dimensions and masses load from a YAML file, and the inertias are computed from them.</li>
+                      <li>Built a <b>Gazebo</b> world in SDF with Jersey barriers, cardboard boxes, a person, and other Gazebo Fuel models.</li>
+                      <li>Drove the wheels with Gazebo's <b>DiffDrive</b> plugin and bridged <code>/cmd_vel</code>, <code>/odom</code>, <code>/tf</code>, <code>/joint_states</code>, and <code>/clock</code> to ROS&nbsp;2 with <code>ros_gz_bridge</code>, loaded into the same component container as the Gazebo server.</li>
+                      <li>Wrote a <code>flip</code> node that starts once odometry appears and reverses the commanded velocity on a fixed period (3&nbsp;m/s every 2&nbsp;s of sim time by default). Each reversal brakes hard enough to flip the robot over its axle, so it drives back and forth along a line.</li>
+                      <li>One launch file starts Gazebo and its GUI, the bridge, <code>robot_state_publisher</code>, and RViz, then spawns the robot and starts the flip node.</li>
+                    </ul>
+                    <ul class="tags"><li>ROS 2</li><li>Gazebo</li><li>ros_gz_bridge</li><li>URDF / xacro</li><li>SDF</li><li>rclpy</li></ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -429,13 +436,20 @@
               <div class="entry-body">
                 <p class="entry-meta">CE346 Microcontroller System Design · Final project · In progress · Nov 2026</p>
                 <h3>Two-Wheeled Self-Balancing Robot</h3>
-                <p>Our team's final project, built around a micro:bit v2. So far we have finished the mechanical design.</p>
-                <ul class="points">
-                  <li>Designed the chassis in <b>Onshape</b>: four 3D-printable decks stacked on built-in standoffs above the wheel axle, plus an L-bracket that holds a 1.69" LCD as the robot's face.</li>
-                  <li>Laid out the real parts from their vendor CAD models: Pololu micro metal gearmotors with encoders and 42×19&nbsp;mm wheels, a DRV8833 motor driver, an MPU-6050 IMU, the micro:bit on a Qwiic breakout, and two 4×AA battery packs.</li>
-                  <li>Balanced the mass in the model: each part carries its datasheet mass, and a <b>FeatureScript</b> feature sizes a 21&nbsp;g steel counterweight so the center of mass sits directly above the axle (73.5&nbsp;mm up, 470&nbsp;g in total).</li>
-                </ul>
-                <ul class="tags"><li>Onshape</li><li>FeatureScript</li><li>CAD</li><li>3D printing</li><li>micro:bit v2</li></ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>Our team is building a two-wheeled robot that balances itself upright, like a tiny Segway, run by a BBC micro:bit. So far we have finished the mechanical design: a stack of 3D-printable decks that carries the motors, sensors, batteries, and a small screen for a face, weighted so its center of mass sits right above the wheels.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <p>Our team's final project, built around a micro:bit v2. So far we have finished the mechanical design.</p>
+                    <ul class="points">
+                      <li>Designed the chassis in <b>Onshape</b>: four 3D-printable decks stacked on built-in standoffs above the wheel axle, plus an L-bracket that holds a 1.69" LCD as the robot's face.</li>
+                      <li>Laid out the real parts from their vendor CAD models: Pololu micro metal gearmotors with encoders and 42×19&nbsp;mm wheels, a DRV8833 motor driver, an MPU-6050 IMU, the micro:bit on a Qwiic breakout, and two 4×AA battery packs.</li>
+                      <li>Balanced the mass in the model: each part carries its datasheet mass, and a <b>FeatureScript</b> feature sizes a 21&nbsp;g steel counterweight so the center of mass sits directly above the axle (73.5&nbsp;mm up, 470&nbsp;g in total).</li>
+                    </ul>
+                    <ul class="tags"><li>Onshape</li><li>FeatureScript</li><li>CAD</li><li>3D printing</li><li>micro:bit v2</li></ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -907,7 +921,7 @@
     </div>
   </section>
 
-  <script src="js/site.js?v=20261111b"></script>
+  <script src="js/site.js?v=20261115"></script>
 
   <footer class="site-footer">
     <div class="wrap">
