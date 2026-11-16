@@ -27,6 +27,7 @@
     <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
     <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
     <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
     <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></symbol>
     <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
   </svg>
@@ -309,13 +310,20 @@
               <div class="entry-body">
                 <p class="entry-meta">ME450 Embedded Systems in Robotics · Homework 3 · Nov 2026 · Team of 4</p>
                 <h3>Franka Pick-and-Place with MoveIt&nbsp;2</h3>
-                <ul class="points">
-                  <li>Built <code>franka_package</code>, a Python library that wraps MoveIt's <b>move_group</b> ROS&nbsp;2 interfaces for the Franka arm: motion planning, the planning scene, robot state (FK/IK), and the gripper.</li>
-                  <li>Co-developed the <b>MotionPlanner</b> module: reworked it to talk to <code>move_group</code> directly instead of MoveItPy, and implemented planning to joint configurations, end-effector poses, <b>Cartesian paths</b>, and named SRDF configurations, plus trajectory execution.</li>
-                  <li>A <code>pick_node</code> exposes a <code>/pick</code> service that loads the table, object, and obstacle into the planning scene, then grasps the object, attaches it to the hand, carries it past the obstacle, and releases it.</li>
-                  <li>Ran the task both in simulation (mock hardware) and on the <b>real robot</b>, and wrote an integration test that moves the arm from pose A to pose B.</li>
-                </ul>
-                <ul class="tags"><li>ROS 2</li><li>MoveIt 2</li><li>Python</li><li>Franka Emika</li><li>pytest</li></ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>Our team of four taught a Franka robot arm to pick up an object, carry it around an obstacle, and set it down on its own. I worked on the Python library that lets the arm plan safe, collision-free movements, and we ran the task both in simulation and on the real robot in the lab.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Built <code>franka_package</code>, a Python library that wraps MoveIt's <b>move_group</b> ROS&nbsp;2 interfaces for the Franka arm: motion planning, the planning scene, robot state (FK/IK), and the gripper.</li>
+                      <li>Co-developed the <b>MotionPlanner</b> module: reworked it to talk to <code>move_group</code> directly instead of MoveItPy, and implemented planning to joint configurations, end-effector poses, <b>Cartesian paths</b>, and named SRDF configurations, plus trajectory execution.</li>
+                      <li>A <code>pick_node</code> exposes a <code>/pick</code> service that loads the table, object, and obstacle into the planning scene, then grasps the object, attaches it to the hand, carries it past the obstacle, and releases it.</li>
+                      <li>Ran the task both in simulation (mock hardware) and on the <b>real robot</b>, and wrote an integration test that moves the arm from pose A to pose B.</li>
+                    </ul>
+                    <ul class="tags"><li>ROS 2</li><li>MoveIt 2</li><li>Python</li><li>Franka Emika</li><li>pytest</li></ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -360,14 +368,21 @@
               <div class="entry-body">
                 <p class="entry-meta">ME450 Embedded Systems in Robotics · Homework 2 · Oct 2026</p>
                 <h3>Brickbot: A Unicycle Robot That Catches Falling Bricks</h3>
-                <ul class="points">
-                  <li>Built a ROS&nbsp;2 simulation of a single-wheel robot with a tilting platform, modeled in <b>URDF/xacro</b> and visualized in <b>RViz</b>.</li>
-                  <li>Wrote a <code>simulation</code> node that acts as fake hardware: it integrates the robot and brick physics (free fall and frictionless sliding), publishes joint states and markers, broadcasts <b>TF</b> frames, and offers <code>place</code> and <code>drop</code> services.</li>
-                  <li>Implemented a <code>control</code> node that computes <b>wheel odometry</b> from joint states and drives to a <code>goal_pose</code>, slowing down as it approaches.</li>
-                  <li>The <code>catcher</code> node compares the brick's <b>fall time</b> with the robot's predicted <b>drive time</b>. If the brick is reachable it drives underneath, catches it, and tilts the platform until the brick slides off; otherwise it marks the brick as unreachable.</li>
-                  <li>Kept the physics ROS-independent and covered it with <b>unit tests</b>; robot dimensions are configurable through YAML.</li>
-                </ul>
-                <ul class="tags"><li>ROS 2</li><li>rclpy</li><li>TF2</li><li>URDF / xacro</li><li>RViz</li><li>pytest</li></ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>A simulated one-wheeled robot that catches bricks falling from the sky. When a brick drops, the robot works out whether it can get underneath in time. If it can, it races over, catches the brick on its platform, and tilts to slide it off; if not, it flags the brick as out of reach.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Built a ROS&nbsp;2 simulation of a single-wheel robot with a tilting platform, modeled in <b>URDF/xacro</b> and visualized in <b>RViz</b>.</li>
+                      <li>Wrote a <code>simulation</code> node that acts as fake hardware: it integrates the robot and brick physics (free fall and frictionless sliding), publishes joint states and markers, broadcasts <b>TF</b> frames, and offers <code>place</code> and <code>drop</code> services.</li>
+                      <li>Implemented a <code>control</code> node that computes <b>wheel odometry</b> from joint states and drives to a <code>goal_pose</code>, slowing down as it approaches.</li>
+                      <li>The <code>catcher</code> node compares the brick's <b>fall time</b> with the robot's predicted <b>drive time</b>. If the brick is reachable it drives underneath, catches it, and tilts the platform until the brick slides off; otherwise it marks the brick as unreachable.</li>
+                      <li>Kept the physics ROS-independent and covered it with <b>unit tests</b>; robot dimensions are configurable through YAML.</li>
+                    </ul>
+                    <ul class="tags"><li>ROS 2</li><li>rclpy</li><li>TF2</li><li>URDF / xacro</li><li>RViz</li><li>pytest</li></ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -387,13 +402,20 @@
               <div class="entry-body">
                 <p class="entry-meta">ME450 Embedded Systems in Robotics · Homework 1 · Oct 2026</p>
                 <h3>TurtleSim Waypoint Follower</h3>
-                <ul class="points">
-                  <li>ROS&nbsp;2 package that drives a TurtleSim turtle around a loop of user-supplied waypoints with a <b>100&nbsp;Hz</b> feedback controller: turn toward the target, then drive with a speed proportional to the remaining distance.</li>
-                  <li>Defined custom interfaces: a <code>LoadWaypoints</code> service that resets the turtle, draws the waypoint markers, and returns the loop distance, and an <code>ErrorMetric</code> message published after every completed loop.</li>
-                  <li>Added a <code>toggle</code> service to start and stop the turtle, and a <code>corrupt</code> node that injects Gaussian noise into velocity commands to test robustness.</li>
-                  <li>Recorded and replayed runs with <b>ros2 bag</b>; one loop took <b>26.9&nbsp;s</b> and finished with a <b>−0.32&nbsp;m</b> distance error.</li>
-                </ul>
-                <ul class="tags"><li>ROS 2</li><li>Python</li><li>Custom msgs &amp; srvs</li><li>Launch files</li><li>ros2 bag</li></ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>A small simulated turtle robot that drives a loop through points the user chooses, steering itself toward one after another. After every lap it reports how far off it ended up, and I stress-tested it by adding random noise to its driving commands.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>ROS&nbsp;2 package that drives a TurtleSim turtle around a loop of user-supplied waypoints with a <b>100&nbsp;Hz</b> feedback controller: turn toward the target, then drive with a speed proportional to the remaining distance.</li>
+                      <li>Defined custom interfaces: a <code>LoadWaypoints</code> service that resets the turtle, draws the waypoint markers, and returns the loop distance, and an <code>ErrorMetric</code> message published after every completed loop.</li>
+                      <li>Added a <code>toggle</code> service to start and stop the turtle, and a <code>corrupt</code> node that injects Gaussian noise into velocity commands to test robustness.</li>
+                      <li>Recorded and replayed runs with <b>ros2 bag</b>; one loop took <b>26.9&nbsp;s</b> and finished with a <b>−0.32&nbsp;m</b> distance error.</li>
+                    </ul>
+                    <ul class="tags"><li>ROS 2</li><li>Python</li><li>Custom msgs &amp; srvs</li><li>Launch files</li><li>ros2 bag</li></ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -431,15 +453,22 @@
               <div class="entry-body">
                 <p class="entry-meta">CE346 Microcontroller System Design · Lab series · Sep – Nov 2026</p>
                 <h3>Bare-Metal Firmware on an ARM Cortex-M4</h3>
-                <p>A series of embedded C labs on the Nordic <b>nRF52833</b> (micro:bit v2), building each driver directly on the hardware registers.</p>
-                <ul class="points">
-                  <li><b>Memory-mapped I/O &amp; interrupts:</b> mapped the GPIO and RNG peripheral registers onto C structs to write drivers from scratch, configured GPIOTE and software interrupts with NVIC priorities to demonstrate preemption, and validated the hardware RNG with a 10,000-sample histogram.</li>
-                  <li><b>Virtual timers:</b> multiplexed one 32-bit hardware timer into any number of one-shot and repeating timers using a sorted linked list and compare-channel scheduling, with interrupt-safe critical sections and handling for stale or missed compare events. Built a real-time clock on top.</li>
-                  <li><b>LED matrix:</b> row-scanned the 5×5 matrix at about 1&nbsp;kHz with app timers, rendered ASCII text from a 5×5 font, and built Snake with a ring-buffer body.</li>
-                  <li><b>Analog sensing &amp; capacitive touch:</b> read an NTC thermistor and a photoresistor through the 12-bit SAADC, drove an RGB LED from sensor thresholds, and detected touches by timing an RC rise with GPIOTE and a 1&nbsp;MHz timer capture.</li>
-                  <li><b>Audio &amp; I²C:</b> generated tones with the PWM peripheral and read the LSM303AGR accelerometer and magnetometer over I²C with repeated-START register reads.</li>
-                </ul>
-                <ul class="tags"><li>Embedded C</li><li>nRF52833</li><li>ARM Cortex-M4</li><li>Interrupts</li><li>Timers</li><li>PWM</li><li>ADC</li><li>I²C</li></ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>A series of labs programming the tiny processor on a BBC micro:bit, with no operating system to lean on. I wrote code that talks to the hardware directly to light up its LED screen, read light and temperature sensors, sense touch, and play tones, then built small apps on top, like a clock and a game of Snake.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <p>A series of embedded C labs on the Nordic <b>nRF52833</b> (micro:bit v2), building each driver directly on the hardware registers.</p>
+                    <ul class="points">
+                      <li><b>Memory-mapped I/O &amp; interrupts:</b> mapped the GPIO and RNG peripheral registers onto C structs to write drivers from scratch, configured GPIOTE and software interrupts with NVIC priorities to demonstrate preemption, and validated the hardware RNG with a 10,000-sample histogram.</li>
+                      <li><b>Virtual timers:</b> multiplexed one 32-bit hardware timer into any number of one-shot and repeating timers using a sorted linked list and compare-channel scheduling, with interrupt-safe critical sections and handling for stale or missed compare events. Built a real-time clock on top.</li>
+                      <li><b>LED matrix:</b> row-scanned the 5×5 matrix at about 1&nbsp;kHz with app timers, rendered ASCII text from a 5×5 font, and built Snake with a ring-buffer body.</li>
+                      <li><b>Analog sensing &amp; capacitive touch:</b> read an NTC thermistor and a photoresistor through the 12-bit SAADC, drove an RGB LED from sensor thresholds, and detected touches by timing an RC rise with GPIOTE and a 1&nbsp;MHz timer capture.</li>
+                      <li><b>Audio &amp; I²C:</b> generated tones with the PWM peripheral and read the LSM303AGR accelerometer and magnetometer over I²C with repeated-START register reads.</li>
+                    </ul>
+                    <ul class="tags"><li>Embedded C</li><li>nRF52833</li><li>ARM Cortex-M4</li><li>Interrupts</li><li>Timers</li><li>PWM</li><li>ADC</li><li>I²C</li></ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -454,8 +483,20 @@
               <div class="entry-body">
                 <p class="entry-meta">Professional project · Desktop application</p>
                 <h3>ImagePipe: AI-Powered Tourist Photo Processing</h3>
-                <p>An end-to-end computer vision pipeline that automates the curation, enhancement, and organization of tourist photos, combining YOLOv8 classification, InsightFace recognition, MediaPipe eye-state detection, and a custom U-Net generative eye-opening model.</p>
-                <ul class="tags"><li>PyTorch</li><li>YOLOv8</li><li>InsightFace</li><li>MediaPipe</li><li>U-Net</li><li>PyQt6</li></ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>A desktop app that takes the tedious work out of tour photography. Give it a day's worth of photos and it keeps the good shots, recognizes each traveler, fixes pictures where someone blinked, and sorts everything into a personal album for every person.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li><b>Pipeline:</b> a <b>YOLOv8</b> classifier filters and tags every photo, <b>InsightFace</b> (Buffalo_L) finds each face and extracts an identity embedding, and <b>DBSCAN</b> clusters the embeddings into one group per person, with no labels needed.</li>
+                      <li><b>Eye correction:</b> <b>MediaPipe</b> face landmarks flag closed or half-closed eyes, and a custom <b>U-Net with attention</b> regenerates naturally open eyes on those faces.</li>
+                      <li><b>Scale:</b> processes batches of 1,000+ photos with lazy image loading, explicit garbage collection, and <code>ThreadPoolExecutor</code> parallelism, with per-stage timing for profiling.</li>
+                      <li><b>Architecture:</b> three layers (a <b>PyQt6</b> UI, the processing core, and a swappable model layer) plus a headless CLI build; hot paths are compiled with <b>Cython</b> and the app ships as a <b>PyInstaller</b> package.</li>
+                    </ul>
+                    <ul class="tags"><li>PyTorch</li><li>YOLOv8</li><li>InsightFace</li><li>DBSCAN</li><li>MediaPipe</li><li>U-Net</li><li>PyQt6</li><li>Cython</li></ul>
+                  </div>
+                </div>
                 <div class="links"><a class="link-btn" href="imagepipe.html">View full demo<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
               </div>
             </article>
@@ -470,12 +511,21 @@
               </div>
               <div class="entry-body">
                 <h3>Simulated Annealing AI Agent</h3>
-                <ul class="points">
-                  <li>Developed a <b>simulated annealing AI agent</b> for constrained graph coloring, minimizing shapes while satisfying adjacency constraints.</li>
-                  <li>Implemented <b>adaptive optimization</b> with intelligent shape selection, problem-area targeting, and dynamic cooling schedules.</li>
-                  <li>Engineered <b>efficient grid algorithms</b> using larger shapes first and offline state management for rapid solution evaluation.</li>
-                  <li>Applied <b>local search metaheuristics</b> to constraint satisfaction problems with applications in scheduling and resource allocation.</li>
-                </ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>An AI that solves a grid puzzle: cover every square with colored shapes so that no two neighboring squares share a color, using as few shapes as possible. It starts from a rough answer and keeps trying small changes, sometimes accepting a worse one early on so it doesn't get stuck. The strategy, simulated annealing, borrows the idea of slowly cooling metal.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Developed a <b>simulated annealing AI agent</b> for constrained graph coloring, minimizing shapes while satisfying adjacency constraints.</li>
+                      <li>Implemented <b>adaptive optimization</b> with intelligent shape selection, problem-area targeting, and dynamic cooling schedules.</li>
+                      <li>Scored each board as <b>1000 × empty cells + 2 × shapes + 5 × same-color neighbors</b>; a run anneals for up to 7,000 steps, aims 70% of its moves at the ten worst problem areas, and stops early once progress stalls.</li>
+                      <li>Engineered <b>efficient grid algorithms</b> using larger shapes first and offline state management for rapid solution evaluation.</li>
+                      <li>Applied <b>local search metaheuristics</b> to constraint satisfaction problems with applications in scheduling and resource allocation.</li>
+                    </ul>
+                    <ul class="tags"><li>Python</li><li>NumPy</li><li>Simulated annealing</li><li>Local search</li></ul>
+                  </div>
+                </div>
                 <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/Simulated_Annealing_Agent" target="_blank" rel="noopener">Source code<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
               </div>
             </article>
@@ -488,12 +538,20 @@
               </div>
               <div class="entry-body">
                 <h3>Q-Learning Reinforcement Learning Agent</h3>
-                <ul class="points">
-                  <li>Implemented a <b>Q-learning agent</b> for a grid-based MDP game with probabilistic transitions and combat mechanics.</li>
-                  <li>Developed <b>model-based probability estimation</b> from random gameplay to learn guard strength characteristics.</li>
-                  <li>Applied <b>epsilon-greedy exploration</b> with adaptive learning rates to train the agent across 1M episodes.</li>
-                  <li>Built a <b>temporal-difference learner</b> that navigates the 5×5 castle grid while managing health and guard encounters.</li>
-                </ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>An AI that learns to escape a castle full of guards purely by trial and error. Nobody tells it the rules: over a million practice runs, it figures out which way to go, when a fight with a guard is worth the risk, and how to stay healthy on the way out.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Implemented a <b>Q-learning agent</b> for a grid-based MDP game with probabilistic transitions and combat mechanics.</li>
+                      <li>Developed <b>model-based probability estimation</b> from random gameplay to learn guard strength characteristics.</li>
+                      <li>Applied <b>epsilon-greedy exploration</b> with adaptive learning rates to train the agent across 1M episodes.</li>
+                      <li>Built a <b>temporal-difference learner</b> that navigates the 5×5 castle grid while managing health and guard encounters.</li>
+                    </ul>
+                    <ul class="tags"><li>Python</li><li>Q-learning</li><li>MDP</li><li>ε-greedy</li></ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -505,12 +563,20 @@
               </div>
               <div class="entry-body">
                 <h3>Deep Learning Image Classification with PyTorch</h3>
-                <ul class="points">
-                  <li>Designed and trained <b>CNN and feedforward neural networks</b> reaching 90%+ accuracy on Fashion-MNIST classification.</li>
-                  <li>Implemented <b>convolutional architectures</b> with 3 conv layers, max pooling, and dropout regularization, showing that CNNs outperform the FFN with 25% fewer parameters.</li>
-                  <li>Visualized <b>learned feature representations</b> through kernel analysis and feature-map progression, revealing hierarchical pattern detection from edges to complex shapes.</li>
-                  <li>Analyzed model performance with <b>confusion matrices and classification metrics</b>, identifying misclassification patterns between visually similar clothing categories.</li>
-                </ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>I trained two kinds of neural networks to recognize ten types of clothing, from shirts and sneakers to bags, in small grayscale photos. The network designed for images (a CNN) was more accurate despite being smaller, and I visualized what it learns: simple edges in its first layers, whole shapes deeper in.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Designed and trained <b>CNN and feedforward neural networks</b> reaching 90%+ accuracy on Fashion-MNIST classification.</li>
+                      <li>Implemented <b>convolutional architectures</b> with 3 conv layers, max pooling, and dropout regularization, showing that CNNs outperform the FFN with 25% fewer parameters.</li>
+                      <li>Visualized <b>learned feature representations</b> through kernel analysis and feature-map progression, revealing hierarchical pattern detection from edges to complex shapes.</li>
+                      <li>Analyzed model performance with <b>confusion matrices and classification metrics</b>, identifying misclassification patterns between visually similar clothing categories.</li>
+                    </ul>
+                    <ul class="tags"><li>PyTorch</li><li>Python</li><li>CNN</li><li>Fashion-MNIST</li></ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -523,11 +589,21 @@
               <div class="entry-body">
                 <p class="entry-meta">Multi-user system with role-based permissions · Project leader</p>
                 <h3>Weekly Planner System</h3>
-                <ul class="points">
-                  <li>Built a multi-user weekly planner with role-based permissions for event creation and deletion, keeping every related user's schedule updated automatically in real time.</li>
-                  <li>Chose the <b>MVC design pattern</b> for the project, following <b>object-oriented design</b> principles.</li>
-                  <li>Implemented XML support so users can upload or save their schedule as an XML file, significantly improving the system's efficiency.</li>
-                </ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>A shared weekly calendar for a group of people. Users plan events together; when someone adds or cancels one, everyone involved sees the change right away, and permissions control who can create or delete what. Schedules can be saved to and loaded from files.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Built a multi-user weekly planner with role-based permissions for event creation and deletion, keeping every related user's schedule updated automatically in real time.</li>
+                      <li>Chose the <b>MVC design pattern</b> for the project, following <b>object-oriented design</b> principles.</li>
+                      <li>Implemented XML support so users can upload or save their schedule as an XML file, significantly improving the system's efficiency.</li>
+                      <li>Wrote the desktop GUI in <b>Java Swing</b>, with the model split into read-only and mutable interfaces so views cannot change state.</li>
+                      <li>Integrated another team's GUI by writing <b>adapter</b> classes between their interfaces and our model, and added a planner variant whose week starts on Saturday behind a new date interface.</li>
+                    </ul>
+                    <ul class="tags"><li>Java</li><li>Swing</li><li>MVC</li><li>XML</li><li>JUnit</li></ul>
+                  </div>
+                </div>
                 <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/OOD_hw" target="_blank" rel="noopener">Source code<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
               </div>
             </article>
@@ -541,10 +617,20 @@
               <div class="entry-body">
                 <p class="entry-meta">Data science semester project · Project leader</p>
                 <h3>Nationwide University Statistics Analysis</h3>
-                <ul class="points">
-                  <li>Ran a data-driven analysis of private universities by <b>scraping</b> key variables from CollegeSimply to investigate the relationship between tuition and educational quality.</li>
-                  <li>Built an interactive linear-regression plot where every point is clickable and shows that university's educational quality as a radar chart.</li>
-                </ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>Does paying more get you a better education? We gathered tuition and ratings for private universities across the U.S. from a college-review website and compared the two. The result is an interactive chart where every dot is a school; click one to see a breakdown of its educational quality.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Ran a data-driven analysis of private universities by <b>scraping</b> key variables from CollegeSimply to investigate the relationship between tuition and educational quality.</li>
+                      <li>Parsed tuition and five rating categories for each school with <b>BeautifulSoup</b>, and placed each school in its state with geopy's Nominatim geocoder.</li>
+                      <li>Scored educational quality as the <b>area of each school's five-category radar chart</b> (shoelace formula), then fit a least-squares line of quality against tuition with NumPy.</li>
+                      <li>Built an interactive linear-regression plot in <b>Dash</b> and <b>Plotly</b>: every point is clickable and shows that university's educational quality as a radar chart, and a search box jumps to any school.</li>
+                    </ul>
+                    <ul class="tags"><li>Python</li><li>BeautifulSoup</li><li>NumPy</li><li>pandas</li><li>Plotly</li><li>Dash</li></ul>
+                  </div>
+                </div>
                 <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/nationwide_university_stat_analysis" target="_blank" rel="noopener">Source code<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
               </div>
             </article>
@@ -738,11 +824,18 @@
                 <p class="entry-meta">Target venue: TACL (Transactions of the ACL) · In preparation · Oct 2025 – Present</p>
                 <h3>Slow the Dialogue, Not Just the Robot: Positive Friction for Reliable Grounding and Safe, Embodied Vision-Language Action</h3>
                 <p class="authors"><b>Haocheng Li</b>, Asteria Kaeberlein, Mert Inan, Malihe Alikhani</p>
-                <ul class="points">
-                  <li>Built a <b>2D coordinate-based world model</b> with collision detection, hazard zones, and dynamic FOV simulation for reproducible evaluation of embodied dialogue policies across 46 structured task scenarios.</li>
-                  <li>Engineered a <b>hierarchical ambiguity detection protocol</b> that prioritizes safety hazards over navigation and referential errors, reducing collision-related task failures through ordered friction triggers.</li>
-                  <li>Implemented a <b>vague-to-specific synthetic evaluation pipeline</b> using GPT-4o-mini as a simulated user agent, enabling controlled large-scale benchmarking that isolated the contributions of conversation history (+7%), prompt design (+15.5%), and friction (+14.5%).</li>
-                </ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>When people give a robot a vague request like “grab that one” or “go over there,” it can guess wrong, or even do something unsafe. This work teaches robots to slow the conversation down at the right moments and ask a quick clarifying question before acting, and shows that this “positive friction” makes them more reliable and safer.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Built a <b>2D coordinate-based world model</b> with collision detection, hazard zones, and dynamic FOV simulation for reproducible evaluation of embodied dialogue policies across 46 structured task scenarios.</li>
+                      <li>Engineered a <b>hierarchical ambiguity detection protocol</b> that prioritizes safety hazards over navigation and referential errors, reducing collision-related task failures through ordered friction triggers.</li>
+                      <li>Implemented a <b>vague-to-specific synthetic evaluation pipeline</b> using GPT-4o-mini as a simulated user agent, enabling controlled large-scale benchmarking that isolated the contributions of conversation history (+7%), prompt design (+15.5%), and friction (+14.5%).</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </article>
 
@@ -759,15 +852,24 @@
                 <p class="entry-meta">Submitted to IEEE RA-L (Robotics and Automation Letters), Oct 2026 · Under review · Dec 2024 – Sep 2026</p>
                 <h3>SAGE: State-Aware Guided End-to-End Policy for Multi-Stage Sequential Tasks via Hidden Markov Decision Process</h3>
                 <p class="authors">Binxu Wu, Tengfei Zhang, Chen Yang, Jiahao Wen, Yixuan Huang, <b>Haocheng Li</b>, Jingtian Ma, Zhen Chen, Jingyuan Wang</p>
-                <ul class="points">
-                  <li>Reproduced UMI successfully after extensive code review and debugging.</li>
-                  <li>Conducted comprehensive research on SLAM (ORB-SLAM3), raising our dataset's SLAM success rate <b>from 43.1% to 97.9%</b>.</li>
-                  <li>Refined the gripper's 3D design in <b>SolidWorks</b>, significantly improving maximum grasping force and stability.</li>
-                  <li>Led literature reviews and identified model improvements, actively driving the team's progress; contributed significantly to the <b>Related Work</b> section of the paper.</li>
-                  <li>Reproduced Diffusion Policy's <b>behavior cloning</b> module and evaluated its performance and suitability for our model.</li>
-                  <li>Collaborated on developing and debugging the model's <b>state-perception module</b>, improving performance on long-horizon, complex tasks.</li>
-                  <li>Proposed and co-developed an <b>active learning</b> module for automated data labeling, significantly streamlining the labeling pipeline.</li>
-                </ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>Many robot tasks happen in stages, like pressing a row of buttons in a set order, and between stages the scene can look exactly the same, so a robot that only sees the present loses track of where it is. SAGE gives the robot a sense of which stage it is in; in real-world tests it reached a 100% success rate, far ahead of the baselines. I worked on the data-collection setup, the model, and the paper.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <p>SAGE models a multi-stage task as a <b>Hidden Markov Decision Process</b>: a state-transition network infers the hidden task stage, and a state-aware policy acts on both the observation and that stage. A semi-automatic labeling pipeline (active learning plus soft-label interpolation) needs manual labels for only about <b>13%</b> of states.</p>
+                    <p class="tech-label">My contributions</p>
+                    <ul class="points">
+                      <li>Reproduced UMI successfully after extensive code review and debugging.</li>
+                      <li>Conducted comprehensive research on SLAM (ORB-SLAM3), raising our dataset's SLAM success rate <b>from 43.1% to 97.9%</b>.</li>
+                      <li>Refined the gripper's 3D design in <b>SolidWorks</b>, significantly improving maximum grasping force and stability.</li>
+                      <li>Led literature reviews and identified model improvements, actively driving the team's progress; contributed significantly to the <b>Related Work</b> section of the paper.</li>
+                      <li>Reproduced Diffusion Policy's <b>behavior cloning</b> module and evaluated its performance and suitability for our model.</li>
+                      <li>Collaborated on developing and debugging the model's <b>state-perception module</b>, improving performance on long-horizon, complex tasks.</li>
+                      <li>Proposed and co-developed an <b>active learning</b> module for automated data labeling, significantly streamlining the labeling pipeline.</li>
+                    </ul>
+                  </div>
+                </div>
                 <div class="links"><a class="link-btn" href="https://arxiv.org/abs/2509.19853" target="_blank" rel="noopener">Paper on arXiv<svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
               </div>
             </article>
@@ -785,11 +887,18 @@
                 <p class="entry-meta">Under submission · Jul 2024 – Nov 2024</p>
                 <h3>ProGEM: Probing Generalizable and Efficient Feature Fields Distillation for Multi-Task Robotic Manipulation</h3>
                 <p class="authors">Zhen Chen, Robin Ananda, Binxu Wu, <b>Haocheng Li</b>, Weize Li, Qi Lu, Qianyao Xu, Jiaying Li, Yingqing Xu</p>
-                <ul class="points">
-                  <li>Used <b>Stable Diffusion</b> as a vision foundation model to extract semantic information from the scene.</li>
-                  <li>Fused the semantic embeddings with <b>RGB</b> observations to build a semantically enriched <b>3D point cloud</b> (distilled feature field) of the scene.</li>
-                  <li>Voxelized the scene and used a learned <b>selection network</b> to keep only the <b>top-k occupied voxels</b>, so the policy reasons over a small set of informative voxels instead of the full grid, improving <b>inference speed</b>.</li>
-                </ul>
+                <div class="views">
+                  <div class="view view--summary">
+                    <p>To handle many different tasks, a robot needs to know what the objects around it are and where they sit in 3D. ProGEM borrows the visual knowledge of an image-generation model (Stable Diffusion) to build a 3D “meaning map” of the scene, then focuses on just the few spots that matter, so the robot generalizes better and decides faster.</p>
+                  </div>
+                  <div class="view view--tech">
+                    <ul class="points">
+                      <li>Used <b>Stable Diffusion</b> as a vision foundation model to extract semantic information from the scene.</li>
+                      <li>Fused the semantic embeddings with <b>RGB</b> observations to build a semantically enriched <b>3D point cloud</b> (distilled feature field) of the scene.</li>
+                      <li>Voxelized the scene and used a learned <b>selection network</b> to keep only the <b>top-k occupied voxels</b>, so the policy reasons over a small set of informative voxels instead of the full grid, improving <b>inference speed</b>.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
@@ -798,7 +907,7 @@
     </div>
   </section>
 
-  <script src="js/site.js?v=20261111"></script>
+  <script src="js/site.js?v=20261111b"></script>
 
   <footer class="site-footer">
     <div class="wrap">

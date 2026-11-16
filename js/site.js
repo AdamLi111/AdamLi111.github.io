@@ -9,6 +9,8 @@
  *    #research deep-link straight into one.
  * 3. GIFs inside a sheet only download when they scroll near the viewport.
  *    With reduced motion or Save-Data they become click-to-play.
+ * 4. Project and research entries open on a plain-language summary; a
+ *    "Technical details" button cross-fades to the in-depth version.
  */
 (() => {
   'use strict';
@@ -502,6 +504,119 @@
 
   doc.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && current) { e.preventDefault(); requestClose(); }
+  });
+
+  /* ------------------------------------------ summary ⇄ technical details */
+  // Entries open on a plain-language summary. "Technical details" cross-fades
+  // to the in-depth version while the text box eases to its new height; the
+  // same button then reads "Back to summary".
+  const swaps = new WeakMap(); // .views -> the swap currently animating it
+
+  function swapView(box, btn, byKeyboard) {
+    const on = !box.classList.contains('is-tech');
+    const from = box.querySelector(on ? '.view--summary' : '.view--tech');
+    const to = box.querySelector(on ? '.view--tech' : '.view--summary');
+    const sheet = box.closest('.sheet');
+    const sc = sheet && sheet.classList.contains('is-open') ? scroller(sheet) : null;
+    let vTop = 0; // top of the readable area, just under the sticky bar
+    if (sc) {
+      const bar = sheet.querySelector('.sheet-bar');
+      vTop = sc.getBoundingClientRect().top + (bar ? bar.offsetHeight : 0) + 12;
+    }
+
+    // Start from wherever an interrupted swap had got to.
+    const r0 = box.getBoundingClientRect();
+    const prev = swaps.get(box);
+    const fromO = prev ? +getComputedStyle(from).opacity : 1;
+    const toO = prev ? +getComputedStyle(to).opacity : 0;
+    if (prev) prev.stop();
+
+    box.classList.toggle('is-tech', on);
+    btn.setAttribute('aria-expanded', String(on));
+    if (byKeyboard) to.focus({ preventScroll: true }); // keyboard and screen-reader users read on from here
+
+    // Measured in the final layout, before any animation applies.
+    const h1 = box.getBoundingClientRect().height;
+    const x1 = box.getBoundingClientRect().top;
+    const x0 = r0.top;
+    const inView = x0 >= vTop; // was the start of the text on screen?
+    // If it was not (and still is not), scroll the entry's header back to just
+    // under the sticky bar, so the reader sees what they are reading.
+    const glide = sc && !inView && x1 < vTop ? box.parentNode.getBoundingClientRect().top - vTop : 0;
+
+    if (reduced()) {
+      if (sc) sc.scrollTop += inView ? Math.min(0, x1 - x0) : glide;
+      return;
+    }
+
+    from.classList.add('is-leaving'); // overlaid while it fades out
+    box.classList.add('is-swapping');
+    const anims = [
+      box.animate([{ height: r0.height + 'px' }, { height: h1 + 'px' }], { duration: 440, easing: EASE }),
+      from.animate([{ opacity: fromO, transform: 'none' }, { opacity: 0, transform: 'translateY(-4px)' }],
+        { duration: 180, easing: 'ease-out', fill: 'forwards' }),
+      to.animate([{ opacity: toO, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }],
+        { duration: 380, delay: 110, easing: EASE, fill: 'backwards' }),
+    ];
+
+    let raf = 0;
+    if (sc) {
+      sc.style.overflowAnchor = 'none';
+      if (inView) {
+        // Keep the text where the reader is looking: when it grows past the media
+        // column, the sticky text column would otherwise slide up out of view.
+        // (Only upward drift is corrected; a column pinned at its sticky offset
+        // does not move with scrolling, so chasing downward drift never settles.)
+        const hold = () => {
+          const dy = box.getBoundingClientRect().top - x0;
+          if (dy < -0.5) sc.scrollTop += dy;
+          raf = requestAnimationFrame(hold);
+        };
+        raf = requestAnimationFrame(hold);
+      } else if (glide) {
+        sc.scrollBy({ top: glide, behavior: 'smooth' });
+      }
+    }
+
+    const swap = {
+      stop() {
+        cancelAnimationFrame(raf);
+        anims.forEach((a) => a.cancel());
+        from.classList.remove('is-leaving');
+        box.classList.remove('is-swapping');
+        if (sc) sc.style.overflowAnchor = '';
+        if (swaps.get(box) === swap) swaps.delete(box);
+      },
+    };
+    swaps.set(box, swap);
+    Promise.all(anims.map((a) => a.finished)).then(() => swap.stop(), () => {});
+  }
+
+  doc.querySelectorAll('.views').forEach((box, k) => {
+    const sum = box.querySelector('.view--summary');
+    const tech = box.querySelector('.view--tech');
+    if (!sum || !tech) return;
+    const entry = box.closest('.entry');
+    if (!tech.id) tech.id = (entry && entry.id ? entry.id : 'views-' + k) + '-tech';
+    sum.tabIndex = -1;
+    tech.tabIndex = -1;
+
+    const btn = doc.createElement('button');
+    btn.type = 'button';
+    btn.className = 'tech-btn';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', tech.id);
+    btn.innerHTML = '<span class="when-closed">Technical details</span><span class="when-open">Back to summary</span>'
+      + '<svg class="i" aria-hidden="true"><use href="#i-chevron-down"/></svg>';
+    btn.addEventListener('click', (e) => swapView(box, btn, e.detail === 0));
+
+    let row = box.nextElementSibling; // share the row with the entry's links
+    if (!row || !row.classList.contains('links')) {
+      row = doc.createElement('div');
+      row.className = 'links';
+      box.after(row);
+    }
+    row.prepend(btn);
   });
 
   // Deep link (e.g. index.html#research): open immediately, no animation.

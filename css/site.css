@@ -384,6 +384,38 @@ code { font-family: var(--mono); font-size: .84em; background: rgba(21, 22, 26, 
 .link-btn:hover { color: var(--accent-ink); border-color: rgba(var(--accent-rgb), .45); box-shadow: 0 4px 14px -8px rgba(var(--accent-rgb), .6); }
 .link-btn .i { font-size: .95em; }
 
+/* summary ⇄ technical details: each entry opens on a plain-language summary */
+.views { position: relative; display: flow-root; }
+.view { display: flow-root; }
+.view > p { margin: 0 0 .85rem; color: var(--ink-2); }
+.view > :last-child { margin-bottom: 0; }
+.view > .tech-label { margin: 1.25rem 0 .6rem; font: 500 .72rem/1.2 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+html:not(.js) .view--tech { margin-top: 1.1rem; }
+.js .views:not(.is-tech) > .view--tech, .js .views.is-tech > .view--summary { display: none; }
+.js .views > .view.is-leaving { display: flow-root; position: absolute; inset: 0 0 auto; pointer-events: none; }
+.views.is-swapping { overflow: hidden; overflow: clip; }
+.view:focus { outline: none; }
+.view:focus-visible { outline: 2px solid rgba(var(--accent-rgb), .45); outline-offset: 8px; border-radius: 10px; }
+
+.tech-btn {
+  display: inline-flex; align-items: center; gap: .45rem;
+  margin: 0; padding: .42rem .8rem .42rem .95rem;
+  border: 1px solid rgba(21, 22, 26, .8); border-radius: 999px;
+  background: transparent; color: var(--ink);
+  font: 600 .85rem/1.6 var(--font);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .3s var(--ease-out), border-color .3s var(--ease-out), color .3s var(--ease-out), box-shadow .3s var(--ease-out);
+}
+.tech-btn:focus-visible { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 8px 18px -10px rgba(var(--accent-rgb), .75); }
+@media (hover: hover) {
+  .tech-btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 8px 18px -10px rgba(var(--accent-rgb), .75); }
+}
+.tech-btn .i { transition: transform .45s var(--ease-out); }
+.tech-btn[aria-expanded="true"] .i { transform: rotate(180deg); }
+.tech-btn .when-open, .tech-btn[aria-expanded="true"] .when-closed { display: none; }
+.tech-btn[aria-expanded="true"] .when-open { display: inline; }
+
 /* organisations on the work sheet */
 .org { padding-top: 2.25rem; }
 .org-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .35rem 1.5rem; padding-bottom: .9rem; border-bottom: 1px solid var(--line-2); }
