@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
-  <link rel="stylesheet" href="css/site.css?v=20261115b">
+  <link rel="stylesheet" href="css/site.css?v=20261118">
   <script>
     (function (d) {
       d.classList.add('js');
@@ -38,194 +38,735 @@
     <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
     <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></symbol>
     <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
   </svg>
 
   <a class="skip" href="#main"><span class="en">Skip to content</span><span class="zh">跳到正文</span></a>
 
-  <!-- ===================== Hero: top third ===================== -->
-  <header class="hero site-header">
-    <div class="lang-switch lang-switch--hero" role="group" aria-label="Language" data-zh-aria-label="语言">
-      <svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>
-      <button type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
-      <button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button>
-    </div>
-    <div class="wrap hero-grid">
-      <img class="portrait" src="images/misc/profile.webp" width="560" height="560" alt="Portrait of Haocheng Li" data-zh-alt="Haocheng Li 的个人照片" fetchpriority="high">
-      <div class="hero-info">
-        <p class="eyebrow"><span class="en">Robotics · Embodied AI · Human-Robot Interaction</span><span class="zh">机器人 · 具身智能 · 人机交互</span></p>
-        <h1>Haocheng Li</h1>
-        <p class="hero-lede"><span class="en">M.S. in Robotics student at Northwestern University. I aim to build <strong>embodied agents</strong> that interact with humans in real-world settings.</span><span class="zh">美国西北大学机器人学硕士在读，致力于打造能在真实环境中与人交互的<strong>具身智能体</strong>。</span></p>
-        <div class="hero-facts">
-          <div>
-            <p class="fact-label"><span class="en">Education</span><span class="zh">教育背景</span></p>
-            <ul class="facts">
-              <li><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg><span><span class="en"><a href="https://www.mccormick.northwestern.edu/robotics/" target="_blank" rel="noopener">M.S. in Robotics (MSR)</a>, Northwestern University <span class="muted">· expected late 2027</span></span><span class="zh"><a href="https://www.mccormick.northwestern.edu/robotics/" target="_blank" rel="noopener">机器人学硕士（MSR）</a>，美国西北大学 <span class="muted">· 预计 2027 年底毕业</span></span></span></li>
-              <li><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg><span><span class="en">B.S. in Computer Science, Northeastern University <span class="muted">· Khoury College</span></span><span class="zh">计算机科学学士，美国东北大学 <span class="muted">· Khoury 计算机学院</span></span></span></li>
-            </ul>
-          </div>
-          <div>
-            <p class="fact-label"><span class="en">Contact</span><span class="zh">联系方式</span></p>
-            <ul class="facts">
-              <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:haochengli2018@gmail.com">haochengli2018@gmail.com</a></li>
-              <li class="socials">
-                <span class="loc"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="en">Evanston, IL</span><span class="zh">美国伊利诺伊州埃文斯顿</span></span>
-                <a class="social" href="https://github.com/AdamLi111/" target="_blank" rel="noopener"><svg class="i i--fill" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
-                <a class="social" href="https://www.linkedin.com/in/haocheng-li-aug27/" target="_blank" rel="noopener"><svg class="i i--fill" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <!-- ===================== Top bar ===================== -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">Haocheng Li</a>
+      <nav class="topnav" aria-label="Sections" data-zh-aria-label="栏目">
+        <a href="#projects"><span class="en">Projects</span><span class="zh">项目</span></a>
+        <a href="#work"><span class="en">Work</span><span class="zh">工作经历</span></a>
+        <a href="#research"><span class="en">Research</span><span class="zh">研究</span></a>
+        <a href="#misc"><span class="en">Misc.</span><span class="zh">其他</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language" data-zh-aria-label="语言">
+        <svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>
+        <button type="button" data-lang="en" lang="en" aria-pressed="true" aria-label="English"><span class="long">English</span><span class="short">EN</span></button>
+        <button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- ===================== Hub: lower two thirds ===================== -->
-    <section class="hub wrap" aria-label="Explore" data-zh-aria-label="浏览">
-
-      <!-- Projects -->
-      <article class="hub-card" data-sheet="projects">
-        <div class="reel" data-reel role="region" aria-label="Project demos" data-zh-aria-label="项目演示">
+    <!-- ===================== About ===================== -->
+    <section class="about wrap" id="about" aria-labelledby="name">
+      <div class="about-text">
+        <div class="about-id">
+          <img class="portrait" src="images/misc/profile.webp" width="560" height="560" alt="Portrait of Haocheng Li" data-zh-alt="Haocheng Li 的个人照片" fetchpriority="high">
+          <div>
+            <p class="eyebrow"><span class="en">Robotics · Embodied AI · Human-Robot Interaction</span><span class="zh">机器人 · 具身智能 · 人机交互</span></p>
+            <h1 id="name">Haocheng Li</h1>
+          </div>
+        </div>
+        <p class="about-lede"><span class="en">M.S. in Robotics student at Northwestern University. I aim to build <strong>embodied agents</strong> that interact with humans in real-world settings.</span><span class="zh">美国西北大学机器人学硕士在读，致力于打造能在真实环境中与人交互的<strong>具身智能体</strong>。</span></p>
+        <ul class="schools" aria-label="Education" data-zh-aria-label="教育背景">
+          <li>
+            <svg class="i" aria-hidden="true"><use href="#i-cap"/></svg>
+            <div>
+              <p class="school"><span class="en">Northwestern University</span><span class="zh">美国西北大学</span></p>
+              <p class="degree"><span class="en"><a href="https://www.mccormick.northwestern.edu/robotics/" target="_blank" rel="noopener">M.S. in Robotics (MSR)</a> · expected late 2027</span><span class="zh"><a href="https://www.mccormick.northwestern.edu/robotics/" target="_blank" rel="noopener">机器人学硕士（MSR）</a> · 预计 2027 年底毕业</span></p>
+            </div>
+          </li>
+          <li>
+            <svg class="i" aria-hidden="true"><use href="#i-cap"/></svg>
+            <div>
+              <p class="school"><span class="en">Northeastern University</span><span class="zh">美国东北大学</span></p>
+              <p class="degree"><span class="en">B.S. in Computer Science · Khoury College</span><span class="zh">计算机科学学士 · Khoury 计算机学院</span></p>
+            </div>
+          </li>
+        </ul>
+        <ul class="contact">
+          <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:haochengli2018@gmail.com">haochengli2018@gmail.com</a></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="en">Evanston, IL</span><span class="zh">美国伊利诺伊州埃文斯顿</span></li>
+        </ul>
+        <p class="socials">
+          <a class="social" href="https://github.com/AdamLi111/" target="_blank" rel="noopener"><svg class="i i--fill" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+          <a class="social" href="https://www.linkedin.com/in/haocheng-li-aug27/" target="_blank" rel="noopener"><svg class="i i--fill" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+        </p>
+      </div>
+      <figure class="about-media">
+        <div class="reel" data-reel role="region" aria-label="Highlights" data-zh-aria-label="精选片段">
           <div class="reel-track">
             <figure class="slide slide--fit" data-target="p-franka">
               <img class="slide-bg" src="images/projects/franka_real-poster.webp" alt="" aria-hidden="true" decoding="async">
               <img class="slide-img" src="images/projects/franka_real-poster.webp" data-gif="images/projects/franka_real.gif" width="540" height="676" alt="Real Franka arm carrying a block past an obstacle" data-zh-alt="真实的 Franka 机械臂携带方块绕过障碍物" decoding="async">
               <figcaption><span class="en">Franka pick-and-place</span><span class="zh">Franka 抓取与放置</span></figcaption>
             </figure>
-            <figure class="slide" data-target="p-franka">
-              <img class="slide-img" src="images/projects/franka_rviz-poster.webp" data-gif="images/projects/franka_rviz.gif" width="760" height="542" alt="MoveIt motion plan executing in RViz" data-zh-alt="在 RViz 中执行的 MoveIt 运动规划" loading="lazy" decoding="async">
-              <figcaption><span class="en">MoveIt plan in RViz</span><span class="zh">RViz 中的 MoveIt 规划</span></figcaption>
+            <figure class="slide" data-target="r-sage">
+              <img class="slide-img" src="images/research/sage-poster.webp" data-gif="images/research/sage.gif" width="800" height="450" alt="UR robot arm with a wrist fisheye camera executing a multi-stage task" data-zh-alt="装有腕部鱼眼相机的 UR 机械臂执行多阶段任务" loading="lazy" decoding="async">
+              <figcaption><span class="en">SAGE · real-robot rollout</span><span class="zh">SAGE · 真机演示</span></figcaption>
+            </figure>
+            <figure class="slide slide--fit" data-target="w-learm">
+              <img class="slide-bg" src="images/work/learm-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <img class="slide-img" src="images/work/learm-poster.webp" data-gif="images/work/learm.gif" width="540" height="676" alt="6-DOF robotic arm pressing buttons on a smart speaker" data-zh-alt="六自由度机械臂按压智能音箱的按钮" loading="lazy" decoding="async">
+              <figcaption><span class="en">EDGE Lab · LeArm automation</span><span class="zh">EDGE 实验室 · LeArm 自动化</span></figcaption>
             </figure>
             <figure class="slide" data-target="p-flip">
               <img class="slide-img" src="images/projects/flipbot-poster.webp" data-gif="images/projects/flipbot.gif" width="480" height="270" alt="Differential-drive robot flipping over in a Gazebo world" data-zh-alt="差速驱动机器人在 Gazebo 场景中翻转" loading="lazy" decoding="async">
               <figcaption><span class="en">Flipping diff-drive robot</span><span class="zh">会翻转的差速机器人</span></figcaption>
+            </figure>
+            <figure class="slide" data-target="r-progem">
+              <img class="slide-img" src="images/research/progem-poster.webp" data-gif="images/research/progem.gif" width="800" height="450" alt="Robot arm opening a drawer and placing objects" data-zh-alt="机械臂拉开抽屉并放置物体" loading="lazy" decoding="async">
+              <figcaption><span class="en">ProGEM · multi-task manipulation</span><span class="zh">ProGEM · 多任务操作</span></figcaption>
             </figure>
             <figure class="slide slide--fit" data-target="p-brickbot">
               <img class="slide-bg" src="images/projects/brickbot-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
               <img class="slide-img" src="images/projects/brickbot-poster.webp" data-gif="images/projects/brickbot.gif" width="456" height="588" alt="Unicycle robot catching a falling brick in RViz" data-zh-alt="独轮机器人在 RViz 中接住下落的砖块" loading="lazy" decoding="async">
               <figcaption><span class="en">Brickbot catching a brick</span><span class="zh">Brickbot 接砖块</span></figcaption>
             </figure>
-            <figure class="slide slide--fit" data-target="p-turtle">
-              <img class="slide-bg" src="images/projects/turtlesim-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <img class="slide-img" src="images/projects/turtlesim-poster.webp" data-gif="images/projects/turtlesim.gif" width="496" height="540" alt="TurtleSim turtle tracing a loop of waypoints" data-zh-alt="TurtleSim 小海龟沿航点绕圈行驶" loading="lazy" decoding="async">
-              <figcaption><span class="en">TurtleSim waypoint follower</span><span class="zh">TurtleSim 航点跟随</span></figcaption>
-            </figure>
-            <figure class="slide slide--paper" data-target="p-balance">
-              <img class="slide-img" src="images/projects/balancebot_cad.webp" width="1040" height="1300" alt="CAD model of the two-wheeled self-balancing robot" data-zh-alt="两轮自平衡机器人的 CAD 模型" loading="lazy" decoding="async">
-              <figcaption><span class="en">Balancing robot · CAD design</span><span class="zh">自平衡机器人 · CAD 设计</span></figcaption>
-            </figure>
-            <figure class="slide slide--fit" data-target="p-ce346">
-              <img class="slide-img" src="images/projects/ce346_led-poster.webp" data-gif="images/projects/ce346_led.gif" width="640" height="400" alt="5x5 LED matrix spelling out text" data-zh-alt="5×5 LED 点阵显示文字" loading="lazy" decoding="async">
-              <figcaption><span class="en">CE346 LED-matrix firmware</span><span class="zh">CE346 LED 点阵固件</span></figcaption>
-            </figure>
-            <figure class="slide slide--paper" data-target="p-imagepipe">
-              <img class="slide-img" src="images/projects/imagepipe.webp" width="1200" height="676" alt="ImagePipe photo-processing pipeline" data-zh-alt="ImagePipe 照片处理流程" loading="lazy" decoding="async">
-              <figcaption>ImagePipe</figcaption>
-            </figure>
-            <figure class="slide slide--fit" data-target="p-annealing">
-              <img class="slide-bg" src="images/projects/gridgame-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <img class="slide-img" src="images/projects/gridgame-poster.webp" data-gif="images/projects/gridgame.gif" width="242" height="272" alt="Simulated-annealing agent coloring a grid" data-zh-alt="模拟退火智能体为网格着色" loading="lazy" decoding="async">
-              <figcaption><span class="en">Simulated-annealing agent</span><span class="zh">模拟退火智能体</span></figcaption>
-            </figure>
-            <figure class="slide slide--fit" data-target="p-qlearning">
-              <img class="slide-bg" src="images/projects/escape_castle-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <img class="slide-img" src="images/projects/escape_castle-poster.webp" data-gif="images/projects/escape_castle.gif" width="600" height="868" alt="Q-learning agent escaping a castle grid" data-zh-alt="Q-learning 智能体逃离城堡网格" loading="lazy" decoding="async">
-              <figcaption><span class="en">Q-learning agent</span><span class="zh">Q-learning 智能体</span></figcaption>
-            </figure>
-            <figure class="slide slide--paper" data-target="p-pytorch">
-              <img class="slide-img" src="images/projects/training_losses.webp" width="1200" height="500" alt="Training-loss curves for feedforward and convolutional networks" data-zh-alt="前馈网络与卷积网络的训练损失曲线" loading="lazy" decoding="async">
-              <figcaption><span class="en">PyTorch image classifiers</span><span class="zh">PyTorch 图像分类器</span></figcaption>
-            </figure>
-            <figure class="slide slide--paper" data-target="p-planner">
-              <img class="slide-img" src="images/projects/plannersystem.webp" width="1200" height="482" alt="Weekly planner system interface and MVC architecture" data-zh-alt="周计划系统界面与 MVC 架构" loading="lazy" decoding="async">
-              <figcaption><span class="en">Weekly planner system</span><span class="zh">周计划系统</span></figcaption>
-            </figure>
-            <figure class="slide slide--paper" data-target="p-stats">
-              <img class="slide-img" src="images/projects/tuition_project.webp" width="900" height="844" alt="University statistics radar charts and regression plot" data-zh-alt="大学统计分析的雷达图与回归图" loading="lazy" decoding="async">
-              <figcaption><span class="en">University statistics analysis</span><span class="zh">大学数据统计分析</span></figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="hub-text">
-          <h2><span class="en">Projects</span><span class="zh">项目</span></h2>
-          <p class="desc"><span class="en">All my academic and professional projects, focusing on both hardware and software.</span><span class="zh">我的全部学术与职业项目，兼顾硬件与软件。</span></p>
-          <a class="btn" href="#projects" data-open="projects"><span class="en">See more details</span><span class="zh">查看详情</span><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        </div>
-      </article>
-
-      <!-- Work -->
-      <article class="hub-card" data-sheet="work">
-        <div class="reel" data-reel role="region" aria-label="Work demos" data-zh-aria-label="工作演示">
-          <div class="reel-track">
-            <figure class="slide slide--fit" data-target="w-learm">
-              <img class="slide-bg" src="images/work/learm-poster.webp" alt="" aria-hidden="true" decoding="async">
-              <img class="slide-img" src="images/work/learm-poster.webp" data-gif="images/work/learm.gif" width="540" height="676" alt="6-DOF robotic arm pressing buttons on a smart speaker" data-zh-alt="六自由度机械臂按压智能音箱的按钮" decoding="async">
-              <figcaption><span class="en">EDGE Lab · LeArm automation</span><span class="zh">EDGE 实验室 · LeArm 自动化</span></figcaption>
+            <figure class="slide" data-target="w-embodied">
+              <img class="slide-img" src="images/work/sim_open_drawer-poster.webp" data-gif="images/work/sim_open_drawer.gif" width="760" height="426" alt="Simulated Franka arm opening a drawer" data-zh-alt="仿真中的 Franka 机械臂拉开抽屉" loading="lazy" decoding="async">
+              <figcaption><span class="en">EncoSmart · open-drawer rollout</span><span class="zh">EncoSmart · 开抽屉策略演示</span></figcaption>
             </figure>
             <figure class="slide slide--fit" data-target="w-plotter">
               <img class="slide-bg" src="images/work/xy_plotter-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
               <img class="slide-img" src="images/work/xy_plotter-poster.webp" data-gif="images/work/xy_plotter.gif" width="540" height="676" alt="CoreXY plotter moving under G-code control" data-zh-alt="CoreXY 绘图仪在 G-code 控制下运动" loading="lazy" decoding="async">
               <figcaption><span class="en">EDGE Lab · XY-plotter</span><span class="zh">EDGE 实验室 · XY 绘图仪</span></figcaption>
             </figure>
-            <figure class="slide slide--fit" data-target="w-sphere">
-              <img class="slide-bg" src="images/work/sphere_testbed-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <img class="slide-img" src="images/work/sphere_testbed-poster.webp" width="540" height="720" alt="SPHERE testbed cabinet with robot arm, smart speaker, camera and XY-plotter" data-zh-alt="装有机械臂、智能音箱、摄像头和 XY 绘图仪的 SPHERE 测试平台机柜" loading="lazy" decoding="async">
-              <figcaption><span class="en">EDGE Lab · SPHERE testbed</span><span class="zh">EDGE 实验室 · SPHERE 测试平台</span></figcaption>
-            </figure>
-            <figure class="slide slide--fit" data-target="w-embodied">
-              <img class="slide-bg" src="images/work/progem_featurefield-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <img class="slide-img" src="images/work/progem_featurefield-poster.webp" data-gif="images/work/progem_featurefield.gif" width="600" height="600" alt="Point-cloud feature field of a robot workspace" data-zh-alt="机器人工作空间的点云特征场" loading="lazy" decoding="async">
-              <figcaption><span class="en">EncoSmart · feature field</span><span class="zh">EncoSmart · 特征场</span></figcaption>
-            </figure>
-            <figure class="slide" data-target="w-embodied">
-              <img class="slide-img" src="images/work/sim_open_drawer-poster.webp" data-gif="images/work/sim_open_drawer.gif" width="760" height="426" alt="Simulated Franka arm opening a drawer" data-zh-alt="仿真中的 Franka 机械臂拉开抽屉" loading="lazy" decoding="async">
-              <figcaption><span class="en">EncoSmart · open-drawer rollout</span><span class="zh">EncoSmart · 开抽屉策略演示</span></figcaption>
-            </figure>
           </div>
         </div>
-        <div class="hub-text">
-          <h2><span class="en">Work Experience</span><span class="zh">工作经历</span></h2>
-          <p class="desc"><span class="en">Engineering roles at Northeastern's EDGE Lab and EncoSmart Technology, from robotic test automation to embodied-AI R&amp;D.</span><span class="zh">在美国东北大学 EDGE 实验室与 EncoSmart Technology 的工程经历，从机器人测试自动化到具身智能研发。</span></p>
-          <a class="btn" href="#work" data-open="work"><span class="en">See more details</span><span class="zh">查看详情</span><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        </div>
-      </article>
+        <figcaption><span class="en">Highlights · click a clip to jump to it</span><span class="zh">精选片段 · 点击片段即可跳转</span></figcaption>
+      </figure>
+    </section>
 
-      <!-- Research -->
-      <article class="hub-card" data-sheet="research">
-        <div class="reel" data-reel role="region" aria-label="Research figures and demos" data-zh-aria-label="研究图示与演示">
-          <div class="reel-track">
-            <figure class="slide" data-target="r-sage">
-              <img class="slide-img" src="images/research/sage-poster.webp" data-gif="images/research/sage.gif" width="800" height="450" alt="UR robot arm with a wrist fisheye camera executing a multi-stage task" data-zh-alt="装有腕部鱼眼相机的 UR 机械臂执行多阶段任务" decoding="async">
-              <figcaption><span class="en">SAGE · real-robot rollout</span><span class="zh">SAGE · 真机演示</span></figcaption>
+    <!-- ===================== Projects ===================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="projects-title"><span class="en">Projects</span><span class="zh">项目</span></h2>
+          <p><span class="en">All my academic and professional projects, focusing on both hardware and software: bare-metal firmware, ROS&nbsp;2 robots, computer-vision products, and learning agents.</span><span class="zh">我的全部学术与职业项目，兼顾硬件与软件：裸机固件、ROS&nbsp;2 机器人、计算机视觉产品，以及学习型智能体。</span></p>
+        </header>
+
+        <h3 class="group-title" id="g-robotics"><span class="en">Robotics &amp; embedded systems · Northwestern University</span><span class="zh">机器人与嵌入式系统 · 美国西北大学</span></h3>
+        <div class="entries">
+          <article class="entry" id="p-franka">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/projects/franka_real-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/projects/franka_real-poster.webp" data-gif="images/projects/franka_real.gif" width="368" height="460" alt="Real Franka arm grasping a block and carrying it past a book obstacle" data-zh-alt="真实的 Franka 机械臂抓起方块，并携带它绕过作为障碍物的书" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="en">Pick-and-place on the real Franka in the lab (1.5× speed).</span><span class="zh">在实验室的真实 Franka 机械臂上完成抓取与放置（1.5 倍速）。</span></figcaption>
             </figure>
-            <figure class="slide slide--paper" data-target="r-friction">
-              <img class="slide-img" src="images/research/misty.webp" width="1400" height="764" alt="Four ambiguity scenarios for positive friction in human-robot interaction" data-zh-alt="人机交互中“积极摩擦”的四种歧义场景" loading="lazy" decoding="async">
-              <figcaption><span class="en">Positive friction in HRI</span><span class="zh">人机交互中的积极摩擦</span></figcaption>
+            <div class="entry-body">
+              <h4><span class="en">Franka Pick-and-Place with MoveIt&nbsp;2</span><span class="zh">基于 MoveIt&nbsp;2 的 Franka 抓取与放置</span></h4>
+              <p class="entry-meta"><span class="en">ME450 Embedded Systems in Robotics · Homework 3 · Nov 2026 · Team of 4</span><span class="zh">ME450 机器人嵌入式系统 · 作业 3 · 2026 年 11 月 · 4 人团队</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">Our team of four taught a Franka robot arm to pick up an object, carry it around an obstacle, and set it down on its own. I worked on the Python library that lets the arm plan safe, collision-free movements, and we ran the task both in simulation and on the real robot in the lab.</span><span class="zh">我们四人团队让一台 Franka 机械臂自主完成抓取物体、绕过障碍物搬运并放下的任务。我参与开发了让机械臂规划安全、无碰撞动作的 Python 库；我们在仿真环境和实验室的真实机器人上都完成了这项任务。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Built <code>franka_package</code>, a Python library that wraps MoveIt's <b>move_group</b> ROS&nbsp;2 interfaces for the Franka arm: motion planning, the planning scene, robot state (FK/IK), and the gripper.</span><span class="zh">构建了 <code>franka_package</code>：一个封装 MoveIt <b>move_group</b> ROS&nbsp;2 接口的 Franka 机械臂 Python 库，涵盖运动规划、规划场景、机器人状态（正/逆运动学）和夹爪控制。</span></li>
+                    <li><span class="en">Co-developed the <b>MotionPlanner</b> module: reworked it to talk to <code>move_group</code> directly instead of MoveItPy, and implemented planning to joint configurations, end-effector poses, <b>Cartesian paths</b>, and named SRDF configurations, plus trajectory execution.</span><span class="zh">共同开发了 <b>MotionPlanner</b> 模块：将其改为直接与 <code>move_group</code> 通信而不再经由 MoveItPy，并实现了到关节构型、末端执行器位姿、<b>笛卡尔路径</b>和 SRDF 命名构型的规划，以及轨迹执行。</span></li>
+                    <li><span class="en">A <code>pick_node</code> exposes a <code>/pick</code> service that loads the table, object, and obstacle into the planning scene, then grasps the object, attaches it to the hand, carries it past the obstacle, and releases it.</span><span class="zh"><code>pick_node</code> 提供 <code>/pick</code> 服务：先把桌面、物体和障碍物加载进规划场景，再抓取物体、将其附着到手爪上、搬运绕过障碍物并释放。</span></li>
+                    <li><span class="en">Ran the task both in simulation (mock hardware) and on the <b>real robot</b>, and wrote an integration test that moves the arm from pose A to pose B.</span><span class="zh">在仿真（模拟硬件）和<b>真实机器人</b>上都运行了该任务，并编写了让机械臂从位姿 A 移动到位姿 B 的集成测试。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>ROS 2</li><li>MoveIt 2</li><li>Python</li><li>Franka Emika</li><li>pytest</li></ul>
+            </div>
+            <div class="entry-extra entry-extra--tech">
+              <figure class="media has-gif">
+                <img src="images/projects/franka_rviz-poster.webp" data-gif="images/projects/franka_rviz.gif" width="560" height="400" alt="RViz view of the planned and executed Franka trajectory" data-zh-alt="RViz 中显示的 Franka 规划与执行轨迹" loading="lazy" decoding="async">
+                <figcaption><span class="en">The same task with mock hardware, visualized in RViz (2× speed).</span><span class="zh">同一任务在模拟硬件上运行，并在 RViz 中可视化（2 倍速）。</span></figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="entry" id="p-flip">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/projects/flipbot-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/projects/flipbot-poster.webp" data-gif="images/projects/flipbot.gif" width="480" height="270" alt="Blue differential-drive robot driving back and forth between Jersey barriers and cardboard boxes, flipping over at each reversal" data-zh-alt="蓝色差速驱动机器人在混凝土隔离墩和纸箱之间来回行驶，每次换向时都会翻转" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="en">In Gazebo, the robot flips over at every reversal instead of turning around.</span><span class="zh">在 Gazebo 中，机器人每次换向都会直接翻转，而不是掉头。</span></figcaption>
             </figure>
-            <figure class="slide" data-target="r-progem">
-              <img class="slide-img" src="images/research/progem-poster.webp" data-gif="images/research/progem.gif" width="800" height="450" alt="Robot arm opening a drawer and placing objects" data-zh-alt="机械臂拉开抽屉并放置物体" loading="lazy" decoding="async">
-              <figcaption><span class="en">ProGEM · multi-task manipulation</span><span class="zh">ProGEM · 多任务操作</span></figcaption>
+            <div class="entry-body">
+              <h4><span class="en">Flipping Differential-Drive Robot in Gazebo</span><span class="zh">Gazebo 中的翻转差速驱动机器人</span></h4>
+              <p class="entry-meta"><span class="en">ME450 Embedded Systems in Robotics · Homework 3, individual part · Nov 2026</span><span class="zh">ME450 机器人嵌入式系统 · 作业 3 个人部分 · 2026 年 11 月</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">A simulated robot that never turns around. Every two seconds it throws itself into reverse so hard that it flips over its own axle, then keeps driving on its other side. I designed the robot so it can drive either way up, built its world in the Gazebo simulator, and wrote the program that times the flips.</span><span class="zh">一台从不掉头的仿真机器人：每隔两秒，它就猛地倒车，力道大到绕着自己的车轴翻转过去，然后用另一面着地继续行驶。我设计了这台正反两面都能行驶的机器人，在 Gazebo 仿真器中搭建了它的场景，并编写了控制翻转时机的程序。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Modeled a differential-drive robot in <b>URDF/xacro</b>: a box body with two wheels at the front and frictionless casters on both its top and bottom, so it can drive either way up. Dimensions and masses load from a YAML file, and the inertias are computed from them.</span><span class="zh">用 <b>URDF/xacro</b> 建模了一台差速驱动机器人：箱形车身，前部两个车轮，顶部和底部都装有无摩擦万向轮，因此正反两面都能行驶。尺寸和质量从 YAML 文件读取，惯量据此计算。</span></li>
+                    <li><span class="en">Built a <b>Gazebo</b> world in SDF with Jersey barriers, cardboard boxes, a person, and other Gazebo Fuel models.</span><span class="zh">用 SDF 搭建了 <b>Gazebo</b> 场景，包含混凝土隔离墩、纸箱、行人以及其他 Gazebo Fuel 模型。</span></li>
+                    <li><span class="en">Drove the wheels with Gazebo's <b>DiffDrive</b> plugin and bridged <code>/cmd_vel</code>, <code>/odom</code>, <code>/tf</code>, <code>/joint_states</code>, and <code>/clock</code> to ROS&nbsp;2 with <code>ros_gz_bridge</code>, loaded into the same component container as the Gazebo server.</span><span class="zh">使用 Gazebo 的 <b>DiffDrive</b> 插件驱动车轮，并通过 <code>ros_gz_bridge</code> 将 <code>/cmd_vel</code>、<code>/odom</code>、<code>/tf</code>、<code>/joint_states</code> 和 <code>/clock</code> 桥接到 ROS&nbsp;2；该桥接与 Gazebo 服务器加载在同一个组件容器中。</span></li>
+                    <li><span class="en">Wrote a <code>flip</code> node that starts once odometry appears and reverses the commanded velocity on a fixed period (3&nbsp;m/s every 2&nbsp;s of sim time by default). Each reversal brakes hard enough to flip the robot over its axle, so it drives back and forth along a line.</span><span class="zh">编写了 <code>flip</code> 节点：检测到里程计数据后启动，按固定周期反转指令速度（默认每 2&nbsp;s 仿真时间反转一次，速度 3&nbsp;m/s）。每次反转的制动都足以让机器人绕车轴翻转，因此它会沿一条直线来回行驶。</span></li>
+                    <li><span class="en">One launch file starts Gazebo and its GUI, the bridge, <code>robot_state_publisher</code>, and RViz, then spawns the robot and starts the flip node.</span><span class="zh">一个 launch 文件即可启动 Gazebo 及其 GUI、桥接、<code>robot_state_publisher</code> 和 RViz，然后生成机器人并启动翻转节点。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>ROS 2</li><li>Gazebo</li><li>ros_gz_bridge</li><li>URDF / xacro</li><li>SDF</li><li>rclpy</li></ul>
+            </div>
+          </article>
+
+          <article class="entry" id="p-brickbot">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/projects/brickbot-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/projects/brickbot-poster.webp" data-gif="images/projects/brickbot.gif" width="456" height="588" alt="Unicycle robot driving under a falling brick and catching it on its platform" data-zh-alt="独轮机器人驶到下落的砖块下方，用平台接住它" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="en">Catching a brick dropped within range.</span><span class="zh">接住在可达范围内落下的砖块。</span></figcaption>
             </figure>
-            <figure class="slide slide--paper" data-target="r-sage">
-              <img class="slide-img" src="images/research/sage_pipeline.webp" width="1264" height="870" alt="SAGE state-aware policy framework" data-zh-alt="SAGE 状态感知策略框架" loading="lazy" decoding="async">
-              <figcaption><span class="en">SAGE · framework</span><span class="zh">SAGE · 框架</span></figcaption>
+            <div class="entry-body">
+              <h4><span class="en">Brickbot: A Unicycle Robot That Catches Falling Bricks</span><span class="zh">Brickbot：会接住下落砖块的独轮机器人</span></h4>
+              <p class="entry-meta"><span class="en">ME450 Embedded Systems in Robotics · Homework 2 · Oct 2026</span><span class="zh">ME450 机器人嵌入式系统 · 作业 2 · 2026 年 10 月</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">A simulated one-wheeled robot that catches bricks falling from the sky. When a brick drops, the robot works out whether it can get underneath in time. If it can, it races over, catches the brick on its platform, and tilts to slide it off; if not, it flags the brick as out of reach.</span><span class="zh">一台能接住从天而降的砖块的仿真独轮机器人。砖块落下时，机器人会先判断自己能否及时赶到它的下方：如果能，它就冲过去用平台接住砖块，再倾斜平台让砖块滑下；如果不能，就把这块砖标记为不可达。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Built a ROS&nbsp;2 simulation of a single-wheel robot with a tilting platform, modeled in <b>URDF/xacro</b> and visualized in <b>RViz</b>.</span><span class="zh">搭建了一个带可倾斜平台的独轮机器人的 ROS&nbsp;2 仿真，用 <b>URDF/xacro</b> 建模并在 <b>RViz</b> 中可视化。</span></li>
+                    <li><span class="en">Wrote a <code>simulation</code> node that acts as fake hardware: it integrates the robot and brick physics (free fall and frictionless sliding), publishes joint states and markers, broadcasts <b>TF</b> frames, and offers <code>place</code> and <code>drop</code> services.</span><span class="zh">编写了充当虚拟硬件的 <code>simulation</code> 节点：对机器人和砖块的物理过程（自由落体与无摩擦滑动）做数值积分，发布关节状态和可视化标记，广播 <b>TF</b> 坐标系，并提供 <code>place</code> 和 <code>drop</code> 服务。</span></li>
+                    <li><span class="en">Implemented a <code>control</code> node that computes <b>wheel odometry</b> from joint states and drives to a <code>goal_pose</code>, slowing down as it approaches.</span><span class="zh">实现了 <code>control</code> 节点：根据关节状态计算<b>车轮里程计</b>并驶向 <code>goal_pose</code>，接近目标时减速。</span></li>
+                    <li><span class="en">The <code>catcher</code> node compares the brick's <b>fall time</b> with the robot's predicted <b>drive time</b>. If the brick is reachable it drives underneath, catches it, and tilts the platform until the brick slides off; otherwise it marks the brick as unreachable.</span><span class="zh"><code>catcher</code> 节点比较砖块的<b>下落时间</b>与机器人预计的<b>行驶时间</b>：若可达，就驶到砖块下方接住它，并倾斜平台直到砖块滑落；否则将砖块标记为不可达。</span></li>
+                    <li><span class="en">Kept the physics ROS-independent and covered it with <b>unit tests</b>; robot dimensions are configurable through YAML.</span><span class="zh">物理模块不依赖 ROS，并有<b>单元测试</b>覆盖；机器人尺寸可通过 YAML 配置。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>ROS 2</li><li>rclpy</li><li>TF2</li><li>URDF / xacro</li><li>RViz</li><li>pytest</li></ul>
+            </div>
+            <div class="entry-extra entry-extra--tech entry-extra--pair">
+              <figure class="media">
+                <img src="images/projects/brickbot_unreachable.webp" width="441" height="478" alt="RViz showing an Unreachable marker above a brick" data-zh-alt="RViz 中砖块上方显示“Unreachable”（不可达）标记" loading="lazy" decoding="async">
+                <figcaption><span class="en">Out of reach: the catcher flags it.</span><span class="zh">超出范围：catcher 节点会将其标记出来。</span></figcaption>
+              </figure>
+              <figure class="media">
+                <img src="images/projects/brickbot_big_robot.webp" width="518" height="588" alt="Larger robot model loaded from a YAML config" data-zh-alt="从 YAML 配置加载的更大的机器人模型" loading="lazy" decoding="async">
+                <figcaption><span class="en">Robot size set from YAML.</span><span class="zh">机器人尺寸由 YAML 设置。</span></figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="entry" id="p-turtle">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/projects/turtlesim-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/projects/turtlesim-poster.webp" data-gif="images/projects/turtlesim.gif" width="440" height="478" alt="Turtle driving through red waypoint markers" data-zh-alt="小海龟依次驶过红色航点标记" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="en">Following loaded waypoints (3× speed).</span><span class="zh">跟随加载的航点（3 倍速）。</span></figcaption>
             </figure>
-            <figure class="slide slide--paper" data-target="r-progem">
-              <img class="slide-img" src="images/research/progem_pipeline.webp" width="699" height="284" alt="ProGEM feature-field distillation pipeline" data-zh-alt="ProGEM 特征场蒸馏流程" loading="lazy" decoding="async">
-              <figcaption><span class="en">ProGEM · pipeline</span><span class="zh">ProGEM · 流程</span></figcaption>
+            <div class="entry-body">
+              <h4><span class="en">TurtleSim Waypoint Follower</span><span class="zh">TurtleSim 航点跟随</span></h4>
+              <p class="entry-meta"><span class="en">ME450 Embedded Systems in Robotics · Homework 1 · Oct 2026</span><span class="zh">ME450 机器人嵌入式系统 · 作业 1 · 2026 年 10 月</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">A small simulated turtle robot that drives a loop through points the user chooses, steering itself toward one after another. After every lap it reports how far off it ended up, and I stress-tested it by adding random noise to its driving commands.</span><span class="zh">一只仿真小海龟机器人会沿着用户选定的点绕圈行驶，自动依次转向每一个点。每跑完一圈，它都会报告自己最终偏离了多少；我还在它的行驶指令中加入随机噪声，对它做了压力测试。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">ROS&nbsp;2 package that drives a TurtleSim turtle around a loop of user-supplied waypoints with a <b>100&nbsp;Hz</b> feedback controller: turn toward the target, then drive with a speed proportional to the remaining distance.</span><span class="zh">一个 ROS&nbsp;2 功能包，用 <b>100&nbsp;Hz</b> 的反馈控制器驱动 TurtleSim 小海龟沿用户给定的航点循环行驶：先转向目标，再以与剩余距离成正比的速度前进。</span></li>
+                    <li><span class="en">Defined custom interfaces: a <code>LoadWaypoints</code> service that resets the turtle, draws the waypoint markers, and returns the loop distance, and an <code>ErrorMetric</code> message published after every completed loop.</span><span class="zh">定义了自定义接口：<code>LoadWaypoints</code> 服务负责重置小海龟、绘制航点标记并返回一圈的距离；<code>ErrorMetric</code> 消息在每完成一圈后发布。</span></li>
+                    <li><span class="en">Added a <code>toggle</code> service to start and stop the turtle, and a <code>corrupt</code> node that injects Gaussian noise into velocity commands to test robustness.</span><span class="zh">添加了用于启停小海龟的 <code>toggle</code> 服务，以及向速度指令注入高斯噪声以测试鲁棒性的 <code>corrupt</code> 节点。</span></li>
+                    <li><span class="en">Recorded and replayed runs with <b>ros2 bag</b>; one loop took <b>26.9&nbsp;s</b> and finished with a <b>−0.32&nbsp;m</b> distance error.</span><span class="zh">用 <b>ros2 bag</b> 录制并回放运行过程；跑一圈用时 <b>26.9&nbsp;s</b>，终点距离误差为 <b>−0.32&nbsp;m</b>。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>ROS 2</li><li>Python</li><li><span class="en">Custom msgs &amp; srvs</span><span class="zh">自定义消息与服务</span></li><li><span class="en">Launch files</span><span class="zh">Launch 文件</span></li><li>ros2 bag</li></ul>
+            </div>
+            <div class="entry-extra entry-extra--tech">
+              <figure class="media has-gif">
+                <img src="images/projects/turtlesim_bag-poster.webp" data-gif="images/projects/turtlesim_bag.gif" width="440" height="478" alt="Turtle replaying a recorded path from a bag file" data-zh-alt="小海龟回放 bag 文件中录制的路径" loading="lazy" decoding="async">
+                <figcaption><span class="en">Replaying a recorded ros2 bag (3× speed).</span><span class="zh">回放录制的 ros2 bag（3 倍速）。</span></figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="entry" id="p-balance">
+            <figure class="entry-thumb">
+              <div class="thumb-box thumb-box--paper">
+                <img class="thumb-img" src="images/projects/balancebot_cad.webp" width="1040" height="1300" alt="CAD model of the balancing robot: four stacked decks between two wheels, with battery packs on the middle decks and a micro:bit and LCD face on top" data-zh-alt="自平衡机器人的 CAD 模型：两轮之间堆叠着四层板，中间两层放电池组，顶部是 micro:bit 和作为“脸”的 LCD 屏" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="en">Our CAD design in Onshape.</span><span class="zh">我们在 Onshape 中完成的 CAD 设计。</span></figcaption>
             </figure>
+            <div class="entry-body">
+              <h4><span class="en">Two-Wheeled Self-Balancing Robot</span><span class="zh">两轮自平衡机器人</span></h4>
+              <p class="entry-meta"><span class="en">CE346 Microcontroller System Design · Final project · In progress · Nov 2026</span><span class="zh">CE346 微控制器系统设计 · 期末项目 · 进行中 · 2026 年 11 月</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">Our team is building a two-wheeled robot that balances itself upright, like a tiny Segway, run by a BBC micro:bit. So far we have finished the mechanical design: a stack of 3D-printable decks that carries the motors, sensors, batteries, and a small screen for a face, weighted so its center of mass sits right above the wheels.</span><span class="zh">我们团队正在制作一台能自己保持直立的两轮机器人，就像迷你版的赛格威平衡车，由 BBC micro:bit 控制。目前我们已经完成了机械设计：几层可 3D 打印的板层层堆叠，搭载电机、传感器、电池和一块充当“脸”的小屏幕，并通过配重让重心正好落在车轮正上方。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <p><span class="en">Our team's final project, built around a micro:bit v2. So far we have finished the mechanical design.</span><span class="zh">我们团队的期末项目，以 micro:bit v2 为核心。目前已完成机械设计。</span></p>
+                  <ul class="points">
+                    <li><span class="en">Designed the chassis in <b>Onshape</b>: four 3D-printable decks stacked on built-in standoffs above the wheel axle, plus an L-bracket that holds a 1.69" LCD as the robot's face.</span><span class="zh">在 <b>Onshape</b> 中设计底盘：四层可 3D 打印的板通过一体化支柱堆叠在车轴上方，另有一个 L 形支架固定一块 1.69 英寸 LCD 屏作为机器人的“脸”。</span></li>
+                    <li><span class="en">Laid out the real parts from their vendor CAD models: Pololu micro metal gearmotors with encoders and 42×19&nbsp;mm wheels, a DRV8833 motor driver, an MPU-6050 IMU, the micro:bit on a Qwiic breakout, and two 4×AA battery packs.</span><span class="zh">使用厂商提供的 CAD 模型布置真实零件：带编码器的 Pololu 微型金属减速电机与 42×19&nbsp;mm 车轮、DRV8833 电机驱动器、MPU-6050 IMU、装在 Qwiic 转接板上的 micro:bit，以及两组 4×AA 电池盒。</span></li>
+                    <li><span class="en">Balanced the mass in the model: each part carries its datasheet mass, and a <b>FeatureScript</b> feature sizes a 21&nbsp;g steel counterweight so the center of mass sits directly above the axle (73.5&nbsp;mm up, 470&nbsp;g in total).</span><span class="zh">在模型中配平质量：每个零件都赋予数据手册中的质量，并用 <b>FeatureScript</b> 自定义特征算出一块 21&nbsp;g 的钢制配重，使重心正好位于车轴正上方（高 73.5&nbsp;mm，总质量 470&nbsp;g）。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>Onshape</li><li>FeatureScript</li><li>CAD</li><li><span class="en">3D printing</span><span class="zh">3D 打印</span></li><li>micro:bit v2</li></ul>
+            </div>
+          </article>
+
+          <article class="entry" id="p-ce346">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/projects/ce346_led-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/projects/ce346_led-poster.webp" data-gif="images/projects/ce346_led.gif" width="640" height="400" alt="5x5 LED matrix showing an X, then spelling Hi CE346! and It works!" data-zh-alt="5×5 LED 点阵先显示一个 X，然后依次显示“Hi CE346!”和“It works!”" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="en">LED-matrix driver output, rendered from the lab's own font table and 400&nbsp;ms / 100&nbsp;ms character timing.</span><span class="zh">LED 点阵驱动的输出效果，按实验自带的字库和 400&nbsp;ms / 100&nbsp;ms 的字符时序渲染。</span></figcaption>
+            </figure>
+            <div class="entry-body">
+              <h4><span class="en">Bare-Metal Firmware on an ARM Cortex-M4</span><span class="zh">ARM Cortex-M4 上的裸机固件</span></h4>
+              <p class="entry-meta"><span class="en">CE346 Microcontroller System Design · Lab series · Sep – Nov 2026</span><span class="zh">CE346 微控制器系统设计 · 系列实验 · 2026 年 9 月 – 11 月</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">A series of labs programming the tiny processor on a BBC micro:bit, with no operating system to lean on. I wrote code that talks to the hardware directly to light up its LED screen, read light and temperature sensors, sense touch, and play tones, then built small apps on top, like a clock and a game of Snake.</span><span class="zh">一系列在没有操作系统可依赖的情况下，为 BBC micro:bit 上的小处理器编程的实验。我编写了直接与硬件打交道的代码，用来点亮 LED 屏幕、读取光线和温度传感器、感应触摸和播放音调，并在此基础上做了时钟和贪吃蛇等小应用。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <p><span class="en">A series of embedded C labs on the Nordic <b>nRF52833</b> (micro:bit v2), building each driver directly on the hardware registers.</span><span class="zh">在 Nordic <b>nRF52833</b>（micro:bit v2）上完成的一系列嵌入式 C 实验，每个驱动都直接基于硬件寄存器实现。</span></p>
+                  <ul class="points">
+                    <li><span class="en"><b>Memory-mapped I/O &amp; interrupts:</b> mapped the GPIO and RNG peripheral registers onto C structs to write drivers from scratch, configured GPIOTE and software interrupts with NVIC priorities to demonstrate preemption, and validated the hardware RNG with a 10,000-sample histogram.</span><span class="zh"><b>内存映射 I/O 与中断：</b>将 GPIO 和 RNG 外设寄存器映射为 C 结构体，从零编写驱动；配置 GPIOTE 与软件中断及其 NVIC 优先级来演示中断抢占；并用 10,000 个样本的直方图验证硬件随机数发生器。</span></li>
+                    <li><span class="en"><b>Virtual timers:</b> multiplexed one 32-bit hardware timer into any number of one-shot and repeating timers using a sorted linked list and compare-channel scheduling, with interrupt-safe critical sections and handling for stale or missed compare events. Built a real-time clock on top.</span><span class="zh"><b>虚拟定时器：</b>借助有序链表和比较通道调度，把一个 32 位硬件定时器复用为任意数量的单次和周期定时器，实现了中断安全的临界区，并处理过期或错过的比较事件；在此之上实现了实时时钟。</span></li>
+                    <li><span class="en"><b>LED matrix:</b> row-scanned the 5×5 matrix at about 1&nbsp;kHz with app timers, rendered ASCII text from a 5×5 font, and built Snake with a ring-buffer body.</span><span class="zh"><b>LED 点阵：</b>用应用定时器以约 1&nbsp;kHz 逐行扫描 5×5 点阵，用 5×5 字库渲染 ASCII 文字，并用环形缓冲区存储蛇身，实现了贪吃蛇游戏。</span></li>
+                    <li><span class="en"><b>Analog sensing &amp; capacitive touch:</b> read an NTC thermistor and a photoresistor through the 12-bit SAADC, drove an RGB LED from sensor thresholds, and detected touches by timing an RC rise with GPIOTE and a 1&nbsp;MHz timer capture.</span><span class="zh"><b>模拟量采集与电容触摸：</b>通过 12 位 SAADC 读取 NTC 热敏电阻和光敏电阻，根据传感器阈值驱动 RGB LED，并借助 GPIOTE 和 1&nbsp;MHz 定时器捕获测量 RC 充电上升时间来检测触摸。</span></li>
+                    <li><span class="en"><b>Audio &amp; I²C:</b> generated tones with the PWM peripheral and read the LSM303AGR accelerometer and magnetometer over I²C with repeated-START register reads.</span><span class="zh"><b>音频与 I²C：</b>用 PWM 外设生成音调，并通过 I²C（以重复起始条件读取寄存器）读取 LSM303AGR 加速度计和磁力计。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li><span class="en">Embedded C</span><span class="zh">嵌入式 C</span></li><li>nRF52833</li><li>ARM Cortex-M4</li><li><span class="en">Interrupts</span><span class="zh">中断</span></li><li><span class="en">Timers</span><span class="zh">定时器</span></li><li>PWM</li><li>ADC</li><li>I²C</li></ul>
+            </div>
+            <div class="entry-extra entry-extra--tech">
+              <figure class="media">
+                <img src="images/projects/ce346_rng_histogram.webp" width="640" height="480" alt="Histogram of 10,000 hardware random numbers in 16 bins against the uniform expectation" data-zh-alt="10,000 个硬件随机数在 16 个区间上的直方图，与均匀分布期望值对比" loading="lazy" decoding="async">
+                <figcaption><span class="en">10,000 hardware-RNG samples against the uniform expectation.</span><span class="zh">10,000 个硬件随机数样本与均匀分布期望值的对比。</span></figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="group-title" id="g-professional"><span class="en">Professional</span><span class="zh">职业项目</span></h3>
+        <div class="entries">
+          <article class="entry" id="p-imagepipe">
+            <figure class="entry-thumb">
+              <div class="thumb-box thumb-box--paper">
+                <img class="thumb-img" src="images/projects/imagepipe.webp" width="1200" height="676" alt="ImagePipe pipeline: photo set, face detection, eye-state correction, and per-person albums" data-zh-alt="ImagePipe 流程：照片集、人脸检测、眼部状态修正和按人分类的相册" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h4><span class="en">ImagePipe: AI-Powered Tourist Photo Processing</span><span class="zh">ImagePipe：AI 驱动的游客照片处理</span></h4>
+              <p class="entry-meta"><span class="en">Professional project · Desktop application</span><span class="zh">职业项目 · 桌面应用</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">A desktop app that takes the tedious work out of tour photography. Give it a day's worth of photos and it keeps the good shots, recognizes each traveler, fixes pictures where someone blinked, and sorts everything into a personal album for every person.</span><span class="zh">一款为旅拍摄影省去繁琐工作的桌面应用。把一整天拍的照片交给它，它会留下好照片、识别出每位游客、修复有人闭眼的照片，并把所有照片整理成每个人专属的相册。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en"><b>Pipeline:</b> a <b>YOLOv8</b> classifier filters and tags every photo, <b>InsightFace</b> (Buffalo_L) finds each face and extracts an identity embedding, and <b>DBSCAN</b> clusters the embeddings into one group per person, with no labels needed.</span><span class="zh"><b>处理流程：</b><b>YOLOv8</b> 分类器筛选并标注每张照片，<b>InsightFace</b>（Buffalo_L）找出每张人脸并提取身份嵌入向量，<b>DBSCAN</b> 再把这些嵌入聚类成每人一组，无需任何标注。</span></li>
+                    <li><span class="en"><b>Eye correction:</b> <b>MediaPipe</b> face landmarks flag closed or half-closed eyes, and a custom <b>U-Net with attention</b> regenerates naturally open eyes on those faces.</span><span class="zh"><b>眼部修正：</b>利用 <b>MediaPipe</b> 人脸关键点标记闭眼或半闭眼，再由自研的<b>带注意力机制的 U-Net</b> 在这些人脸上重新生成自然睁开的眼睛。</span></li>
+                    <li><span class="en"><b>Scale:</b> processes batches of 1,000+ photos with lazy image loading, explicit garbage collection, and <code>ThreadPoolExecutor</code> parallelism, with per-stage timing for profiling.</span><span class="zh"><b>规模：</b>借助图片懒加载、显式垃圾回收和 <code>ThreadPoolExecutor</code> 并行，可批量处理 1,000 张以上的照片，并对各阶段计时以便性能分析。</span></li>
+                    <li><span class="en"><b>Architecture:</b> three layers (a <b>PyQt6</b> UI, the processing core, and a swappable model layer) plus a headless CLI build; hot paths are compiled with <b>Cython</b> and the app ships as a <b>PyInstaller</b> package.</span><span class="zh"><b>架构：</b>三层结构（<b>PyQt6</b> 界面、处理核心和可替换的模型层），另有无界面的命令行版本；热点代码用 <b>Cython</b> 编译，应用以 <b>PyInstaller</b> 打包发布。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>PyTorch</li><li>YOLOv8</li><li>InsightFace</li><li>DBSCAN</li><li>MediaPipe</li><li>U-Net</li><li>PyQt6</li><li>Cython</li></ul>
+              <div class="links"><a class="link-btn" href="imagepipe.html"><span class="en">View full demo</span><span class="zh">查看完整演示</span><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="group-title" id="g-ai"><span class="en">AI &amp; software</span><span class="zh">AI 与软件</span></h3>
+        <div class="entries">
+          <article class="entry" id="p-annealing">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/projects/gridgame-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/projects/gridgame-poster.webp" data-gif="images/projects/gridgame.gif" width="242" height="272" alt="Agent placing shapes on a grid under adjacency constraints" data-zh-alt="智能体在相邻约束下向网格中放置形状" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h4><span class="en">Simulated Annealing AI Agent</span><span class="zh">模拟退火 AI 智能体</span></h4>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">An AI that solves a grid puzzle: cover every square with colored shapes so that no two neighboring squares share a color, using as few shapes as possible. It starts from a rough answer and keeps trying small changes, sometimes accepting a worse one early on so it doesn't get stuck. The strategy, simulated annealing, borrows the idea of slowly cooling metal.</span><span class="zh">一个解网格谜题的 AI：用彩色形状铺满所有格子，相邻格子不能同色，并且用的形状越少越好。它从一个粗略的答案出发，不断尝试小的改动，早期有时还会接受更差的改动，以免陷入僵局。这种策略叫作模拟退火，借鉴了金属缓慢冷却的原理。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Developed a <b>simulated annealing AI agent</b> for constrained graph coloring, minimizing shapes while satisfying adjacency constraints.</span><span class="zh">开发了用于约束图着色问题的<b>模拟退火 AI 智能体</b>，在满足相邻约束的同时最小化形状数量。</span></li>
+                    <li><span class="en">Implemented <b>adaptive optimization</b> with intelligent shape selection, problem-area targeting, and dynamic cooling schedules.</span><span class="zh">实现了<b>自适应优化</b>，包括智能形状选择、问题区域定向搜索和动态降温策略。</span></li>
+                    <li><span class="en">Scored each board as <b>1000 × empty cells + 2 × shapes + 5 × same-color neighbors</b>; a run anneals for up to 7,000 steps, aims 70% of its moves at the ten worst problem areas, and stops early once progress stalls.</span><span class="zh">每个盘面的得分为 <b>1000 × 空格数 + 2 × 形状数 + 5 × 同色相邻数</b>；每次运行最多退火 7,000 步，70% 的操作集中在最严重的十个问题区域，进展停滞时提前终止。</span></li>
+                    <li><span class="en">Engineered <b>efficient grid algorithms</b> using larger shapes first and offline state management for rapid solution evaluation.</span><span class="zh">设计了<b>高效的网格算法</b>：优先放置较大的形状，并借助离线状态管理快速评估解。</span></li>
+                    <li><span class="en">Applied <b>local search metaheuristics</b> to constraint satisfaction problems with applications in scheduling and resource allocation.</span><span class="zh">将<b>局部搜索元启发式算法</b>应用于约束满足问题，可推广到排程和资源分配等场景。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>Python</li><li>NumPy</li><li><span class="en">Simulated annealing</span><span class="zh">模拟退火</span></li><li><span class="en">Local search</span><span class="zh">局部搜索</span></li></ul>
+              <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/Simulated_Annealing_Agent" target="_blank" rel="noopener"><span class="en">Source code</span><span class="zh">源代码</span><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+            </div>
+          </article>
+
+          <article class="entry" id="p-qlearning">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/projects/escape_castle-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/projects/escape_castle-poster.webp" data-gif="images/projects/escape_castle.gif" width="600" height="868" alt="Agent navigating a 5x5 castle grid past guards" data-zh-alt="智能体在 5×5 城堡网格中绕过守卫前进" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h4><span class="en">Q-Learning Reinforcement Learning Agent</span><span class="zh">Q-learning 强化学习智能体</span></h4>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">An AI that learns to escape a castle full of guards purely by trial and error. Nobody tells it the rules: over a million practice runs, it figures out which way to go, when a fight with a guard is worth the risk, and how to stay healthy on the way out.</span><span class="zh">一个完全靠试错学会逃出守卫重重的城堡的 AI。没人告诉它规则：经过一百万次练习，它自己摸索出该往哪走、什么时候值得冒险和守卫交手，以及如何在逃出去的路上保住生命值。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Implemented a <b>Q-learning agent</b> for a grid-based MDP game with probabilistic transitions and combat mechanics.</span><span class="zh">为一个具有概率状态转移和战斗机制的网格 MDP 游戏实现了 <b>Q-learning 智能体</b>。</span></li>
+                    <li><span class="en">Developed <b>model-based probability estimation</b> from random gameplay to learn guard strength characteristics.</span><span class="zh">通过随机对局进行<b>基于模型的概率估计</b>，以学习各守卫的强度特征。</span></li>
+                    <li><span class="en">Applied <b>epsilon-greedy exploration</b> with adaptive learning rates to train the agent across 1M episodes.</span><span class="zh">采用 <b>ε-贪心探索</b>和自适应学习率，训练智能体 100 万个回合。</span></li>
+                    <li><span class="en">Built a <b>temporal-difference learner</b> that navigates the 5×5 castle grid while managing health and guard encounters.</span><span class="zh">构建了<b>时序差分学习器</b>，在 5×5 城堡网格中导航，同时管理生命值和与守卫的遭遇。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>Python</li><li>Q-learning</li><li>MDP</li><li><span class="en">ε-greedy</span><span class="zh">ε-贪心</span></li></ul>
+            </div>
+          </article>
+
+          <article class="entry" id="p-pytorch">
+            <figure class="entry-thumb">
+              <div class="thumb-box thumb-box--paper">
+                <img class="thumb-img" src="images/projects/training_losses.webp" width="1200" height="500" alt="Training loss curves for a feedforward network and a CNN" data-zh-alt="前馈网络与 CNN 的训练损失曲线" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h4><span class="en">Deep Learning Image Classification with PyTorch</span><span class="zh">基于 PyTorch 的深度学习图像分类</span></h4>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">I trained two kinds of neural networks to recognize ten types of clothing, from shirts and sneakers to bags, in small grayscale photos. The network designed for images (a CNN) was more accurate despite being smaller, and I visualized what it learns: simple edges in its first layers, whole shapes deeper in.</span><span class="zh">我训练了两种神经网络，从小尺寸灰度照片中识别衬衫、运动鞋、包等十类服饰。专为图像设计的网络（CNN）虽然更小，却更准确；我还可视化了它学到的内容：浅层识别简单的边缘，深层识别完整的形状。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Designed and trained <b>CNN and feedforward neural networks</b> reaching 90%+ accuracy on Fashion-MNIST classification.</span><span class="zh">设计并训练了 <b>CNN 和前馈神经网络</b>，在 Fashion-MNIST 分类上达到 90% 以上的准确率。</span></li>
+                    <li><span class="en">Implemented <b>convolutional architectures</b> with 3 conv layers, max pooling, and dropout regularization, showing that CNNs outperform the FFN with 25% fewer parameters.</span><span class="zh">实现了包含 3 个卷积层、最大池化和 dropout 正则化的<b>卷积架构</b>，证明 CNN 能以少 25% 的参数量胜过前馈网络。</span></li>
+                    <li><span class="en">Visualized <b>learned feature representations</b> through kernel analysis and feature-map progression, revealing hierarchical pattern detection from edges to complex shapes.</span><span class="zh">通过卷积核分析和逐层特征图，可视化了<b>学到的特征表示</b>，揭示了从边缘到复杂形状的层级化模式识别。</span></li>
+                    <li><span class="en">Analyzed model performance with <b>confusion matrices and classification metrics</b>, identifying misclassification patterns between visually similar clothing categories.</span><span class="zh">利用<b>混淆矩阵和分类指标</b>分析模型性能，找出了外观相似的服饰类别之间的误分类规律。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>PyTorch</li><li>Python</li><li>CNN</li><li>Fashion-MNIST</li></ul>
+            </div>
+          </article>
+
+          <article class="entry" id="p-planner">
+            <figure class="entry-thumb">
+              <div class="thumb-box thumb-box--paper">
+                <img class="thumb-img" src="images/projects/plannersystem.webp" width="1200" height="482" alt="Weekly planner schedule view, MVC diagram, and event editor" data-zh-alt="周计划的日程视图、MVC 示意图和事件编辑器" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h4><span class="en">Weekly Planner System</span><span class="zh">周计划系统</span></h4>
+              <p class="entry-meta"><span class="en">Multi-user system with role-based permissions · Project leader</span><span class="zh">多用户系统，基于角色的权限 · 项目负责人</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">A shared weekly calendar for a group of people. Users plan events together; when someone adds or cancels one, everyone involved sees the change right away, and permissions control who can create or delete what. Schedules can be saved to and loaded from files.</span><span class="zh">一个供多人共享的周日历。用户可以一起安排活动；有人新增或取消活动时，所有相关的人都能立即看到变化，权限则决定谁可以创建或删除哪些活动。日程还可以保存为文件，或从文件载入。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Built a multi-user weekly planner with role-based permissions for event creation and deletion, keeping every related user's schedule updated automatically in real time.</span><span class="zh">构建了一个多用户周计划系统，以基于角色的权限控制活动的创建和删除，并实时自动更新每位相关用户的日程。</span></li>
+                    <li><span class="en">Chose the <b>MVC design pattern</b> for the project, following <b>object-oriented design</b> principles.</span><span class="zh">项目采用 <b>MVC 设计模式</b>，遵循<b>面向对象设计</b>原则。</span></li>
+                    <li><span class="en">Implemented XML support so users can upload or save their schedule as an XML file, significantly improving the system's efficiency.</span><span class="zh">实现了 XML 支持，用户可以上传日程，或将日程保存为 XML 文件，大幅提升了系统的使用效率。</span></li>
+                    <li><span class="en">Wrote the desktop GUI in <b>Java Swing</b>, with the model split into read-only and mutable interfaces so views cannot change state.</span><span class="zh">用 <b>Java Swing</b> 编写桌面图形界面，并将模型拆分为只读和可变两种接口，使视图无法修改状态。</span></li>
+                    <li><span class="en">Integrated another team's GUI by writing <b>adapter</b> classes between their interfaces and our model, and added a planner variant whose week starts on Saturday behind a new date interface.</span><span class="zh">编写<b>适配器</b>类连接另一团队的接口与我们的模型，从而集成了他们的图形界面；还通过新的日期接口增加了以周六为一周起始的计划变体。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>Java</li><li>Swing</li><li>MVC</li><li>XML</li><li>JUnit</li></ul>
+              <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/OOD_hw" target="_blank" rel="noopener"><span class="en">Source code</span><span class="zh">源代码</span><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+            </div>
+          </article>
+
+          <article class="entry" id="p-stats">
+            <figure class="entry-thumb">
+              <div class="thumb-box thumb-box--paper">
+                <img class="thumb-img" src="images/projects/tuition_project.webp" width="900" height="844" alt="Radar charts of education quality and a tuition regression plot" data-zh-alt="教育质量雷达图与学费回归图" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h4><span class="en">Nationwide University Statistics Analysis</span><span class="zh">全美大学数据统计分析</span></h4>
+              <p class="entry-meta"><span class="en">Data science semester project · Project leader</span><span class="zh">数据科学学期项目 · 项目负责人</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">Does paying more get you a better education? We gathered tuition and ratings for private universities across the U.S. from a college-review website and compared the two. The result is an interactive chart where every dot is a school; click one to see a breakdown of its educational quality.</span><span class="zh">学费越高，教育就越好吗？我们从一个大学点评网站收集了全美私立大学的学费和评分，并对两者进行比较。最终做成一张交互式图表：每个点代表一所学校，点击即可查看它的教育质量细分。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Ran a data-driven analysis of private universities by <b>scraping</b> key variables from CollegeSimply to investigate the relationship between tuition and educational quality.</span><span class="zh">从 CollegeSimply <b>爬取</b>关键变量，对私立大学进行数据驱动的分析，研究学费与教育质量之间的关系。</span></li>
+                    <li><span class="en">Parsed tuition and five rating categories for each school with <b>BeautifulSoup</b>, and placed each school in its state with geopy's Nominatim geocoder.</span><span class="zh">用 <b>BeautifulSoup</b> 解析每所学校的学费和五项评分，并用 geopy 的 Nominatim 地理编码器确定学校所在的州。</span></li>
+                    <li><span class="en">Scored educational quality as the <b>area of each school's five-category radar chart</b> (shoelace formula), then fit a least-squares line of quality against tuition with NumPy.</span><span class="zh">以<b>每所学校五项评分雷达图的面积</b>（鞋带公式）作为教育质量得分，再用 NumPy 对质量与学费做最小二乘直线拟合。</span></li>
+                    <li><span class="en">Built an interactive linear-regression plot in <b>Dash</b> and <b>Plotly</b>: every point is clickable and shows that university's educational quality as a radar chart, and a search box jumps to any school.</span><span class="zh">用 <b>Dash</b> 和 <b>Plotly</b> 构建了交互式线性回归图：点击任一数据点即可用雷达图展示该校的教育质量，搜索框可直接跳转到任意学校。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="tags"><li>Python</li><li>BeautifulSoup</li><li>NumPy</li><li>pandas</li><li>Plotly</li><li>Dash</li></ul>
+              <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/nationwide_university_stat_analysis" target="_blank" rel="noopener"><span class="en">Source code</span><span class="zh">源代码</span><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Work experience ===================== -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="work-title"><span class="en">Work Experience</span><span class="zh">工作经历</span></h2>
+          <p><span class="en">Engineering roles in a research lab and in industry: automating real IoT devices with robots, and taking embodied-AI research onto real hardware.</span><span class="zh">在研究实验室和企业中的工程经历：用机器人自动化操作真实的物联网设备，并把具身智能研究部署到真实硬件上。</span></p>
+        </header>
+
+        <section class="org" id="o-edge" aria-labelledby="o-edge-title">
+          <header class="org-head">
+            <div>
+              <h3 id="o-edge-title"><span class="en">Northeastern University · EDGE Lab</span><span class="zh">美国东北大学 · EDGE 实验室</span></h3>
+              <p class="org-sub"><span class="en">Research Engineer · SPHERE Project</span><span class="zh">研究工程师 · SPHERE 项目</span></p>
+            </div>
+            <p class="org-when"><span class="en">Jun 2025 – Dec 2025</span><span class="zh">2025 年 6 月 – 2025 年 12 月</span></p>
+          </header>
+          <div class="entries">
+            <article class="entry" id="w-learm">
+              <figure class="entry-thumb has-gif">
+                <div class="thumb-box thumb-box--fit">
+                  <img class="thumb-bg" src="images/work/learm-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                  <img class="thumb-img" src="images/work/learm-poster.webp" data-gif="images/work/learm.gif" width="384" height="480" alt="LeArm 6-DOF arm pressing the buttons of a smart speaker" data-zh-alt="LeArm 六自由度机械臂按压智能音箱的按钮" loading="lazy" decoding="async">
+                </div>
+                <figcaption><span class="en">LeArm pressing a smart speaker's buttons (1.6× speed).</span><span class="zh">LeArm 按压智能音箱的按钮（1.6 倍速）。</span></figcaption>
+              </figure>
+              <div class="entry-body">
+                <h4><span class="en">LeArm 6-DOF Robotic Arm System</span><span class="zh">LeArm 六自由度机械臂系统</span></h4>
+                <p class="entry-meta"><span class="en">Robot arm · USB HID · Flask</span><span class="zh">机械臂 · USB HID · Flask</span></p>
+                <ul class="points">
+                  <li><span class="en">Developed USB HID communication protocols for precise <b>6-DOF robotic arm control</b>.</span><span class="zh">开发了 USB HID 通信协议，实现对<b>六自由度机械臂的精确控制</b>。</span></li>
+                  <li><span class="en">Created automated interaction systems that physically manipulate diverse IoT interfaces, including button pressing and dial rotation.</span><span class="zh">打造了能实际操作多种物联网设备界面的自动化交互系统，包括按压按钮和旋转旋钮。</span></li>
+                  <li><span class="en">Built <b>Flask web servers</b> and SSH-based remote execution for distributed robotic control.</span><span class="zh">搭建了 <b>Flask Web 服务器</b>和基于 SSH 的远程执行，用于分布式机器人控制。</span></li>
+                  <li><span class="en">Implemented position calibration and <b>inverse kinematics</b> for repeatable automated testing sequences.</span><span class="zh">实现了位置标定和<b>逆运动学</b>，以支持可重复的自动化测试流程。</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="entry" id="w-plotter">
+              <figure class="entry-thumb has-gif">
+                <div class="thumb-box thumb-box--fit">
+                  <img class="thumb-bg" src="images/work/xy_plotter-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                  <img class="thumb-img" src="images/work/xy_plotter-poster.webp" data-gif="images/work/xy_plotter.gif" width="384" height="480" alt="CoreXY plotter moving while a G-code sender shows its position" data-zh-alt="CoreXY 绘图仪运动时，G-code 发送程序显示其实时位置" loading="lazy" decoding="async">
+                </div>
+                <figcaption><span class="en">CoreXY plotter driven over G-code (1.8× speed).</span><span class="zh">通过 G-code 驱动的 CoreXY 绘图仪（1.8 倍速）。</span></figcaption>
+              </figure>
+              <div class="entry-body">
+                <h4><span class="en">XY-Plotter Drawing / Interaction System</span><span class="zh">XY 绘图仪绘图 / 交互系统</span></h4>
+                <p class="entry-meta">CoreXY · GRBL · G-code</p>
+                <ul class="points">
+                  <li><span class="en">Interfaced with <b>GRBL-based</b> CoreXY systems through G-code protocols.</span><span class="zh">通过 G-code 协议与<b>基于 GRBL</b> 的 CoreXY 系统对接。</span></li>
+                  <li><span class="en">Implemented safety features including bounds checking and collision avoidance.</span><span class="zh">实现了边界检查和碰撞规避等安全功能。</span></li>
+                  <li><span class="en">Created high-level command abstractions (click, swipe, draw) from low-level motion primitives.</span><span class="zh">在底层运动原语之上构建了高层指令抽象（点击、滑动、绘制）。</span></li>
+                  <li><span class="en">Developed <b>real-time position tracking</b> and error recovery for autonomous operation.</span><span class="zh">开发了<b>实时位置追踪</b>和错误恢复功能，以支持自主运行。</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="entry" id="w-sphere">
+              <figure class="entry-thumb">
+                <div class="thumb-box thumb-box--fit">
+                  <img class="thumb-bg" src="images/work/sphere_testbed.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                  <img class="thumb-img" src="images/work/sphere_testbed.webp" width="900" height="1200" alt="SPHERE testbed cabinet: robot arm, smart speaker and camera on the top shelf, XY-plotter and laptop below" data-zh-alt="SPHERE 测试平台机柜：上层是机械臂、智能音箱和摄像头，下层是 XY 绘图仪和笔记本电脑" loading="lazy" decoding="async">
+                </div>
+                <figcaption><span class="en">The SPHERE testbed: arm and smart speaker on top, XY-plotter below.</span><span class="zh">SPHERE 测试平台：上层是机械臂和智能音箱，下层是 XY 绘图仪。</span></figcaption>
+              </figure>
+              <div class="entry-body">
+                <h4><span class="en">SPHERE Framework Integration</span><span class="zh">SPHERE 框架集成</span></h4>
+                <p class="entry-meta"><span class="en">Systems integration · Python</span><span class="zh">系统集成 · Python</span></p>
+                <ul class="points">
+                  <li><span class="en">Architected handler classes following design patterns for the SPHERE device infrastructure.</span><span class="zh">遵循设计模式，为 SPHERE 设备基础架构设计了处理器（handler）类。</span></li>
+                  <li><span class="en">Implemented <b>asynchronous command execution</b> using ThreadPoolExecutor.</span><span class="zh">使用 ThreadPoolExecutor 实现了<b>异步指令执行</b>。</span></li>
+                  <li><span class="en">Built standardized interfaces and YAML-based configuration for flexible deployment.</span><span class="zh">构建了标准化接口和基于 YAML 的配置，便于灵活部署。</span></li>
+                </ul>
+              </div>
+            </article>
           </div>
+        </section>
+
+        <section class="org" id="o-encosmart" aria-labelledby="o-encosmart-title">
+          <header class="org-head">
+            <div>
+              <h3 id="o-encosmart-title">EncoSmart Technology</h3>
+              <p class="org-sub"><span class="en">Internships in Embodied AI, Networking, and Testing</span><span class="zh">具身智能、网络与测试方向实习</span></p>
+            </div>
+            <p class="org-when"><span class="en">Jul 2024 – Dec 2024</span><span class="zh">2024 年 7 月 – 2024 年 12 月</span></p>
+          </header>
+          <div class="entries">
+            <article class="entry" id="w-embodied">
+              <figure class="entry-thumb has-gif">
+                <div class="thumb-box thumb-box--fit">
+                  <img class="thumb-bg" src="images/work/progem_featurefield-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                  <img class="thumb-img" src="images/work/progem_featurefield-poster.webp" data-gif="images/work/progem_featurefield.gif" width="420" height="420" alt="Rotating point cloud of a robot workspace colored by distilled features" data-zh-alt="按蒸馏特征着色的机器人工作空间旋转点云" loading="lazy" decoding="async">
+                </div>
+                <figcaption><span class="en">ProGEM's distilled feature field of the workspace, as a point cloud.</span><span class="zh">ProGEM 蒸馏得到的工作空间特征场，以点云形式呈现。</span></figcaption>
+              </figure>
+              <div class="entry-body">
+                <h4><span class="en">Intern, Department of Embodied AI</span><span class="zh">具身智能部门实习生</span></h4>
+                <p class="entry-meta"><span class="en">Jul 2024 – Nov 2024</span><span class="zh">2024 年 7 月 – 2024 年 11 月</span></p>
+                <ul class="points">
+                  <li><span class="en">Participated in the full research cycle of <b>ProGEM</b> and was listed as 4th author of the paper.</span><span class="zh">全程参与了 <b>ProGEM</b> 的研究，并作为论文第四作者署名。</span></li>
+                  <li><span class="en">Assisted in deploying our research results on the company's robot in real-world settings.</span><span class="zh">协助将研究成果部署到公司的机器人上，在真实环境中运行。</span></li>
+                </ul>
+                <div class="links"><a class="link-btn" href="#r-progem"><span class="en">About ProGEM</span><span class="zh">关于 ProGEM</span><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+              </div>
+              <div class="entry-extra">
+                <figure class="media has-gif">
+                  <img src="images/work/sim_open_drawer-poster.webp" data-gif="images/work/sim_open_drawer.gif" width="520" height="290" alt="Simulated Franka arm grasping a drawer handle and pulling it open" data-zh-alt="仿真中的 Franka 机械臂抓住抽屉把手并将其拉开" loading="lazy" decoding="async">
+                  <figcaption><span class="en">Policy rollout in simulation: opening a drawer (1.5× speed).</span><span class="zh">仿真中的策略执行：打开抽屉（1.5 倍速）。</span></figcaption>
+                </figure>
+              </div>
+            </article>
+
+            <article class="entry entry--text" id="w-network">
+              <div class="entry-body">
+                <h4><span class="en">Network Intern</span><span class="zh">网络实习生</span></h4>
+                <p class="entry-meta"><span class="en">Jul 2024 – Sep 2024</span><span class="zh">2024 年 7 月 – 2024 年 9 月</span></p>
+                <ul class="points">
+                  <li><span class="en">Analyzed open-source IoT frameworks, leading to the selection of an optimal solution for the company's third-generation product.</span><span class="zh">分析了多个开源物联网框架，为公司第三代产品选定了最优方案。</span></li>
+                  <li><span class="en">Assisted in developing and debugging back-end interface code using Django for preliminary IoT networks.</span><span class="zh">协助用 Django 开发和调试初期物联网网络的后端接口代码。</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="entry entry--text" id="w-testing">
+              <div class="entry-body">
+                <h4><span class="en">Intern, Department of Testing</span><span class="zh">测试部门实习生</span></h4>
+                <p class="entry-meta"><span class="en">Nov 2024 – Dec 2024</span><span class="zh">2024 年 11 月 – 2024 年 12 月</span></p>
+                <ul class="points">
+                  <li><span class="en">Evaluated the robotic arm and gripper's grasping stability across various objects, durations, and environmental conditions.</span><span class="zh">评估了机械臂和夹爪在不同物体、持续时间和环境条件下的抓取稳定性。</span></li>
+                  <li><span class="en">Assisted in testing the back-end interface code of the preliminary IoT networks.</span><span class="zh">协助测试初期物联网网络的后端接口代码。</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ===================== Research ===================== -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="research-title"><span class="en">Research</span><span class="zh">研究</span></h2>
+          <p><span class="en">I'm currently exploring my research interests in areas such as <b>robotic manipulation</b>, <b>3D vision</b>, and <b>human-robot interaction</b>.</span><span class="zh">我目前在<b>机器人操作</b>、<b>三维视觉</b>和<b>人机交互</b>等领域探索自己的研究兴趣。</span></p>
+        </header>
+        <div class="entries">
+          <article class="entry" id="r-friction">
+            <figure class="entry-thumb">
+              <div class="thumb-box thumb-box--paper">
+                <img class="thumb-img" src="images/research/misty.webp" width="1400" height="764" alt="Referential, trajectory, implicit-precondition, and contextual-safety ambiguity, each with and without positive friction" data-zh-alt="指代、轨迹、隐含前提和情境安全四类歧义，分别在有无积极摩擦时的对比" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h3>Slow the Dialogue, Not Just the Robot: Positive Friction for Reliable Grounding and Safe, Embodied Vision-Language Action</h3>
+              <p class="authors"><b>Haocheng Li</b>, Asteria Kaeberlein, Mert Inan, Malihe Alikhani</p>
+              <p class="entry-meta"><span class="en">Target venue: TACL (Transactions of the ACL) · In preparation · Oct 2025 – Present</span><span class="zh">目标期刊：TACL（Transactions of the ACL）· 撰写中 · 2025 年 10 月至今</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">When people give a robot a vague request like “grab that one” or “go over there,” it can guess wrong, or even do something unsafe. This work teaches robots to slow the conversation down at the right moments and ask a quick clarifying question before acting, and shows that this “positive friction” makes them more reliable and safer.</span><span class="zh">当人们向机器人发出“拿那个”“去那边”之类模糊的指令时，机器人可能会猜错，甚至做出不安全的动作。这项研究让机器人在恰当的时机放慢对话节奏，在行动前先简短地问一句以澄清意图，并证明这种“积极摩擦”能让机器人更可靠、更安全。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Built a <b>2D coordinate-based world model</b> with collision detection, hazard zones, and dynamic FOV simulation for reproducible evaluation of embodied dialogue policies across 46 structured task scenarios.</span><span class="zh">构建了<b>基于二维坐标的世界模型</b>，包含碰撞检测、危险区域和动态视野模拟，用于在 46 个结构化任务场景中可复现地评估具身对话策略。</span></li>
+                    <li><span class="en">Engineered a <b>hierarchical ambiguity detection protocol</b> that prioritizes safety hazards over navigation and referential errors, reducing collision-related task failures through ordered friction triggers.</span><span class="zh">设计了<b>分层歧义检测协议</b>，将安全隐患置于导航和指代错误之前优先处理，并通过有序的摩擦触发机制减少了与碰撞相关的任务失败。</span></li>
+                    <li><span class="en">Implemented a <b>vague-to-specific synthetic evaluation pipeline</b> using GPT-4o-mini as a simulated user agent, enabling controlled large-scale benchmarking that isolated the contributions of conversation history (+7%), prompt design (+15.5%), and friction (+14.5%).</span><span class="zh">实现了<b>由模糊到具体的合成评估流程</b>，以 GPT-4o-mini 作为模拟用户智能体，支持受控的大规模基准测试，并分离出对话历史（+7%）、提示设计（+15.5%）和摩擦机制（+14.5%）各自的贡献。</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="entry" id="r-sage">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/research/sage-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/research/sage-poster.webp" data-gif="images/research/sage.gif" width="480" height="270" alt="UR arm pushing colored buttons in sequence, with a wrist fisheye view inset" data-zh-alt="UR 机械臂依次按下彩色按钮，插图为腕部鱼眼相机视角" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h3>SAGE: State-Aware Guided End-to-End Policy for Multi-Stage Sequential Tasks via Hidden Markov Decision Process</h3>
+              <p class="authors">Binxu Wu, Tengfei Zhang, Chen Yang, Jiahao Wen, Yixuan Huang, <b>Haocheng Li</b>, Jingtian Ma, Zhen Chen, Jingyuan Wang</p>
+              <p class="entry-meta"><span class="en">Submitted to IEEE RA-L (Robotics and Automation Letters), Oct 2026 · Under review · Dec 2024 – Sep 2026</span><span class="zh">已投稿至 IEEE RA-L（Robotics and Automation Letters），2026 年 10 月 · 审稿中 · 2024 年 12 月 – 2026 年 9 月</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">Many robot tasks happen in stages, like pressing a row of buttons in a set order, and between stages the scene can look exactly the same, so a robot that only sees the present loses track of where it is. SAGE gives the robot a sense of which stage it is in; in real-world tests it reached a 100% success rate, far ahead of the baselines. I worked on the data-collection setup, the model, and the paper.</span><span class="zh">许多机器人任务是分阶段完成的，比如按固定顺序按下一排按钮。不同阶段之间的场景可能看起来一模一样，只看眼前画面的机器人就会搞不清自己进行到了哪一步。SAGE 让机器人知道自己正处于哪个阶段；在真实环境测试中，它达到了 100% 的成功率，远超基线方法。我参与了数据采集系统、模型和论文的工作。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <p><span class="en">SAGE models a multi-stage task as a <b>Hidden Markov Decision Process</b>: a state-transition network infers the hidden task stage, and a state-aware policy acts on both the observation and that stage. A semi-automatic labeling pipeline (active learning plus soft-label interpolation) needs manual labels for only about <b>13%</b> of states.</span><span class="zh">SAGE 将多阶段任务建模为<b>隐马尔可夫决策过程</b>：状态转移网络推断隐藏的任务阶段，状态感知策略则同时依据观测和该阶段输出动作。半自动标注流程（主动学习加软标签插值）只需人工标注约 <b>13%</b> 的状态。</span></p>
+                  <p class="tech-label"><span class="en">My contributions</span><span class="zh">我的贡献</span></p>
+                  <ul class="points">
+                    <li><span class="en">Reproduced UMI successfully after extensive code review and debugging.</span><span class="zh">经过大量代码审查和调试，成功复现了 UMI。</span></li>
+                    <li><span class="en">Conducted comprehensive research on SLAM (ORB-SLAM3), raising our dataset's SLAM success rate <b>from 43.1% to 97.9%</b>.</span><span class="zh">深入研究 SLAM（ORB-SLAM3），将数据集的 SLAM 成功率<b>从 43.1% 提升到 97.9%</b>。</span></li>
+                    <li><span class="en">Refined the gripper's 3D design in <b>SolidWorks</b>, significantly improving maximum grasping force and stability.</span><span class="zh">在 <b>SolidWorks</b> 中改进夹爪的三维设计，显著提升了最大夹持力和稳定性。</span></li>
+                    <li><span class="en">Led literature reviews and identified model improvements, actively driving the team's progress; contributed significantly to the <b>Related Work</b> section of the paper.</span><span class="zh">主导文献调研并提出模型改进方向，积极推动团队进展；为论文的<b>相关工作</b>部分做出了重要贡献。</span></li>
+                    <li><span class="en">Reproduced Diffusion Policy's <b>behavior cloning</b> module and evaluated its performance and suitability for our model.</span><span class="zh">复现了 Diffusion Policy 的<b>行为克隆</b>模块，并评估了其性能及对我们模型的适用性。</span></li>
+                    <li><span class="en">Collaborated on developing and debugging the model's <b>state-perception module</b>, improving performance on long-horizon, complex tasks.</span><span class="zh">协作开发并调试模型的<b>状态感知模块</b>，提升了模型在长时程复杂任务上的表现。</span></li>
+                    <li><span class="en">Proposed and co-developed an <b>active learning</b> module for automated data labeling, significantly streamlining the labeling pipeline.</span><span class="zh">提出并共同开发了用于自动数据标注的<b>主动学习</b>模块，大幅简化了标注流程。</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="links"><a class="link-btn" href="https://arxiv.org/abs/2509.19853" target="_blank" rel="noopener"><span class="en">Paper on arXiv</span><span class="zh">arXiv 论文</span><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+            </div>
+            <div class="entry-extra entry-extra--tech">
+              <figure class="media">
+                <img src="images/research/sage_pipeline.webp" width="1264" height="870" alt="SAGE: pushing buttons in order with a state-aware policy" data-zh-alt="SAGE：用状态感知策略按顺序按下按钮" loading="lazy" decoding="async">
+              </figure>
+            </div>
+          </article>
+
+          <article class="entry" id="r-progem">
+            <figure class="entry-thumb has-gif">
+              <div class="thumb-box thumb-box--fit">
+                <img class="thumb-bg" src="images/research/progem-poster.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                <img class="thumb-img" src="images/research/progem-poster.webp" data-gif="images/research/progem.gif" width="480" height="270" alt="Robot arm opening a drawer and placing objects on a table" data-zh-alt="机械臂拉开抽屉并将物体放到桌上" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="entry-body">
+              <h3>ProGEM: Probing Generalizable and Efficient Feature Fields Distillation for Multi-Task Robotic Manipulation</h3>
+              <p class="authors">Zhen Chen, Robin Ananda, Binxu Wu, <b>Haocheng Li</b>, Weize Li, Qi Lu, Qianyao Xu, Jiaying Li, Yingqing Xu</p>
+              <p class="entry-meta"><span class="en">Under submission · Jul 2024 – Nov 2024</span><span class="zh">投稿中 · 2024 年 7 月 – 2024 年 11 月</span></p>
+              <div class="views">
+                <div class="view view--summary">
+                  <p><span class="en">To handle many different tasks, a robot needs to know what the objects around it are and where they sit in 3D. ProGEM borrows the visual knowledge of an image-generation model (Stable Diffusion) to build a 3D “meaning map” of the scene, then focuses on just the few spots that matter, so the robot generalizes better and decides faster.</span><span class="zh">要胜任多种不同任务，机器人需要知道周围的物体是什么、在三维空间中的什么位置。ProGEM 借用图像生成模型（Stable Diffusion）的视觉知识，为场景构建一张三维“语义地图”，再只关注少数关键区域，从而让机器人泛化得更好、决策更快。</span></p>
+                </div>
+                <div class="view view--tech">
+                  <ul class="points">
+                    <li><span class="en">Used <b>Stable Diffusion</b> as a vision foundation model to extract semantic information from the scene.</span><span class="zh">以 <b>Stable Diffusion</b> 作为视觉基础模型，从场景中提取语义信息。</span></li>
+                    <li><span class="en">Fused the semantic embeddings with <b>RGB</b> observations to build a semantically enriched <b>3D point cloud</b> (distilled feature field) of the scene.</span><span class="zh">将语义嵌入与 <b>RGB</b> 观测融合，构建出富含语义的场景<b>三维点云</b>（蒸馏特征场）。</span></li>
+                    <li><span class="en">Voxelized the scene and used a learned <b>selection network</b> to keep only the <b>top-k occupied voxels</b>, so the policy reasons over a small set of informative voxels instead of the full grid, improving <b>inference speed</b>.</span><span class="zh">将场景体素化，并用学习得到的<b>选择网络</b>只保留 <b>top-k 个被占据的体素</b>，让策略只需在少量信息丰富的体素上推理，而不必处理整个网格，从而提升了<b>推理速度</b>。</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="entry-extra entry-extra--tech">
+              <figure class="media">
+                <img src="images/research/progem_pipeline.webp" width="699" height="284" alt="ProGEM pipeline: Stable Diffusion features, contrastive learning, voxel selection, and next-best-action prediction" data-zh-alt="ProGEM 流程：Stable Diffusion 特征、对比学习、体素选择与下一最佳动作预测" loading="lazy" decoding="async">
+              </figure>
+            </div>
+          </article>
         </div>
-        <div class="hub-text">
-          <h2><span class="en">Research</span><span class="zh">研究</span></h2>
-          <p class="desc"><span class="en">Robotic manipulation, 3D vision, and human-robot interaction, from methods to real-robot results.</span><span class="zh">机器人操作、三维视觉与人机交互，从方法研究到真机验证。</span></p>
-          <a class="btn" href="#research" data-open="research"><span class="en">See more details</span><span class="zh">查看详情</span><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        </div>
-      </article>
+      </div>
     </section>
 
     <!-- ===================== Misc ===================== -->
-    <section class="misc" id="misc" aria-labelledby="misc-title">
+    <section class="section misc" id="misc" aria-labelledby="misc-title">
       <div class="wrap">
         <div class="section-head">
           <h2 id="misc-title"><span class="en">Misc.</span><span class="zh">其他</span></h2>
@@ -278,679 +819,6 @@
     </section>
   </main>
 
-  <!-- =====================================================================
-       Detail sheets. They open in place (no page load); images are lazy.
-       ===================================================================== -->
-
-  <!-- ===================== Projects sheet ===================== -->
-  <section class="sheet" id="projects" aria-labelledby="projects-title">
-    <div class="sheet-scroll">
-      <div class="sheet-inner">
-        <div class="sheet-bar">
-          <a class="sheet-back" href="#top" data-close><svg class="i" aria-hidden="true"><use href="#i-arrow-left"/></svg><span class="en">Home</span><span class="zh">首页</span></a>
-          <nav class="sheet-tabs" aria-label="Sections" data-zh-aria-label="栏目">
-            <a href="#projects" data-switch="projects" aria-current="page"><span class="en">Projects</span><span class="zh">项目</span></a>
-            <a href="#work" data-switch="work"><span class="en">Work Experience</span><span class="zh">工作经历</span></a>
-            <a href="#research" data-switch="research"><span class="en">Research</span><span class="zh">研究</span></a>
-          </nav>
-          <div class="lang-switch" role="group" aria-label="Language" data-zh-aria-label="语言">
-            <svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>
-            <button type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
-            <button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button>
-          </div>
-        </div>
-        <div class="wrap">
-          <header class="sheet-head">
-            <p class="eyebrow"><span class="en">Projects</span><span class="zh">项目</span></p>
-            <h2 id="projects-title" tabindex="-1"><span class="en">Projects</span><span class="zh">项目</span></h2>
-            <p class="lede"><span class="en">All my academic and professional projects, focusing on both hardware and software: bare-metal firmware, ROS&nbsp;2 robots, computer-vision products, and learning agents.</span><span class="zh">我的全部学术与职业项目，兼顾硬件与软件：裸机固件、ROS&nbsp;2 机器人、计算机视觉产品，以及学习型智能体。</span></p>
-            <ul class="jump">
-              <li><a href="#g-robotics" data-jump="g-robotics"><span class="en">Robotics &amp; embedded systems</span><span class="zh">机器人与嵌入式系统</span></a></li>
-              <li><a href="#g-professional" data-jump="g-professional"><span class="en">Professional</span><span class="zh">职业项目</span></a></li>
-              <li><a href="#g-ai" data-jump="g-ai"><span class="en">AI &amp; software</span><span class="zh">AI 与软件</span></a></li>
-            </ul>
-          </header>
-
-          <div class="sheet-body">
-            <h3 class="group-title" id="g-robotics"><span class="en">Robotics &amp; embedded systems · Northwestern University</span><span class="zh">机器人与嵌入式系统 · 美国西北大学</span></h3>
-
-            <article class="entry" id="p-franka">
-              <div class="entry-media">
-                <figure class="media media--portrait has-gif">
-                  <img src="images/projects/franka_real-poster.webp" data-gif="images/projects/franka_real.gif" width="368" height="460" alt="Real Franka arm grasping a block and carrying it past a book obstacle" data-zh-alt="真实的 Franka 机械臂抓起方块，并携带它绕过作为障碍物的书" loading="lazy" decoding="async">
-                  <figcaption><span class="en">Pick-and-place on the real Franka in the lab (1.5× speed).</span><span class="zh">在实验室的真实 Franka 机械臂上完成抓取与放置（1.5 倍速）。</span></figcaption>
-                </figure>
-                <figure class="media has-gif">
-                  <img src="images/projects/franka_rviz-poster.webp" data-gif="images/projects/franka_rviz.gif" width="560" height="400" alt="RViz view of the planned and executed Franka trajectory" data-zh-alt="RViz 中显示的 Franka 规划与执行轨迹" loading="lazy" decoding="async">
-                  <figcaption><span class="en">The same task with mock hardware, visualized in RViz (2× speed).</span><span class="zh">同一任务在模拟硬件上运行，并在 RViz 中可视化（2 倍速）。</span></figcaption>
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">ME450 Embedded Systems in Robotics · Homework 3 · Nov 2026 · Team of 4</span><span class="zh">ME450 机器人嵌入式系统 · 作业 3 · 2026 年 11 月 · 4 人团队</span></p>
-                <h3><span class="en">Franka Pick-and-Place with MoveIt&nbsp;2</span><span class="zh">基于 MoveIt&nbsp;2 的 Franka 抓取与放置</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">Our team of four taught a Franka robot arm to pick up an object, carry it around an obstacle, and set it down on its own. I worked on the Python library that lets the arm plan safe, collision-free movements, and we ran the task both in simulation and on the real robot in the lab.</span><span class="zh">我们四人团队让一台 Franka 机械臂自主完成抓取物体、绕过障碍物搬运并放下的任务。我参与开发了让机械臂规划安全、无碰撞动作的 Python 库；我们在仿真环境和实验室的真实机器人上都完成了这项任务。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Built <code>franka_package</code>, a Python library that wraps MoveIt's <b>move_group</b> ROS&nbsp;2 interfaces for the Franka arm: motion planning, the planning scene, robot state (FK/IK), and the gripper.</span><span class="zh">构建了 <code>franka_package</code>：一个封装 MoveIt <b>move_group</b> ROS&nbsp;2 接口的 Franka 机械臂 Python 库，涵盖运动规划、规划场景、机器人状态（正/逆运动学）和夹爪控制。</span></li>
-                      <li><span class="en">Co-developed the <b>MotionPlanner</b> module: reworked it to talk to <code>move_group</code> directly instead of MoveItPy, and implemented planning to joint configurations, end-effector poses, <b>Cartesian paths</b>, and named SRDF configurations, plus trajectory execution.</span><span class="zh">共同开发了 <b>MotionPlanner</b> 模块：将其改为直接与 <code>move_group</code> 通信而不再经由 MoveItPy，并实现了到关节构型、末端执行器位姿、<b>笛卡尔路径</b>和 SRDF 命名构型的规划，以及轨迹执行。</span></li>
-                      <li><span class="en">A <code>pick_node</code> exposes a <code>/pick</code> service that loads the table, object, and obstacle into the planning scene, then grasps the object, attaches it to the hand, carries it past the obstacle, and releases it.</span><span class="zh"><code>pick_node</code> 提供 <code>/pick</code> 服务：先把桌面、物体和障碍物加载进规划场景，再抓取物体、将其附着到手爪上、搬运绕过障碍物并释放。</span></li>
-                      <li><span class="en">Ran the task both in simulation (mock hardware) and on the <b>real robot</b>, and wrote an integration test that moves the arm from pose A to pose B.</span><span class="zh">在仿真（模拟硬件）和<b>真实机器人</b>上都运行了该任务，并编写了让机械臂从位姿 A 移动到位姿 B 的集成测试。</span></li>
-                    </ul>
-                    <ul class="tags"><li>ROS 2</li><li>MoveIt 2</li><li>Python</li><li>Franka Emika</li><li>pytest</li></ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-flip">
-              <div class="entry-media">
-                <figure class="media has-gif">
-                  <img src="images/projects/flipbot-poster.webp" data-gif="images/projects/flipbot.gif" width="480" height="270" alt="Blue differential-drive robot driving back and forth between Jersey barriers and cardboard boxes, flipping over at each reversal" data-zh-alt="蓝色差速驱动机器人在混凝土隔离墩和纸箱之间来回行驶，每次换向时都会翻转" loading="lazy" decoding="async">
-                  <figcaption><span class="en">In Gazebo, the robot flips over at every reversal instead of turning around.</span><span class="zh">在 Gazebo 中，机器人每次换向都会直接翻转，而不是掉头。</span></figcaption>
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">ME450 Embedded Systems in Robotics · Homework 3, individual part · Nov 2026</span><span class="zh">ME450 机器人嵌入式系统 · 作业 3 个人部分 · 2026 年 11 月</span></p>
-                <h3><span class="en">Flipping Differential-Drive Robot in Gazebo</span><span class="zh">Gazebo 中的翻转差速驱动机器人</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">A simulated robot that never turns around. Every two seconds it throws itself into reverse so hard that it flips over its own axle, then keeps driving on its other side. I designed the robot so it can drive either way up, built its world in the Gazebo simulator, and wrote the program that times the flips.</span><span class="zh">一台从不掉头的仿真机器人：每隔两秒，它就猛地倒车，力道大到绕着自己的车轴翻转过去，然后用另一面着地继续行驶。我设计了这台正反两面都能行驶的机器人，在 Gazebo 仿真器中搭建了它的场景，并编写了控制翻转时机的程序。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Modeled a differential-drive robot in <b>URDF/xacro</b>: a box body with two wheels at the front and frictionless casters on both its top and bottom, so it can drive either way up. Dimensions and masses load from a YAML file, and the inertias are computed from them.</span><span class="zh">用 <b>URDF/xacro</b> 建模了一台差速驱动机器人：箱形车身，前部两个车轮，顶部和底部都装有无摩擦万向轮，因此正反两面都能行驶。尺寸和质量从 YAML 文件读取，惯量据此计算。</span></li>
-                      <li><span class="en">Built a <b>Gazebo</b> world in SDF with Jersey barriers, cardboard boxes, a person, and other Gazebo Fuel models.</span><span class="zh">用 SDF 搭建了 <b>Gazebo</b> 场景，包含混凝土隔离墩、纸箱、行人以及其他 Gazebo Fuel 模型。</span></li>
-                      <li><span class="en">Drove the wheels with Gazebo's <b>DiffDrive</b> plugin and bridged <code>/cmd_vel</code>, <code>/odom</code>, <code>/tf</code>, <code>/joint_states</code>, and <code>/clock</code> to ROS&nbsp;2 with <code>ros_gz_bridge</code>, loaded into the same component container as the Gazebo server.</span><span class="zh">使用 Gazebo 的 <b>DiffDrive</b> 插件驱动车轮，并通过 <code>ros_gz_bridge</code> 将 <code>/cmd_vel</code>、<code>/odom</code>、<code>/tf</code>、<code>/joint_states</code> 和 <code>/clock</code> 桥接到 ROS&nbsp;2；该桥接与 Gazebo 服务器加载在同一个组件容器中。</span></li>
-                      <li><span class="en">Wrote a <code>flip</code> node that starts once odometry appears and reverses the commanded velocity on a fixed period (3&nbsp;m/s every 2&nbsp;s of sim time by default). Each reversal brakes hard enough to flip the robot over its axle, so it drives back and forth along a line.</span><span class="zh">编写了 <code>flip</code> 节点：检测到里程计数据后启动，按固定周期反转指令速度（默认每 2&nbsp;s 仿真时间反转一次，速度 3&nbsp;m/s）。每次反转的制动都足以让机器人绕车轴翻转，因此它会沿一条直线来回行驶。</span></li>
-                      <li><span class="en">One launch file starts Gazebo and its GUI, the bridge, <code>robot_state_publisher</code>, and RViz, then spawns the robot and starts the flip node.</span><span class="zh">一个 launch 文件即可启动 Gazebo 及其 GUI、桥接、<code>robot_state_publisher</code> 和 RViz，然后生成机器人并启动翻转节点。</span></li>
-                    </ul>
-                    <ul class="tags"><li>ROS 2</li><li>Gazebo</li><li>ros_gz_bridge</li><li>URDF / xacro</li><li>SDF</li><li>rclpy</li></ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-brickbot">
-              <div class="entry-media">
-                <figure class="media media--portrait has-gif">
-                  <img src="images/projects/brickbot-poster.webp" data-gif="images/projects/brickbot.gif" width="456" height="588" alt="Unicycle robot driving under a falling brick and catching it on its platform" data-zh-alt="独轮机器人驶到下落的砖块下方，用平台接住它" loading="lazy" decoding="async">
-                  <figcaption><span class="en">Catching a brick dropped within range.</span><span class="zh">接住在可达范围内落下的砖块。</span></figcaption>
-                </figure>
-                <div class="media-row">
-                  <figure class="media">
-                    <img src="images/projects/brickbot_unreachable.webp" width="441" height="478" alt="RViz showing an Unreachable marker above a brick" data-zh-alt="RViz 中砖块上方显示“Unreachable”（不可达）标记" loading="lazy" decoding="async">
-                    <figcaption><span class="en">Out of reach: the catcher flags it.</span><span class="zh">超出范围：catcher 节点会将其标记出来。</span></figcaption>
-                  </figure>
-                  <figure class="media">
-                    <img src="images/projects/brickbot_big_robot.webp" width="518" height="588" alt="Larger robot model loaded from a YAML config" data-zh-alt="从 YAML 配置加载的更大的机器人模型" loading="lazy" decoding="async">
-                    <figcaption><span class="en">Robot size set from YAML.</span><span class="zh">机器人尺寸由 YAML 设置。</span></figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">ME450 Embedded Systems in Robotics · Homework 2 · Oct 2026</span><span class="zh">ME450 机器人嵌入式系统 · 作业 2 · 2026 年 10 月</span></p>
-                <h3><span class="en">Brickbot: A Unicycle Robot That Catches Falling Bricks</span><span class="zh">Brickbot：会接住下落砖块的独轮机器人</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">A simulated one-wheeled robot that catches bricks falling from the sky. When a brick drops, the robot works out whether it can get underneath in time. If it can, it races over, catches the brick on its platform, and tilts to slide it off; if not, it flags the brick as out of reach.</span><span class="zh">一台能接住从天而降的砖块的仿真独轮机器人。砖块落下时，机器人会先判断自己能否及时赶到它的下方：如果能，它就冲过去用平台接住砖块，再倾斜平台让砖块滑下；如果不能，就把这块砖标记为不可达。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Built a ROS&nbsp;2 simulation of a single-wheel robot with a tilting platform, modeled in <b>URDF/xacro</b> and visualized in <b>RViz</b>.</span><span class="zh">搭建了一个带可倾斜平台的独轮机器人的 ROS&nbsp;2 仿真，用 <b>URDF/xacro</b> 建模并在 <b>RViz</b> 中可视化。</span></li>
-                      <li><span class="en">Wrote a <code>simulation</code> node that acts as fake hardware: it integrates the robot and brick physics (free fall and frictionless sliding), publishes joint states and markers, broadcasts <b>TF</b> frames, and offers <code>place</code> and <code>drop</code> services.</span><span class="zh">编写了充当虚拟硬件的 <code>simulation</code> 节点：对机器人和砖块的物理过程（自由落体与无摩擦滑动）做数值积分，发布关节状态和可视化标记，广播 <b>TF</b> 坐标系，并提供 <code>place</code> 和 <code>drop</code> 服务。</span></li>
-                      <li><span class="en">Implemented a <code>control</code> node that computes <b>wheel odometry</b> from joint states and drives to a <code>goal_pose</code>, slowing down as it approaches.</span><span class="zh">实现了 <code>control</code> 节点：根据关节状态计算<b>车轮里程计</b>并驶向 <code>goal_pose</code>，接近目标时减速。</span></li>
-                      <li><span class="en">The <code>catcher</code> node compares the brick's <b>fall time</b> with the robot's predicted <b>drive time</b>. If the brick is reachable it drives underneath, catches it, and tilts the platform until the brick slides off; otherwise it marks the brick as unreachable.</span><span class="zh"><code>catcher</code> 节点比较砖块的<b>下落时间</b>与机器人预计的<b>行驶时间</b>：若可达，就驶到砖块下方接住它，并倾斜平台直到砖块滑落；否则将砖块标记为不可达。</span></li>
-                      <li><span class="en">Kept the physics ROS-independent and covered it with <b>unit tests</b>; robot dimensions are configurable through YAML.</span><span class="zh">物理模块不依赖 ROS，并有<b>单元测试</b>覆盖；机器人尺寸可通过 YAML 配置。</span></li>
-                    </ul>
-                    <ul class="tags"><li>ROS 2</li><li>rclpy</li><li>TF2</li><li>URDF / xacro</li><li>RViz</li><li>pytest</li></ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-turtle">
-              <div class="entry-media">
-                <div class="media-row">
-                  <figure class="media has-gif">
-                    <img src="images/projects/turtlesim-poster.webp" data-gif="images/projects/turtlesim.gif" width="440" height="478" alt="Turtle driving through red waypoint markers" data-zh-alt="小海龟依次驶过红色航点标记" loading="lazy" decoding="async">
-                    <figcaption><span class="en">Following loaded waypoints (3× speed).</span><span class="zh">跟随加载的航点（3 倍速）。</span></figcaption>
-                  </figure>
-                  <figure class="media has-gif">
-                    <img src="images/projects/turtlesim_bag-poster.webp" data-gif="images/projects/turtlesim_bag.gif" width="440" height="478" alt="Turtle replaying a recorded path from a bag file" data-zh-alt="小海龟回放 bag 文件中录制的路径" loading="lazy" decoding="async">
-                    <figcaption><span class="en">Replaying a recorded ros2 bag (3× speed).</span><span class="zh">回放录制的 ros2 bag（3 倍速）。</span></figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">ME450 Embedded Systems in Robotics · Homework 1 · Oct 2026</span><span class="zh">ME450 机器人嵌入式系统 · 作业 1 · 2026 年 10 月</span></p>
-                <h3><span class="en">TurtleSim Waypoint Follower</span><span class="zh">TurtleSim 航点跟随</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">A small simulated turtle robot that drives a loop through points the user chooses, steering itself toward one after another. After every lap it reports how far off it ended up, and I stress-tested it by adding random noise to its driving commands.</span><span class="zh">一只仿真小海龟机器人会沿着用户选定的点绕圈行驶，自动依次转向每一个点。每跑完一圈，它都会报告自己最终偏离了多少；我还在它的行驶指令中加入随机噪声，对它做了压力测试。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">ROS&nbsp;2 package that drives a TurtleSim turtle around a loop of user-supplied waypoints with a <b>100&nbsp;Hz</b> feedback controller: turn toward the target, then drive with a speed proportional to the remaining distance.</span><span class="zh">一个 ROS&nbsp;2 功能包，用 <b>100&nbsp;Hz</b> 的反馈控制器驱动 TurtleSim 小海龟沿用户给定的航点循环行驶：先转向目标，再以与剩余距离成正比的速度前进。</span></li>
-                      <li><span class="en">Defined custom interfaces: a <code>LoadWaypoints</code> service that resets the turtle, draws the waypoint markers, and returns the loop distance, and an <code>ErrorMetric</code> message published after every completed loop.</span><span class="zh">定义了自定义接口：<code>LoadWaypoints</code> 服务负责重置小海龟、绘制航点标记并返回一圈的距离；<code>ErrorMetric</code> 消息在每完成一圈后发布。</span></li>
-                      <li><span class="en">Added a <code>toggle</code> service to start and stop the turtle, and a <code>corrupt</code> node that injects Gaussian noise into velocity commands to test robustness.</span><span class="zh">添加了用于启停小海龟的 <code>toggle</code> 服务，以及向速度指令注入高斯噪声以测试鲁棒性的 <code>corrupt</code> 节点。</span></li>
-                      <li><span class="en">Recorded and replayed runs with <b>ros2 bag</b>; one loop took <b>26.9&nbsp;s</b> and finished with a <b>−0.32&nbsp;m</b> distance error.</span><span class="zh">用 <b>ros2 bag</b> 录制并回放运行过程；跑一圈用时 <b>26.9&nbsp;s</b>，终点距离误差为 <b>−0.32&nbsp;m</b>。</span></li>
-                    </ul>
-                    <ul class="tags"><li>ROS 2</li><li>Python</li><li><span class="en">Custom msgs &amp; srvs</span><span class="zh">自定义消息与服务</span></li><li><span class="en">Launch files</span><span class="zh">Launch 文件</span></li><li>ros2 bag</li></ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-balance">
-              <div class="entry-media">
-                <figure class="media media--portrait">
-                  <img src="images/projects/balancebot_cad.webp" width="1040" height="1300" alt="CAD model of the balancing robot: four stacked decks between two wheels, with battery packs on the middle decks and a micro:bit and LCD face on top" data-zh-alt="自平衡机器人的 CAD 模型：两轮之间堆叠着四层板，中间两层放电池组，顶部是 micro:bit 和作为“脸”的 LCD 屏" loading="lazy" decoding="async">
-                  <figcaption><span class="en">Our CAD design in Onshape.</span><span class="zh">我们在 Onshape 中完成的 CAD 设计。</span></figcaption>
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">CE346 Microcontroller System Design · Final project · In progress · Nov 2026</span><span class="zh">CE346 微控制器系统设计 · 期末项目 · 进行中 · 2026 年 11 月</span></p>
-                <h3><span class="en">Two-Wheeled Self-Balancing Robot</span><span class="zh">两轮自平衡机器人</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">Our team is building a two-wheeled robot that balances itself upright, like a tiny Segway, run by a BBC micro:bit. So far we have finished the mechanical design: a stack of 3D-printable decks that carries the motors, sensors, batteries, and a small screen for a face, weighted so its center of mass sits right above the wheels.</span><span class="zh">我们团队正在制作一台能自己保持直立的两轮机器人，就像迷你版的赛格威平衡车，由 BBC micro:bit 控制。目前我们已经完成了机械设计：几层可 3D 打印的板层层堆叠，搭载电机、传感器、电池和一块充当“脸”的小屏幕，并通过配重让重心正好落在车轮正上方。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <p><span class="en">Our team's final project, built around a micro:bit v2. So far we have finished the mechanical design.</span><span class="zh">我们团队的期末项目，以 micro:bit v2 为核心。目前已完成机械设计。</span></p>
-                    <ul class="points">
-                      <li><span class="en">Designed the chassis in <b>Onshape</b>: four 3D-printable decks stacked on built-in standoffs above the wheel axle, plus an L-bracket that holds a 1.69" LCD as the robot's face.</span><span class="zh">在 <b>Onshape</b> 中设计底盘：四层可 3D 打印的板通过一体化支柱堆叠在车轴上方，另有一个 L 形支架固定一块 1.69 英寸 LCD 屏作为机器人的“脸”。</span></li>
-                      <li><span class="en">Laid out the real parts from their vendor CAD models: Pololu micro metal gearmotors with encoders and 42×19&nbsp;mm wheels, a DRV8833 motor driver, an MPU-6050 IMU, the micro:bit on a Qwiic breakout, and two 4×AA battery packs.</span><span class="zh">使用厂商提供的 CAD 模型布置真实零件：带编码器的 Pololu 微型金属减速电机与 42×19&nbsp;mm 车轮、DRV8833 电机驱动器、MPU-6050 IMU、装在 Qwiic 转接板上的 micro:bit，以及两组 4×AA 电池盒。</span></li>
-                      <li><span class="en">Balanced the mass in the model: each part carries its datasheet mass, and a <b>FeatureScript</b> feature sizes a 21&nbsp;g steel counterweight so the center of mass sits directly above the axle (73.5&nbsp;mm up, 470&nbsp;g in total).</span><span class="zh">在模型中配平质量：每个零件都赋予数据手册中的质量，并用 <b>FeatureScript</b> 自定义特征算出一块 21&nbsp;g 的钢制配重，使重心正好位于车轴正上方（高 73.5&nbsp;mm，总质量 470&nbsp;g）。</span></li>
-                    </ul>
-                    <ul class="tags"><li>Onshape</li><li>FeatureScript</li><li>CAD</li><li><span class="en">3D printing</span><span class="zh">3D 打印</span></li><li>micro:bit v2</li></ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-ce346">
-              <div class="entry-media">
-                <figure class="media has-gif">
-                  <img src="images/projects/ce346_led-poster.webp" data-gif="images/projects/ce346_led.gif" width="640" height="400" alt="5x5 LED matrix showing an X, then spelling Hi CE346! and It works!" data-zh-alt="5×5 LED 点阵先显示一个 X，然后依次显示“Hi CE346!”和“It works!”" loading="lazy" decoding="async">
-                  <figcaption><span class="en">LED-matrix driver output, rendered from the lab's own font table and 400&nbsp;ms / 100&nbsp;ms character timing.</span><span class="zh">LED 点阵驱动的输出效果，按实验自带的字库和 400&nbsp;ms / 100&nbsp;ms 的字符时序渲染。</span></figcaption>
-                </figure>
-                <figure class="media media--square">
-                  <img src="images/projects/ce346_rng_histogram.webp" width="640" height="480" alt="Histogram of 10,000 hardware random numbers in 16 bins against the uniform expectation" data-zh-alt="10,000 个硬件随机数在 16 个区间上的直方图，与均匀分布期望值对比" loading="lazy" decoding="async">
-                  <figcaption><span class="en">10,000 hardware-RNG samples against the uniform expectation.</span><span class="zh">10,000 个硬件随机数样本与均匀分布期望值的对比。</span></figcaption>
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">CE346 Microcontroller System Design · Lab series · Sep – Nov 2026</span><span class="zh">CE346 微控制器系统设计 · 系列实验 · 2026 年 9 月 – 11 月</span></p>
-                <h3><span class="en">Bare-Metal Firmware on an ARM Cortex-M4</span><span class="zh">ARM Cortex-M4 上的裸机固件</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">A series of labs programming the tiny processor on a BBC micro:bit, with no operating system to lean on. I wrote code that talks to the hardware directly to light up its LED screen, read light and temperature sensors, sense touch, and play tones, then built small apps on top, like a clock and a game of Snake.</span><span class="zh">一系列在没有操作系统可依赖的情况下，为 BBC micro:bit 上的小处理器编程的实验。我编写了直接与硬件打交道的代码，用来点亮 LED 屏幕、读取光线和温度传感器、感应触摸和播放音调，并在此基础上做了时钟和贪吃蛇等小应用。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <p><span class="en">A series of embedded C labs on the Nordic <b>nRF52833</b> (micro:bit v2), building each driver directly on the hardware registers.</span><span class="zh">在 Nordic <b>nRF52833</b>（micro:bit v2）上完成的一系列嵌入式 C 实验，每个驱动都直接基于硬件寄存器实现。</span></p>
-                    <ul class="points">
-                      <li><span class="en"><b>Memory-mapped I/O &amp; interrupts:</b> mapped the GPIO and RNG peripheral registers onto C structs to write drivers from scratch, configured GPIOTE and software interrupts with NVIC priorities to demonstrate preemption, and validated the hardware RNG with a 10,000-sample histogram.</span><span class="zh"><b>内存映射 I/O 与中断：</b>将 GPIO 和 RNG 外设寄存器映射为 C 结构体，从零编写驱动；配置 GPIOTE 与软件中断及其 NVIC 优先级来演示中断抢占；并用 10,000 个样本的直方图验证硬件随机数发生器。</span></li>
-                      <li><span class="en"><b>Virtual timers:</b> multiplexed one 32-bit hardware timer into any number of one-shot and repeating timers using a sorted linked list and compare-channel scheduling, with interrupt-safe critical sections and handling for stale or missed compare events. Built a real-time clock on top.</span><span class="zh"><b>虚拟定时器：</b>借助有序链表和比较通道调度，把一个 32 位硬件定时器复用为任意数量的单次和周期定时器，实现了中断安全的临界区，并处理过期或错过的比较事件；在此之上实现了实时时钟。</span></li>
-                      <li><span class="en"><b>LED matrix:</b> row-scanned the 5×5 matrix at about 1&nbsp;kHz with app timers, rendered ASCII text from a 5×5 font, and built Snake with a ring-buffer body.</span><span class="zh"><b>LED 点阵：</b>用应用定时器以约 1&nbsp;kHz 逐行扫描 5×5 点阵，用 5×5 字库渲染 ASCII 文字，并用环形缓冲区存储蛇身，实现了贪吃蛇游戏。</span></li>
-                      <li><span class="en"><b>Analog sensing &amp; capacitive touch:</b> read an NTC thermistor and a photoresistor through the 12-bit SAADC, drove an RGB LED from sensor thresholds, and detected touches by timing an RC rise with GPIOTE and a 1&nbsp;MHz timer capture.</span><span class="zh"><b>模拟量采集与电容触摸：</b>通过 12 位 SAADC 读取 NTC 热敏电阻和光敏电阻，根据传感器阈值驱动 RGB LED，并借助 GPIOTE 和 1&nbsp;MHz 定时器捕获测量 RC 充电上升时间来检测触摸。</span></li>
-                      <li><span class="en"><b>Audio &amp; I²C:</b> generated tones with the PWM peripheral and read the LSM303AGR accelerometer and magnetometer over I²C with repeated-START register reads.</span><span class="zh"><b>音频与 I²C：</b>用 PWM 外设生成音调，并通过 I²C（以重复起始条件读取寄存器）读取 LSM303AGR 加速度计和磁力计。</span></li>
-                    </ul>
-                    <ul class="tags"><li><span class="en">Embedded C</span><span class="zh">嵌入式 C</span></li><li>nRF52833</li><li>ARM Cortex-M4</li><li><span class="en">Interrupts</span><span class="zh">中断</span></li><li><span class="en">Timers</span><span class="zh">定时器</span></li><li>PWM</li><li>ADC</li><li>I²C</li></ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <h3 class="group-title" id="g-professional"><span class="en">Professional</span><span class="zh">职业项目</span></h3>
-
-            <article class="entry" id="p-imagepipe">
-              <div class="entry-media">
-                <figure class="media">
-                  <img src="images/projects/imagepipe.webp" width="1200" height="676" alt="ImagePipe pipeline: photo set, face detection, eye-state correction, and per-person albums" data-zh-alt="ImagePipe 流程：照片集、人脸检测、眼部状态修正和按人分类的相册" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">Professional project · Desktop application</span><span class="zh">职业项目 · 桌面应用</span></p>
-                <h3><span class="en">ImagePipe: AI-Powered Tourist Photo Processing</span><span class="zh">ImagePipe：AI 驱动的游客照片处理</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">A desktop app that takes the tedious work out of tour photography. Give it a day's worth of photos and it keeps the good shots, recognizes each traveler, fixes pictures where someone blinked, and sorts everything into a personal album for every person.</span><span class="zh">一款为旅拍摄影省去繁琐工作的桌面应用。把一整天拍的照片交给它，它会留下好照片、识别出每位游客、修复有人闭眼的照片，并把所有照片整理成每个人专属的相册。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en"><b>Pipeline:</b> a <b>YOLOv8</b> classifier filters and tags every photo, <b>InsightFace</b> (Buffalo_L) finds each face and extracts an identity embedding, and <b>DBSCAN</b> clusters the embeddings into one group per person, with no labels needed.</span><span class="zh"><b>处理流程：</b><b>YOLOv8</b> 分类器筛选并标注每张照片，<b>InsightFace</b>（Buffalo_L）找出每张人脸并提取身份嵌入向量，<b>DBSCAN</b> 再把这些嵌入聚类成每人一组，无需任何标注。</span></li>
-                      <li><span class="en"><b>Eye correction:</b> <b>MediaPipe</b> face landmarks flag closed or half-closed eyes, and a custom <b>U-Net with attention</b> regenerates naturally open eyes on those faces.</span><span class="zh"><b>眼部修正：</b>利用 <b>MediaPipe</b> 人脸关键点标记闭眼或半闭眼，再由自研的<b>带注意力机制的 U-Net</b> 在这些人脸上重新生成自然睁开的眼睛。</span></li>
-                      <li><span class="en"><b>Scale:</b> processes batches of 1,000+ photos with lazy image loading, explicit garbage collection, and <code>ThreadPoolExecutor</code> parallelism, with per-stage timing for profiling.</span><span class="zh"><b>规模：</b>借助图片懒加载、显式垃圾回收和 <code>ThreadPoolExecutor</code> 并行，可批量处理 1,000 张以上的照片，并对各阶段计时以便性能分析。</span></li>
-                      <li><span class="en"><b>Architecture:</b> three layers (a <b>PyQt6</b> UI, the processing core, and a swappable model layer) plus a headless CLI build; hot paths are compiled with <b>Cython</b> and the app ships as a <b>PyInstaller</b> package.</span><span class="zh"><b>架构：</b>三层结构（<b>PyQt6</b> 界面、处理核心和可替换的模型层），另有无界面的命令行版本；热点代码用 <b>Cython</b> 编译，应用以 <b>PyInstaller</b> 打包发布。</span></li>
-                    </ul>
-                    <ul class="tags"><li>PyTorch</li><li>YOLOv8</li><li>InsightFace</li><li>DBSCAN</li><li>MediaPipe</li><li>U-Net</li><li>PyQt6</li><li>Cython</li></ul>
-                  </div>
-                </div>
-                <div class="links"><a class="link-btn" href="imagepipe.html"><span class="en">View full demo</span><span class="zh">查看完整演示</span><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
-              </div>
-            </article>
-
-            <h3 class="group-title" id="g-ai"><span class="en">AI &amp; software</span><span class="zh">AI 与软件</span></h3>
-
-            <article class="entry" id="p-annealing">
-              <div class="entry-media">
-                <figure class="media media--portrait has-gif">
-                  <img src="images/projects/gridgame-poster.webp" data-gif="images/projects/gridgame.gif" width="242" height="272" alt="Agent placing shapes on a grid under adjacency constraints" data-zh-alt="智能体在相邻约束下向网格中放置形状" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <h3><span class="en">Simulated Annealing AI Agent</span><span class="zh">模拟退火 AI 智能体</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">An AI that solves a grid puzzle: cover every square with colored shapes so that no two neighboring squares share a color, using as few shapes as possible. It starts from a rough answer and keeps trying small changes, sometimes accepting a worse one early on so it doesn't get stuck. The strategy, simulated annealing, borrows the idea of slowly cooling metal.</span><span class="zh">一个解网格谜题的 AI：用彩色形状铺满所有格子，相邻格子不能同色，并且用的形状越少越好。它从一个粗略的答案出发，不断尝试小的改动，早期有时还会接受更差的改动，以免陷入僵局。这种策略叫作模拟退火，借鉴了金属缓慢冷却的原理。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Developed a <b>simulated annealing AI agent</b> for constrained graph coloring, minimizing shapes while satisfying adjacency constraints.</span><span class="zh">开发了用于约束图着色问题的<b>模拟退火 AI 智能体</b>，在满足相邻约束的同时最小化形状数量。</span></li>
-                      <li><span class="en">Implemented <b>adaptive optimization</b> with intelligent shape selection, problem-area targeting, and dynamic cooling schedules.</span><span class="zh">实现了<b>自适应优化</b>，包括智能形状选择、问题区域定向搜索和动态降温策略。</span></li>
-                      <li><span class="en">Scored each board as <b>1000 × empty cells + 2 × shapes + 5 × same-color neighbors</b>; a run anneals for up to 7,000 steps, aims 70% of its moves at the ten worst problem areas, and stops early once progress stalls.</span><span class="zh">每个盘面的得分为 <b>1000 × 空格数 + 2 × 形状数 + 5 × 同色相邻数</b>；每次运行最多退火 7,000 步，70% 的操作集中在最严重的十个问题区域，进展停滞时提前终止。</span></li>
-                      <li><span class="en">Engineered <b>efficient grid algorithms</b> using larger shapes first and offline state management for rapid solution evaluation.</span><span class="zh">设计了<b>高效的网格算法</b>：优先放置较大的形状，并借助离线状态管理快速评估解。</span></li>
-                      <li><span class="en">Applied <b>local search metaheuristics</b> to constraint satisfaction problems with applications in scheduling and resource allocation.</span><span class="zh">将<b>局部搜索元启发式算法</b>应用于约束满足问题，可推广到排程和资源分配等场景。</span></li>
-                    </ul>
-                    <ul class="tags"><li>Python</li><li>NumPy</li><li><span class="en">Simulated annealing</span><span class="zh">模拟退火</span></li><li><span class="en">Local search</span><span class="zh">局部搜索</span></li></ul>
-                  </div>
-                </div>
-                <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/Simulated_Annealing_Agent" target="_blank" rel="noopener"><span class="en">Source code</span><span class="zh">源代码</span><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-qlearning">
-              <div class="entry-media">
-                <figure class="media media--portrait has-gif">
-                  <img src="images/projects/escape_castle-poster.webp" data-gif="images/projects/escape_castle.gif" width="600" height="868" alt="Agent navigating a 5x5 castle grid past guards" data-zh-alt="智能体在 5×5 城堡网格中绕过守卫前进" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <h3><span class="en">Q-Learning Reinforcement Learning Agent</span><span class="zh">Q-learning 强化学习智能体</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">An AI that learns to escape a castle full of guards purely by trial and error. Nobody tells it the rules: over a million practice runs, it figures out which way to go, when a fight with a guard is worth the risk, and how to stay healthy on the way out.</span><span class="zh">一个完全靠试错学会逃出守卫重重的城堡的 AI。没人告诉它规则：经过一百万次练习，它自己摸索出该往哪走、什么时候值得冒险和守卫交手，以及如何在逃出去的路上保住生命值。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Implemented a <b>Q-learning agent</b> for a grid-based MDP game with probabilistic transitions and combat mechanics.</span><span class="zh">为一个具有概率状态转移和战斗机制的网格 MDP 游戏实现了 <b>Q-learning 智能体</b>。</span></li>
-                      <li><span class="en">Developed <b>model-based probability estimation</b> from random gameplay to learn guard strength characteristics.</span><span class="zh">通过随机对局进行<b>基于模型的概率估计</b>，以学习各守卫的强度特征。</span></li>
-                      <li><span class="en">Applied <b>epsilon-greedy exploration</b> with adaptive learning rates to train the agent across 1M episodes.</span><span class="zh">采用 <b>ε-贪心探索</b>和自适应学习率，训练智能体 100 万个回合。</span></li>
-                      <li><span class="en">Built a <b>temporal-difference learner</b> that navigates the 5×5 castle grid while managing health and guard encounters.</span><span class="zh">构建了<b>时序差分学习器</b>，在 5×5 城堡网格中导航，同时管理生命值和与守卫的遭遇。</span></li>
-                    </ul>
-                    <ul class="tags"><li>Python</li><li>Q-learning</li><li>MDP</li><li><span class="en">ε-greedy</span><span class="zh">ε-贪心</span></li></ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-pytorch">
-              <div class="entry-media">
-                <figure class="media">
-                  <img src="images/projects/training_losses.webp" width="1200" height="500" alt="Training loss curves for a feedforward network and a CNN" data-zh-alt="前馈网络与 CNN 的训练损失曲线" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <h3><span class="en">Deep Learning Image Classification with PyTorch</span><span class="zh">基于 PyTorch 的深度学习图像分类</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">I trained two kinds of neural networks to recognize ten types of clothing, from shirts and sneakers to bags, in small grayscale photos. The network designed for images (a CNN) was more accurate despite being smaller, and I visualized what it learns: simple edges in its first layers, whole shapes deeper in.</span><span class="zh">我训练了两种神经网络，从小尺寸灰度照片中识别衬衫、运动鞋、包等十类服饰。专为图像设计的网络（CNN）虽然更小，却更准确；我还可视化了它学到的内容：浅层识别简单的边缘，深层识别完整的形状。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Designed and trained <b>CNN and feedforward neural networks</b> reaching 90%+ accuracy on Fashion-MNIST classification.</span><span class="zh">设计并训练了 <b>CNN 和前馈神经网络</b>，在 Fashion-MNIST 分类上达到 90% 以上的准确率。</span></li>
-                      <li><span class="en">Implemented <b>convolutional architectures</b> with 3 conv layers, max pooling, and dropout regularization, showing that CNNs outperform the FFN with 25% fewer parameters.</span><span class="zh">实现了包含 3 个卷积层、最大池化和 dropout 正则化的<b>卷积架构</b>，证明 CNN 能以少 25% 的参数量胜过前馈网络。</span></li>
-                      <li><span class="en">Visualized <b>learned feature representations</b> through kernel analysis and feature-map progression, revealing hierarchical pattern detection from edges to complex shapes.</span><span class="zh">通过卷积核分析和逐层特征图，可视化了<b>学到的特征表示</b>，揭示了从边缘到复杂形状的层级化模式识别。</span></li>
-                      <li><span class="en">Analyzed model performance with <b>confusion matrices and classification metrics</b>, identifying misclassification patterns between visually similar clothing categories.</span><span class="zh">利用<b>混淆矩阵和分类指标</b>分析模型性能，找出了外观相似的服饰类别之间的误分类规律。</span></li>
-                    </ul>
-                    <ul class="tags"><li>PyTorch</li><li>Python</li><li>CNN</li><li>Fashion-MNIST</li></ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-planner">
-              <div class="entry-media">
-                <figure class="media">
-                  <img src="images/projects/plannersystem.webp" width="1200" height="482" alt="Weekly planner schedule view, MVC diagram, and event editor" data-zh-alt="周计划的日程视图、MVC 示意图和事件编辑器" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">Multi-user system with role-based permissions · Project leader</span><span class="zh">多用户系统，基于角色的权限 · 项目负责人</span></p>
-                <h3><span class="en">Weekly Planner System</span><span class="zh">周计划系统</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">A shared weekly calendar for a group of people. Users plan events together; when someone adds or cancels one, everyone involved sees the change right away, and permissions control who can create or delete what. Schedules can be saved to and loaded from files.</span><span class="zh">一个供多人共享的周日历。用户可以一起安排活动；有人新增或取消活动时，所有相关的人都能立即看到变化，权限则决定谁可以创建或删除哪些活动。日程还可以保存为文件，或从文件载入。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Built a multi-user weekly planner with role-based permissions for event creation and deletion, keeping every related user's schedule updated automatically in real time.</span><span class="zh">构建了一个多用户周计划系统，以基于角色的权限控制活动的创建和删除，并实时自动更新每位相关用户的日程。</span></li>
-                      <li><span class="en">Chose the <b>MVC design pattern</b> for the project, following <b>object-oriented design</b> principles.</span><span class="zh">项目采用 <b>MVC 设计模式</b>，遵循<b>面向对象设计</b>原则。</span></li>
-                      <li><span class="en">Implemented XML support so users can upload or save their schedule as an XML file, significantly improving the system's efficiency.</span><span class="zh">实现了 XML 支持，用户可以上传日程，或将日程保存为 XML 文件，大幅提升了系统的使用效率。</span></li>
-                      <li><span class="en">Wrote the desktop GUI in <b>Java Swing</b>, with the model split into read-only and mutable interfaces so views cannot change state.</span><span class="zh">用 <b>Java Swing</b> 编写桌面图形界面，并将模型拆分为只读和可变两种接口，使视图无法修改状态。</span></li>
-                      <li><span class="en">Integrated another team's GUI by writing <b>adapter</b> classes between their interfaces and our model, and added a planner variant whose week starts on Saturday behind a new date interface.</span><span class="zh">编写<b>适配器</b>类连接另一团队的接口与我们的模型，从而集成了他们的图形界面；还通过新的日期接口增加了以周六为一周起始的计划变体。</span></li>
-                    </ul>
-                    <ul class="tags"><li>Java</li><li>Swing</li><li>MVC</li><li>XML</li><li>JUnit</li></ul>
-                  </div>
-                </div>
-                <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/OOD_hw" target="_blank" rel="noopener"><span class="en">Source code</span><span class="zh">源代码</span><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
-              </div>
-            </article>
-
-            <article class="entry" id="p-stats">
-              <div class="entry-media">
-                <figure class="media media--square">
-                  <img src="images/projects/tuition_project.webp" width="900" height="844" alt="Radar charts of education quality and a tuition regression plot" data-zh-alt="教育质量雷达图与学费回归图" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">Data science semester project · Project leader</span><span class="zh">数据科学学期项目 · 项目负责人</span></p>
-                <h3><span class="en">Nationwide University Statistics Analysis</span><span class="zh">全美大学数据统计分析</span></h3>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">Does paying more get you a better education? We gathered tuition and ratings for private universities across the U.S. from a college-review website and compared the two. The result is an interactive chart where every dot is a school; click one to see a breakdown of its educational quality.</span><span class="zh">学费越高，教育就越好吗？我们从一个大学点评网站收集了全美私立大学的学费和评分，并对两者进行比较。最终做成一张交互式图表：每个点代表一所学校，点击即可查看它的教育质量细分。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Ran a data-driven analysis of private universities by <b>scraping</b> key variables from CollegeSimply to investigate the relationship between tuition and educational quality.</span><span class="zh">从 CollegeSimply <b>爬取</b>关键变量，对私立大学进行数据驱动的分析，研究学费与教育质量之间的关系。</span></li>
-                      <li><span class="en">Parsed tuition and five rating categories for each school with <b>BeautifulSoup</b>, and placed each school in its state with geopy's Nominatim geocoder.</span><span class="zh">用 <b>BeautifulSoup</b> 解析每所学校的学费和五项评分，并用 geopy 的 Nominatim 地理编码器确定学校所在的州。</span></li>
-                      <li><span class="en">Scored educational quality as the <b>area of each school's five-category radar chart</b> (shoelace formula), then fit a least-squares line of quality against tuition with NumPy.</span><span class="zh">以<b>每所学校五项评分雷达图的面积</b>（鞋带公式）作为教育质量得分，再用 NumPy 对质量与学费做最小二乘直线拟合。</span></li>
-                      <li><span class="en">Built an interactive linear-regression plot in <b>Dash</b> and <b>Plotly</b>: every point is clickable and shows that university's educational quality as a radar chart, and a search box jumps to any school.</span><span class="zh">用 <b>Dash</b> 和 <b>Plotly</b> 构建了交互式线性回归图：点击任一数据点即可用雷达图展示该校的教育质量，搜索框可直接跳转到任意学校。</span></li>
-                    </ul>
-                    <ul class="tags"><li>Python</li><li>BeautifulSoup</li><li>NumPy</li><li>pandas</li><li>Plotly</li><li>Dash</li></ul>
-                  </div>
-                </div>
-                <div class="links"><a class="link-btn" href="https://github.com/AdamLi111/nationwide_university_stat_analysis" target="_blank" rel="noopener"><span class="en">Source code</span><span class="zh">源代码</span><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== Work sheet ===================== -->
-  <section class="sheet" id="work" aria-labelledby="work-title">
-    <div class="sheet-scroll">
-      <div class="sheet-inner">
-        <div class="sheet-bar">
-          <a class="sheet-back" href="#top" data-close><svg class="i" aria-hidden="true"><use href="#i-arrow-left"/></svg><span class="en">Home</span><span class="zh">首页</span></a>
-          <nav class="sheet-tabs" aria-label="Sections" data-zh-aria-label="栏目">
-            <a href="#projects" data-switch="projects"><span class="en">Projects</span><span class="zh">项目</span></a>
-            <a href="#work" data-switch="work" aria-current="page"><span class="en">Work Experience</span><span class="zh">工作经历</span></a>
-            <a href="#research" data-switch="research"><span class="en">Research</span><span class="zh">研究</span></a>
-          </nav>
-          <div class="lang-switch" role="group" aria-label="Language" data-zh-aria-label="语言">
-            <svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>
-            <button type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
-            <button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button>
-          </div>
-        </div>
-        <div class="wrap">
-          <header class="sheet-head">
-            <p class="eyebrow"><span class="en">Work Experience</span><span class="zh">工作经历</span></p>
-            <h2 id="work-title" tabindex="-1"><span class="en">Work Experience</span><span class="zh">工作经历</span></h2>
-            <p class="lede"><span class="en">Engineering roles in a research lab and in industry: automating real IoT devices with robots, and taking embodied-AI research onto real hardware.</span><span class="zh">在研究实验室和企业中的工程经历：用机器人自动化操作真实的物联网设备，并把具身智能研究部署到真实硬件上。</span></p>
-            <ul class="jump">
-              <li><a href="#o-edge" data-jump="o-edge"><span class="en">Northeastern EDGE Lab</span><span class="zh">美国东北大学 EDGE 实验室</span></a></li>
-              <li><a href="#o-encosmart" data-jump="o-encosmart">EncoSmart Technology</a></li>
-            </ul>
-          </header>
-
-          <div class="sheet-body">
-            <section class="org" id="o-edge" aria-labelledby="o-edge-title">
-              <header class="org-head">
-                <div>
-                  <h3 id="o-edge-title"><span class="en">Northeastern University · EDGE Lab</span><span class="zh">美国东北大学 · EDGE 实验室</span></h3>
-                  <p class="org-sub"><span class="en">Research Engineer · SPHERE Project</span><span class="zh">研究工程师 · SPHERE 项目</span></p>
-                </div>
-                <p class="org-when"><span class="en">Jun 2025 – Dec 2025</span><span class="zh">2025 年 6 月 – 2025 年 12 月</span></p>
-              </header>
-
-              <article class="entry" id="w-learm">
-                <div class="entry-media">
-                  <figure class="media media--portrait has-gif">
-                    <img src="images/work/learm-poster.webp" data-gif="images/work/learm.gif" width="384" height="480" alt="LeArm 6-DOF arm pressing the buttons of a smart speaker" data-zh-alt="LeArm 六自由度机械臂按压智能音箱的按钮" loading="lazy" decoding="async">
-                    <figcaption><span class="en">LeArm pressing a smart speaker's buttons (1.6× speed).</span><span class="zh">LeArm 按压智能音箱的按钮（1.6 倍速）。</span></figcaption>
-                  </figure>
-                </div>
-                <div class="entry-body">
-                  <p class="entry-meta"><span class="en">Robot arm · USB HID · Flask</span><span class="zh">机械臂 · USB HID · Flask</span></p>
-                  <h4><span class="en">LeArm 6-DOF Robotic Arm System</span><span class="zh">LeArm 六自由度机械臂系统</span></h4>
-                  <ul class="points">
-                    <li><span class="en">Developed USB HID communication protocols for precise <b>6-DOF robotic arm control</b>.</span><span class="zh">开发了 USB HID 通信协议，实现对<b>六自由度机械臂的精确控制</b>。</span></li>
-                    <li><span class="en">Created automated interaction systems that physically manipulate diverse IoT interfaces, including button pressing and dial rotation.</span><span class="zh">打造了能实际操作多种物联网设备界面的自动化交互系统，包括按压按钮和旋转旋钮。</span></li>
-                    <li><span class="en">Built <b>Flask web servers</b> and SSH-based remote execution for distributed robotic control.</span><span class="zh">搭建了 <b>Flask Web 服务器</b>和基于 SSH 的远程执行，用于分布式机器人控制。</span></li>
-                    <li><span class="en">Implemented position calibration and <b>inverse kinematics</b> for repeatable automated testing sequences.</span><span class="zh">实现了位置标定和<b>逆运动学</b>，以支持可重复的自动化测试流程。</span></li>
-                  </ul>
-                </div>
-              </article>
-
-              <article class="entry" id="w-plotter">
-                <div class="entry-media">
-                  <figure class="media media--portrait has-gif">
-                    <img src="images/work/xy_plotter-poster.webp" data-gif="images/work/xy_plotter.gif" width="384" height="480" alt="CoreXY plotter moving while a G-code sender shows its position" data-zh-alt="CoreXY 绘图仪运动时，G-code 发送程序显示其实时位置" loading="lazy" decoding="async">
-                    <figcaption><span class="en">CoreXY plotter driven over G-code (1.8× speed).</span><span class="zh">通过 G-code 驱动的 CoreXY 绘图仪（1.8 倍速）。</span></figcaption>
-                  </figure>
-                </div>
-                <div class="entry-body">
-                  <p class="entry-meta">CoreXY · GRBL · G-code</p>
-                  <h4><span class="en">XY-Plotter Drawing / Interaction System</span><span class="zh">XY 绘图仪绘图 / 交互系统</span></h4>
-                  <ul class="points">
-                    <li><span class="en">Interfaced with <b>GRBL-based</b> CoreXY systems through G-code protocols.</span><span class="zh">通过 G-code 协议与<b>基于 GRBL</b> 的 CoreXY 系统对接。</span></li>
-                    <li><span class="en">Implemented safety features including bounds checking and collision avoidance.</span><span class="zh">实现了边界检查和碰撞规避等安全功能。</span></li>
-                    <li><span class="en">Created high-level command abstractions (click, swipe, draw) from low-level motion primitives.</span><span class="zh">在底层运动原语之上构建了高层指令抽象（点击、滑动、绘制）。</span></li>
-                    <li><span class="en">Developed <b>real-time position tracking</b> and error recovery for autonomous operation.</span><span class="zh">开发了<b>实时位置追踪</b>和错误恢复功能，以支持自主运行。</span></li>
-                  </ul>
-                </div>
-              </article>
-
-              <article class="entry" id="w-sphere">
-                <div class="entry-media">
-                  <figure class="media media--portrait">
-                    <img src="images/work/sphere_testbed.webp" width="900" height="1200" alt="SPHERE testbed cabinet: robot arm, smart speaker and camera on the top shelf, XY-plotter and laptop below" data-zh-alt="SPHERE 测试平台机柜：上层是机械臂、智能音箱和摄像头，下层是 XY 绘图仪和笔记本电脑" loading="lazy" decoding="async">
-                    <figcaption><span class="en">The SPHERE testbed: arm and smart speaker on top, XY-plotter below.</span><span class="zh">SPHERE 测试平台：上层是机械臂和智能音箱，下层是 XY 绘图仪。</span></figcaption>
-                  </figure>
-                </div>
-                <div class="entry-body">
-                  <p class="entry-meta"><span class="en">Systems integration · Python</span><span class="zh">系统集成 · Python</span></p>
-                  <h4><span class="en">SPHERE Framework Integration</span><span class="zh">SPHERE 框架集成</span></h4>
-                  <ul class="points">
-                    <li><span class="en">Architected handler classes following design patterns for the SPHERE device infrastructure.</span><span class="zh">遵循设计模式，为 SPHERE 设备基础架构设计了处理器（handler）类。</span></li>
-                    <li><span class="en">Implemented <b>asynchronous command execution</b> using ThreadPoolExecutor.</span><span class="zh">使用 ThreadPoolExecutor 实现了<b>异步指令执行</b>。</span></li>
-                    <li><span class="en">Built standardized interfaces and YAML-based configuration for flexible deployment.</span><span class="zh">构建了标准化接口和基于 YAML 的配置，便于灵活部署。</span></li>
-                  </ul>
-                </div>
-              </article>
-            </section>
-
-            <section class="org" id="o-encosmart" aria-labelledby="o-encosmart-title">
-              <header class="org-head">
-                <div>
-                  <h3 id="o-encosmart-title">EncoSmart Technology</h3>
-                  <p class="org-sub"><span class="en">Internships in Embodied AI, Networking, and Testing</span><span class="zh">具身智能、网络与测试方向实习</span></p>
-                </div>
-                <p class="org-when"><span class="en">Jul 2024 – Dec 2024</span><span class="zh">2024 年 7 月 – 2024 年 12 月</span></p>
-              </header>
-
-              <article class="entry" id="w-embodied">
-                <div class="entry-media">
-                  <figure class="media media--square has-gif">
-                    <img src="images/work/progem_featurefield-poster.webp" data-gif="images/work/progem_featurefield.gif" width="420" height="420" alt="Rotating point cloud of a robot workspace colored by distilled features" data-zh-alt="按蒸馏特征着色的机器人工作空间旋转点云" loading="lazy" decoding="async">
-                    <figcaption><span class="en">ProGEM's distilled feature field of the workspace, as a point cloud.</span><span class="zh">ProGEM 蒸馏得到的工作空间特征场，以点云形式呈现。</span></figcaption>
-                  </figure>
-                  <figure class="media has-gif">
-                    <img src="images/work/sim_open_drawer-poster.webp" data-gif="images/work/sim_open_drawer.gif" width="520" height="290" alt="Simulated Franka arm grasping a drawer handle and pulling it open" data-zh-alt="仿真中的 Franka 机械臂抓住抽屉把手并将其拉开" loading="lazy" decoding="async">
-                    <figcaption><span class="en">Policy rollout in simulation: opening a drawer (1.5× speed).</span><span class="zh">仿真中的策略执行：打开抽屉（1.5 倍速）。</span></figcaption>
-                  </figure>
-                </div>
-                <div class="entry-body">
-                  <p class="entry-meta"><span class="en">Jul 2024 – Nov 2024</span><span class="zh">2024 年 7 月 – 2024 年 11 月</span></p>
-                  <h4><span class="en">Intern, Department of Embodied AI</span><span class="zh">具身智能部门实习生</span></h4>
-                  <ul class="points">
-                    <li><span class="en">Participated in the full research cycle of <b>ProGEM</b> and was listed as 4th author of the paper.</span><span class="zh">全程参与了 <b>ProGEM</b> 的研究，并作为论文第四作者署名。</span></li>
-                    <li><span class="en">Assisted in deploying our research results on the company's robot in real-world settings.</span><span class="zh">协助将研究成果部署到公司的机器人上，在真实环境中运行。</span></li>
-                  </ul>
-                  <div class="links"><a class="link-btn" href="#r-progem" data-switch="research" data-target="r-progem"><span class="en">About ProGEM</span><span class="zh">关于 ProGEM</span><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
-                </div>
-              </article>
-
-              <article class="entry entry--text" id="w-network">
-                <div class="entry-body">
-                  <p class="entry-meta"><span class="en">Jul 2024 – Sep 2024</span><span class="zh">2024 年 7 月 – 2024 年 9 月</span></p>
-                  <h4><span class="en">Network Intern</span><span class="zh">网络实习生</span></h4>
-                  <ul class="points">
-                    <li><span class="en">Analyzed open-source IoT frameworks, leading to the selection of an optimal solution for the company's third-generation product.</span><span class="zh">分析了多个开源物联网框架，为公司第三代产品选定了最优方案。</span></li>
-                    <li><span class="en">Assisted in developing and debugging back-end interface code using Django for preliminary IoT networks.</span><span class="zh">协助用 Django 开发和调试初期物联网网络的后端接口代码。</span></li>
-                  </ul>
-                </div>
-              </article>
-
-              <article class="entry entry--text" id="w-testing">
-                <div class="entry-body">
-                  <p class="entry-meta"><span class="en">Nov 2024 – Dec 2024</span><span class="zh">2024 年 11 月 – 2024 年 12 月</span></p>
-                  <h4><span class="en">Intern, Department of Testing</span><span class="zh">测试部门实习生</span></h4>
-                  <ul class="points">
-                    <li><span class="en">Evaluated the robotic arm and gripper's grasping stability across various objects, durations, and environmental conditions.</span><span class="zh">评估了机械臂和夹爪在不同物体、持续时间和环境条件下的抓取稳定性。</span></li>
-                    <li><span class="en">Assisted in testing the back-end interface code of the preliminary IoT networks.</span><span class="zh">协助测试初期物联网网络的后端接口代码。</span></li>
-                  </ul>
-                </div>
-              </article>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== Research sheet ===================== -->
-  <section class="sheet" id="research" aria-labelledby="research-title">
-    <div class="sheet-scroll">
-      <div class="sheet-inner">
-        <div class="sheet-bar">
-          <a class="sheet-back" href="#top" data-close><svg class="i" aria-hidden="true"><use href="#i-arrow-left"/></svg><span class="en">Home</span><span class="zh">首页</span></a>
-          <nav class="sheet-tabs" aria-label="Sections" data-zh-aria-label="栏目">
-            <a href="#projects" data-switch="projects"><span class="en">Projects</span><span class="zh">项目</span></a>
-            <a href="#work" data-switch="work"><span class="en">Work Experience</span><span class="zh">工作经历</span></a>
-            <a href="#research" data-switch="research" aria-current="page"><span class="en">Research</span><span class="zh">研究</span></a>
-          </nav>
-          <div class="lang-switch" role="group" aria-label="Language" data-zh-aria-label="语言">
-            <svg class="i" aria-hidden="true"><use href="#i-globe"/></svg>
-            <button type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
-            <button type="button" data-lang="zh" lang="zh-CN" aria-pressed="false">中文</button>
-          </div>
-        </div>
-        <div class="wrap">
-          <header class="sheet-head">
-            <p class="eyebrow"><span class="en">Research</span><span class="zh">研究</span></p>
-            <h2 id="research-title" tabindex="-1"><span class="en">Research</span><span class="zh">研究</span></h2>
-            <p class="lede"><span class="en">I'm currently exploring my research interests in areas such as <b>robotic manipulation</b>, <b>3D vision</b>, and <b>human-robot interaction</b>.</span><span class="zh">我目前在<b>机器人操作</b>、<b>三维视觉</b>和<b>人机交互</b>等领域探索自己的研究兴趣。</span></p>
-            <ul class="jump">
-              <li><a href="#r-friction" data-jump="r-friction"><span class="en">Positive Friction</span><span class="zh">积极摩擦</span></a></li>
-              <li><a href="#r-sage" data-jump="r-sage">SAGE</a></li>
-              <li><a href="#r-progem" data-jump="r-progem">ProGEM</a></li>
-            </ul>
-          </header>
-
-          <div class="sheet-body">
-            <article class="entry" id="r-friction">
-              <div class="entry-media">
-                <figure class="media">
-                  <img src="images/research/misty.webp" width="1400" height="764" alt="Referential, trajectory, implicit-precondition, and contextual-safety ambiguity, each with and without positive friction" data-zh-alt="指代、轨迹、隐含前提和情境安全四类歧义，分别在有无积极摩擦时的对比" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">Target venue: TACL (Transactions of the ACL) · In preparation · Oct 2025 – Present</span><span class="zh">目标期刊：TACL（Transactions of the ACL）· 撰写中 · 2025 年 10 月至今</span></p>
-                <h3>Slow the Dialogue, Not Just the Robot: Positive Friction for Reliable Grounding and Safe, Embodied Vision-Language Action</h3>
-                <p class="authors"><b>Haocheng Li</b>, Asteria Kaeberlein, Mert Inan, Malihe Alikhani</p>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">When people give a robot a vague request like “grab that one” or “go over there,” it can guess wrong, or even do something unsafe. This work teaches robots to slow the conversation down at the right moments and ask a quick clarifying question before acting, and shows that this “positive friction” makes them more reliable and safer.</span><span class="zh">当人们向机器人发出“拿那个”“去那边”之类模糊的指令时，机器人可能会猜错，甚至做出不安全的动作。这项研究让机器人在恰当的时机放慢对话节奏，在行动前先简短地问一句以澄清意图，并证明这种“积极摩擦”能让机器人更可靠、更安全。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Built a <b>2D coordinate-based world model</b> with collision detection, hazard zones, and dynamic FOV simulation for reproducible evaluation of embodied dialogue policies across 46 structured task scenarios.</span><span class="zh">构建了<b>基于二维坐标的世界模型</b>，包含碰撞检测、危险区域和动态视野模拟，用于在 46 个结构化任务场景中可复现地评估具身对话策略。</span></li>
-                      <li><span class="en">Engineered a <b>hierarchical ambiguity detection protocol</b> that prioritizes safety hazards over navigation and referential errors, reducing collision-related task failures through ordered friction triggers.</span><span class="zh">设计了<b>分层歧义检测协议</b>，将安全隐患置于导航和指代错误之前优先处理，并通过有序的摩擦触发机制减少了与碰撞相关的任务失败。</span></li>
-                      <li><span class="en">Implemented a <b>vague-to-specific synthetic evaluation pipeline</b> using GPT-4o-mini as a simulated user agent, enabling controlled large-scale benchmarking that isolated the contributions of conversation history (+7%), prompt design (+15.5%), and friction (+14.5%).</span><span class="zh">实现了<b>由模糊到具体的合成评估流程</b>，以 GPT-4o-mini 作为模拟用户智能体，支持受控的大规模基准测试，并分离出对话历史（+7%）、提示设计（+15.5%）和摩擦机制（+14.5%）各自的贡献。</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry" id="r-sage">
-              <div class="entry-media">
-                <figure class="media">
-                  <img src="images/research/sage_pipeline.webp" width="1264" height="870" alt="SAGE: pushing buttons in order with a state-aware policy" data-zh-alt="SAGE：用状态感知策略按顺序按下按钮" loading="lazy" decoding="async">
-                </figure>
-                <figure class="media has-gif">
-                  <img src="images/research/sage-poster.webp" data-gif="images/research/sage.gif" width="480" height="270" alt="UR arm pushing colored buttons in sequence, with a wrist fisheye view inset" data-zh-alt="UR 机械臂依次按下彩色按钮，插图为腕部鱼眼相机视角" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">Submitted to IEEE RA-L (Robotics and Automation Letters), Oct 2026 · Under review · Dec 2024 – Sep 2026</span><span class="zh">已投稿至 IEEE RA-L（Robotics and Automation Letters），2026 年 10 月 · 审稿中 · 2024 年 12 月 – 2026 年 9 月</span></p>
-                <h3>SAGE: State-Aware Guided End-to-End Policy for Multi-Stage Sequential Tasks via Hidden Markov Decision Process</h3>
-                <p class="authors">Binxu Wu, Tengfei Zhang, Chen Yang, Jiahao Wen, Yixuan Huang, <b>Haocheng Li</b>, Jingtian Ma, Zhen Chen, Jingyuan Wang</p>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">Many robot tasks happen in stages, like pressing a row of buttons in a set order, and between stages the scene can look exactly the same, so a robot that only sees the present loses track of where it is. SAGE gives the robot a sense of which stage it is in; in real-world tests it reached a 100% success rate, far ahead of the baselines. I worked on the data-collection setup, the model, and the paper.</span><span class="zh">许多机器人任务是分阶段完成的，比如按固定顺序按下一排按钮。不同阶段之间的场景可能看起来一模一样，只看眼前画面的机器人就会搞不清自己进行到了哪一步。SAGE 让机器人知道自己正处于哪个阶段；在真实环境测试中，它达到了 100% 的成功率，远超基线方法。我参与了数据采集系统、模型和论文的工作。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <p><span class="en">SAGE models a multi-stage task as a <b>Hidden Markov Decision Process</b>: a state-transition network infers the hidden task stage, and a state-aware policy acts on both the observation and that stage. A semi-automatic labeling pipeline (active learning plus soft-label interpolation) needs manual labels for only about <b>13%</b> of states.</span><span class="zh">SAGE 将多阶段任务建模为<b>隐马尔可夫决策过程</b>：状态转移网络推断隐藏的任务阶段，状态感知策略则同时依据观测和该阶段输出动作。半自动标注流程（主动学习加软标签插值）只需人工标注约 <b>13%</b> 的状态。</span></p>
-                    <p class="tech-label"><span class="en">My contributions</span><span class="zh">我的贡献</span></p>
-                    <ul class="points">
-                      <li><span class="en">Reproduced UMI successfully after extensive code review and debugging.</span><span class="zh">经过大量代码审查和调试，成功复现了 UMI。</span></li>
-                      <li><span class="en">Conducted comprehensive research on SLAM (ORB-SLAM3), raising our dataset's SLAM success rate <b>from 43.1% to 97.9%</b>.</span><span class="zh">深入研究 SLAM（ORB-SLAM3），将数据集的 SLAM 成功率<b>从 43.1% 提升到 97.9%</b>。</span></li>
-                      <li><span class="en">Refined the gripper's 3D design in <b>SolidWorks</b>, significantly improving maximum grasping force and stability.</span><span class="zh">在 <b>SolidWorks</b> 中改进夹爪的三维设计，显著提升了最大夹持力和稳定性。</span></li>
-                      <li><span class="en">Led literature reviews and identified model improvements, actively driving the team's progress; contributed significantly to the <b>Related Work</b> section of the paper.</span><span class="zh">主导文献调研并提出模型改进方向，积极推动团队进展；为论文的<b>相关工作</b>部分做出了重要贡献。</span></li>
-                      <li><span class="en">Reproduced Diffusion Policy's <b>behavior cloning</b> module and evaluated its performance and suitability for our model.</span><span class="zh">复现了 Diffusion Policy 的<b>行为克隆</b>模块，并评估了其性能及对我们模型的适用性。</span></li>
-                      <li><span class="en">Collaborated on developing and debugging the model's <b>state-perception module</b>, improving performance on long-horizon, complex tasks.</span><span class="zh">协作开发并调试模型的<b>状态感知模块</b>，提升了模型在长时程复杂任务上的表现。</span></li>
-                      <li><span class="en">Proposed and co-developed an <b>active learning</b> module for automated data labeling, significantly streamlining the labeling pipeline.</span><span class="zh">提出并共同开发了用于自动数据标注的<b>主动学习</b>模块，大幅简化了标注流程。</span></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="links"><a class="link-btn" href="https://arxiv.org/abs/2509.19853" target="_blank" rel="noopener"><span class="en">Paper on arXiv</span><span class="zh">arXiv 论文</span><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a></div>
-              </div>
-            </article>
-
-            <article class="entry" id="r-progem">
-              <div class="entry-media">
-                <figure class="media">
-                  <img src="images/research/progem_pipeline.webp" width="699" height="284" alt="ProGEM pipeline: Stable Diffusion features, contrastive learning, voxel selection, and next-best-action prediction" data-zh-alt="ProGEM 流程：Stable Diffusion 特征、对比学习、体素选择与下一最佳动作预测" loading="lazy" decoding="async">
-                </figure>
-                <figure class="media has-gif">
-                  <img src="images/research/progem-poster.webp" data-gif="images/research/progem.gif" width="480" height="270" alt="Robot arm opening a drawer and placing objects on a table" data-zh-alt="机械臂拉开抽屉并将物体放到桌上" loading="lazy" decoding="async">
-                </figure>
-              </div>
-              <div class="entry-body">
-                <p class="entry-meta"><span class="en">Under submission · Jul 2024 – Nov 2024</span><span class="zh">投稿中 · 2024 年 7 月 – 2024 年 11 月</span></p>
-                <h3>ProGEM: Probing Generalizable and Efficient Feature Fields Distillation for Multi-Task Robotic Manipulation</h3>
-                <p class="authors">Zhen Chen, Robin Ananda, Binxu Wu, <b>Haocheng Li</b>, Weize Li, Qi Lu, Qianyao Xu, Jiaying Li, Yingqing Xu</p>
-                <div class="views">
-                  <div class="view view--summary">
-                    <p><span class="en">To handle many different tasks, a robot needs to know what the objects around it are and where they sit in 3D. ProGEM borrows the visual knowledge of an image-generation model (Stable Diffusion) to build a 3D “meaning map” of the scene, then focuses on just the few spots that matter, so the robot generalizes better and decides faster.</span><span class="zh">要胜任多种不同任务，机器人需要知道周围的物体是什么、在三维空间中的什么位置。ProGEM 借用图像生成模型（Stable Diffusion）的视觉知识，为场景构建一张三维“语义地图”，再只关注少数关键区域，从而让机器人泛化得更好、决策更快。</span></p>
-                  </div>
-                  <div class="view view--tech">
-                    <ul class="points">
-                      <li><span class="en">Used <b>Stable Diffusion</b> as a vision foundation model to extract semantic information from the scene.</span><span class="zh">以 <b>Stable Diffusion</b> 作为视觉基础模型，从场景中提取语义信息。</span></li>
-                      <li><span class="en">Fused the semantic embeddings with <b>RGB</b> observations to build a semantically enriched <b>3D point cloud</b> (distilled feature field) of the scene.</span><span class="zh">将语义嵌入与 <b>RGB</b> 观测融合，构建出富含语义的场景<b>三维点云</b>（蒸馏特征场）。</span></li>
-                      <li><span class="en">Voxelized the scene and used a learned <b>selection network</b> to keep only the <b>top-k occupied voxels</b>, so the policy reasons over a small set of informative voxels instead of the full grid, improving <b>inference speed</b>.</span><span class="zh">将场景体素化，并用学习得到的<b>选择网络</b>只保留 <b>top-k 个被占据的体素</b>，让策略只需在少量信息丰富的体素上推理，而不必处理整个网格，从而提升了<b>推理速度</b>。</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script src="js/site.js?v=20261115b"></script>
-
   <footer class="site-footer">
     <div class="wrap">
       <div id="mapmyvisitors-widget" class="globe">
@@ -959,5 +827,7 @@
       <p><span class="en">© 2026 Haocheng Li · Last update: Nov. 2026</span><span class="zh">© 2026 Haocheng Li · 最后更新：2026 年 11 月</span></p>
     </div>
   </footer>
+
+  <script src="js/site.js?v=20261118"></script>
 </body>
 </html>
